@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+    skip_before_action :verify_authenticity_token
     before_action :redirect_if_logged_in
 
     def create 
