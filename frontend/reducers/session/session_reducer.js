@@ -1,10 +1,10 @@
-import { RECEIVE_CURRENT_USER, REMOVE_CURRENT_USER } from "../actions/session_actions";
+import { RECEIVE_CURRENT_USER, REMOVE_CURRENT_USER } from "../../actions/session_actions";
 
 const _nullState = {
     currentUserId: null
 }
 
-export const SessionReducer = (state = _nullState, action) => {
+const sessionReducer = (state = _nullState, action) => {
     Object.freeze(state);
 
     switch (action.type) {
@@ -18,3 +18,5 @@ export const SessionReducer = (state = _nullState, action) => {
             return state;
     }
 }
+
+export default sessionReducer;
