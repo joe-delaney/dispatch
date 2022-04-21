@@ -1,0 +1,19 @@
+.welcome-nav-bar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-slack-logo {
+    width: 125px;
+}
+
+.welcome-nav-bar-links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.top-splash-page-section {
+    background-color: #4a154b !important;
+}
