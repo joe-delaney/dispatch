@@ -1,8 +1,9 @@
 import React from "react";
+import SplashPageContainer from "./splash_page/splash_page_container";
 
 const App = () => (
     <div>
-        <h1>Slack Chat</h1>
+        <SplashPageContainer/>
     </div>
 );
 
