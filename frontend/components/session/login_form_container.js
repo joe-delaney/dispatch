@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { login, receiveErrors } from "../../actions/session_actions"
-import LoginForm from "./login_form";
+import SessionForm from "./session_form";
 
 const mapStateToProps = (state) => ({
     errors: state.errors.session,
@@ -12,5 +12,5 @@ const mapDispatchToProps = (dispatch) => ({
     receiveErrors: (errors) => dispatch(receiveErrors(errors))
 })
 
-const LoginFormContainer = connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+const LoginFormContainer = connect(mapStateToProps, mapDispatchToProps)(SessionForm);
 export default LoginFormContainer;
