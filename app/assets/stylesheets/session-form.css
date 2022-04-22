@@ -95,7 +95,7 @@
 
 .form-button {
     color: #fff;
-    background-color: #4a154b;
+    background-color: #611f69;
     border: none;
     margin-bottom: 20px;
     width: 400px;
@@ -107,4 +107,9 @@
     text-decoration: none;
     font-family: Lato;
     border-radius: 4px;
+}
+
+.form-button:hover {
+    background-color: #4a154b;
+    transition: background-color 0.3s ease-in-out;
 }
