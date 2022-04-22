@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default class SessionForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { email: "", password: "", title:"", displayName:""};
+        this.state = { email: "", password: "", title:"", display_name:""};
 
         this.handleInput = this.handleInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,7 +28,7 @@ export default class SessionForm extends React.Component {
     render() {
         const errors = this.props.errors;
         let sidebarHeading = (this.props.formType === "login" ? "New to Slack?" 
-            : "Alreadyy have an account?");
+            : "Already have an account?");
         let formHeaderLinkTo = this.props.formType === "login" ? "signup" : "login";
         let formHeaderLinkLabel = (this.props.formType === "login" ? 
             "Create an account" : "Sign in");
@@ -44,7 +44,7 @@ export default class SessionForm extends React.Component {
                     type="text" 
                     value={this.state.displayName} 
                     placeholder="display name" 
-                    onChange={this.handleInput("displayName")} 
+                    onChange={this.handleInput("display_name")} 
                 />
             </div>
             <div>
