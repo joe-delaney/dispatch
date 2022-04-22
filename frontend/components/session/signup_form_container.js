@@ -12,4 +12,5 @@ const mapDispatchToProps = (dispatch) => ({
     receiveErrors: (errors) => dispatch(receiveErrors(errors))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
+const SignupFormContainer = connect(mapStateToProps, mapDispatchToProps)(SessionForm);
+export default SignupFormContainer;
