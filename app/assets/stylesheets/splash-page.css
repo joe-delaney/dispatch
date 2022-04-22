@@ -3,17 +3,102 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 12vw;
 }
 
 .welcome-slack-logo {
     width: 125px;
+    padding-right: 2rem;
 }
 
-.welcome-nav-bar-links {
+.welcome-nav-bar-buttons {
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
 }
 
 .top-splash-page-section {
-    background-color: #4a154b !important;
+    background-color: #f6efe8 !important;
+}
+
+.try-demo {
+    background-color: #611f69;
+    color: white;
+    margin-left: 1.25rem;
+    border: none;
+    padding: 0.75rem 1.0rem;
+    margin: 0px 0px 0px 20px;
+
+}
+
+.try-demo:hover {
+    background-color: #45164a;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sign-up {
+    margin-left: .5rem;
+    color: #611f69;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    fill: #611f69;
+    box-shadow: inset 0 0 0 1px #611f69;
+    background: 0 0;
+}
+
+.sign-up:hover {
+    box-shadow: inset 0 0 0 1.75px #611f69;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.welcome-nav-bar-button {
+    display: inline-block;
+    white-space: nowrap;
+    flex-basis: auto;
+    width: auto;
+    font-size: .875rem;
+    cursor:pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    line-height: 1.2857;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: .8px;
+    font-family: Arial;
+}
+
+.welcome-nav-bar-heading {
+    display: inline-block;
+    color: #1d1d1d;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: .9375rem;
+    margin-right: 1.875rem;
+    white-space: nowrap;
+}
+
+.welcome-nav-bar-heading:hover {
+    text-decoration: underline;
+    transition: text-decoration 0.5s ease-in-out;
+}
+
+.welcome-nav-bar-left-section {
+    display: flex;
+}
+
+.personal-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0px;
+}
+
+.splash-page {
+    margin: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial;
 }

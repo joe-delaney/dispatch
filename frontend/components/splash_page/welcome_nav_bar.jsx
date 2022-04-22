@@ -9,10 +9,18 @@ const WelcomeNavBar = ({currentUser, logout}) => {
         </div>
     ) : (
         <div className="welcome-nav-bar">
-            <img src="https://cdn.bfldr.com/5H442O3W/at/pljt3c-dcwb20-c19uuy/Slack_RGB_White.svg?auto=webp&format=png" className="welcome-slack-logo"/>
-            <div className="welcome-nav-bar-links">
-                <Link to="/signup">Sign Up</Link>
-                <Link to="/login">Login</Link>
+            <div className="welcome-nav-bar-left-section">
+                <img src="https://cdn.bfldr.com/5H442O3W/at/pl546j-7le8zk-btwjnu/Slack_RGB.png?auto=webp&format=png" className="welcome-slack-logo" />
+                <ul className="personal-links">
+                    <a className="welcome-nav-bar-heading" href="#">Portfolio</a>
+                    <a className="welcome-nav-bar-heading" href="#">LinkedIn</a>
+                    <a className="welcome-nav-bar-heading" href="#">Github</a>
+                </ul>
+            </div>
+            <div className="welcome-nav-bar-buttons">
+                <Link to="/login" className="welcome-nav-bar-heading">Sign in</Link>
+                <Link to="/signup" className="welcome-nav-bar-button sign-up">Sign Up Here</Link>
+                <button className="welcome-nav-bar-button try-demo">Try a Demo</button>
             </div>
         </div>
     )
