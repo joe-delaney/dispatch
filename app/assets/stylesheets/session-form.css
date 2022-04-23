@@ -35,6 +35,10 @@
     font-size: 13px;
 }
 
+.form-header-link:hover {
+    text-decoration: underline;
+}
+
 .form-main-section {
     display: flex;
     flex-grow: 1;
@@ -112,4 +116,34 @@
 .form-button:hover {
     background-color: #4a154b;
     transition: background-color 0.3s ease-in-out;
+}
+
+.form-session-error {
+    border-radius: 4px;
+    background-color: rgba(224,30,90,.1);
+    border: 1px solid rgba(224,30,90,.4);
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+    height: 44px;
+    margin-bottom: 16px;
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-family: Lato;
+}
+
+.form-session-error-icon {
+    margin-right: 8px;
+    margin-left: 8px;
+    padding-bottom: 8px;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    color: #e01e5a
+}
+
+.form-session-error-message {
+    font-family: Lato;
 }

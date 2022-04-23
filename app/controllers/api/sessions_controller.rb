@@ -7,10 +7,8 @@ class Api::SessionsController < ApplicationController
         if @user.nil?
             if params[:user][:email] == ""
                 render json: ['Please fill in your email'], status: 401
-            elsif !User.find_by(email: params[:user][:email])
-                render json: ['No user found with this email'], status: 401
             else
-                render json: ['Invalid credentials'], status: 401
+                render json: ['Invalid credentials. Please try again.'], status: 401
             end
         else 
             login_user!(@user)

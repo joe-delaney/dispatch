@@ -10,6 +10,10 @@ export default class SessionForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        this.props.clearErrors();
+    }
+
     handleInput(type) {
         return (e) => (
             this.setState({
@@ -113,7 +117,10 @@ export default class SessionForm extends React.Component {
                     />
                 </form>
             </section>
-            {errors.map(error => <p>{error}</p>)}
+            {errors.map(error => <div className="form-session-error">
+                                    <p className="form-session-error-icon">⚠</p>
+                                    <p  className="form-session-error-message">{error}</p>
+                                </div>)}
             </div>
         )
     }

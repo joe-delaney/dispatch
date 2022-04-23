@@ -30,6 +30,7 @@ gem 'pry-rails'
 gem 'annotate'
 gem 'jquery-rails'
 gem 'figaro'
+gem 'font-awesome-less'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
