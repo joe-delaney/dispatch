@@ -7,7 +7,7 @@ import GetStartedSplashPageSection from "./get_started_splash_page_section";
 const SplashPage = ({currentUser, logout, demoClicked}) => {
     return (
         <div className="splash-page">
-            <section>
+            <section className="sticky">
                 <WelcomeNavBar logout={logout} currentUser={currentUser} demoClicked={demoClicked}/>
             </section>
             <section>
