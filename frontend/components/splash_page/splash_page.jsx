@@ -8,7 +8,7 @@ const SplashPage = ({currentUser, logout, demoClicked}) => (
             <WelcomeNavBar logout={logout} currentUser={currentUser} demoClicked={demoClicked}/>
         </section>
         <section>
-            <MainSplashPageSection currentUser={currentUser}/>
+            <MainSplashPageSection currentUser={currentUser} demoClicked={demoClicked}/>
         </section>
     </div>
 );
