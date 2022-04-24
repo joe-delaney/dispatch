@@ -161,6 +161,10 @@
     max-width: none;
 }
 
+.splash-page-details-container {
+    margin-bottom: 3rem;
+}
+
 .splash-page-details-section {
     align-items: flex-start;
     justify-content: space-between;
@@ -294,5 +298,78 @@
     width: 100%;
 }
 
+.get-started-section {
+    padding: 0 16vw;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
 
+.get-started-header {
+    text-align: center;
+}
+
+.get-started-h2 {
+    font-size: 3.125rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 1.1875;
+    letter-spacing: -.8px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.get-started-instructions {
+    grid-template-columns: repeat(3,1fr);
+    display: grid;
+    padding: 24px 0px 0px;
+    grid-gap: 2rem;
+}
+
+.get-started-instruction {
+    padding: 2rem;
+}
+
+.get-started-instruction-label {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #4a154b;
+    color: white;
+    margin-top:0;
+    width: 40px;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-started-h3 {
+    font-weight: 700;
+    font-size: 1.125rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.444;
+    letter-spacing: normal;
+
+}
+
+.get-started-signup-link {
+    color: #1264a3;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px solid #1264a3;
+    word-break: break-word;
+}
+
+.get-started-p {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.444;
+    letter-spacing: normal;
+}
 

@@ -7,7 +7,7 @@ import splashPageDetails4 from "./../../../app/assets/images/splash-page-details
 const DetailsSplashPageSection = () => {
 
     return (
-        <div>
+        <div className="splash-page-details-container">
             <div className="splash-page-details-section logged-out">
                 <div className="splash-page-details-section-left">
                     <img className="splash-page-details-image-1" src={splashPageDetails1} alt="Build a better tomorrow" />

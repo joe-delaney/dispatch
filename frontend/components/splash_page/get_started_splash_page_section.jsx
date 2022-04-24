@@ -1,0 +1,43 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const GetStartedSplashPageSection = () => (
+    <div className="get-started-section  logged-out">
+        <header className="get-started-header">
+            <h2 className="get-started-h2">Get started with Slack</h2>
+        </header>
+        <div className="get-started-instructions">
+            <div className="get-started-instruction">
+                <div className="get-started-instruction-label">
+                    <p>1</p>
+                </div>
+                <h3 className="get-started-h3">Sign Up</h3>
+                <p className="get-started-p">
+                    <Link to="/signup" className="get-started-signup-link">Sign up for Slack</Link> in just a few moments. It's free to try for teams of any size.
+                </p>
+            </div>
+            <div className="get-started-instruction">
+                <div className="get-started-instruction-label">
+                    <p>2</p>
+                </div>
+                <h3 className="get-started-h3">Invite your coworkers</h3>
+                <p className="get-started-p">
+                    Slack is better together (no, really, it’s a bit underwhelming by yourself), and it’s easy to invite your team.
+                </p>
+            </div>
+            <div className="get-started-instruction">
+                <div className="get-started-instruction-label">
+                    <p>3</p>
+                </div>
+                <h3 className="get-started-h3">Try it out</h3>
+                <p className="get-started-p">
+                    Run a project, coordinate with your team, or just talk it out. Slack is a blank canvas for teamwork.
+                </p>
+            </div>
+        </div>
+    </div>
+)
+
+
+
+export default GetStartedSplashPageSection;
