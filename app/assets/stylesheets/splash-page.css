@@ -194,7 +194,7 @@
     overflow: visible;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -212,8 +212,15 @@
     text-decoration: none;
     padding: 19px 40px 20px;
     font-family: Arial;
-    width: 100%;
 }
+
+@media screen and (min-width: 0) and (max-width: 1023px) {
+    .splash-page-section-main-button {
+        margin-top: 0;
+        width: 100%;
+    }
+}
+
 
 .try-demo-main {
     background-color: #611f69;
@@ -221,9 +228,7 @@
     display: inline-block;
     white-space: nowrap;
     flex-basis: auto;
-    width: auto;
     border: none;
-    margin-right: 10px;
 }
 
 .signup-main {
