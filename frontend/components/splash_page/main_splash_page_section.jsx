@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import img from "../../../app/assets/images/splash-page-main-logged-out.jpg"
+import mainSectionImage from "../../../app/assets/images/img-campaign-hero.png"
 
 const MainSplashPageSection = ({demoClicked}) => {
 
@@ -15,6 +15,7 @@ const MainSplashPageSection = ({demoClicked}) => {
                 </div>
             </div>
             <div className="splash-page-section-main-right">
+                <img className="splash-page-main-section-image" src={mainSectionImage} />
             </div>
         </div>
     )

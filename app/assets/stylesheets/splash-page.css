@@ -194,8 +194,10 @@
     overflow: visible;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 30rem;
+    margin-bottom: 2rem;
 }
 
 .splash-page-section-main-button {
@@ -210,17 +212,10 @@
     font-size: .875rem;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 19px 40px 20px;
     font-family: Arial;
+    max-width: 30rem;
+    width: 100%;
 }
-
-@media screen and (min-width: 0) and (max-width: 1023px) {
-    .splash-page-section-main-button {
-        margin-top: 0;
-        width: 100%;
-    }
-}
-
 
 .try-demo-main {
     background-color: #611f69;
@@ -229,6 +224,12 @@
     white-space: nowrap;
     flex-basis: auto;
     border: none;
+    padding: 19px 40px 20px;
+}
+
+.try-demo-main:hover {
+    background-color: #4a154b;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .signup-main {
@@ -237,13 +238,18 @@
     position: relative;
     box-shadow: inset 0 0 0 1px #611f69;
     fill: #611f69;
+    padding: 19px 0 20px;
+    margin-top: 10px;
 }
 
-@media screen and (min-width: 48rem) and (max-width: 1172px) {
-    .splash-page-section-main-buttons {
-        display: flex;
-        flex-direction: column;
-    }
+.signup-main:hover {
+    box-shadow: inset 0 0 0 2px #611f69;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.splash-page-main-section-image {
+    width: 100%;
+    height: auto;
 }
 
 
