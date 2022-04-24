@@ -301,7 +301,7 @@
 .get-started-section {
     padding: 0 16vw;
     padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
 }
 
 .get-started-header {
@@ -371,5 +371,84 @@
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.444;
     letter-spacing: normal;
+}
+
+.splash-page-final-section {
+    background: #4a154b;
+    border: none;
+    clip-path: ellipse(75% 100% at center top);
+    height: auto;
+    min-height: 260px;
+    padding-top: 5rem;
+}
+
+.splash-page-final-section-content {
+    padding: 0 16vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.splash-page-final-section-h3 {
+    color: #FFF;
+    margin-bottom: 2rem;
+    font-size: 3.125rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 1.1875;
+    letter-spacing: -.8px;
+    margin-top: 0;
+}
+
+.splash-page-final-section-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.splash-page-final-section-button {
+    appearance: none;
+    background: 0 0;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.2857;
+    letter-spacing: .8px;
+    font-size: .875rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Arial;
+    width: auto;
+}
+
+.try-demo-final {
+    color: #4a154b;
+    background-color: white;
+    display: inline-block;
+    white-space: nowrap;
+    flex-basis: auto;
+    border: none;
+    padding: 19px 40px 20px;
+    margin-right: 10px;
+}
+
+.try-demo-final:hover {
+    box-shadow: inset 0 0 0 2px #4a154b;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.signup-final {
+    background-color: #4a154b;
+    color: white;
+    box-shadow: inset 0 0 0 1px white;
+    fill: #4a154b;
+    padding: 19px 40px 20px;
+}
+
+.signup-final:hover {
+    box-shadow: inset 0 0 0 2px white;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
