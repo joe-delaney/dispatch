@@ -13,6 +13,9 @@ const UserDashboardSidebar = () => (
                     <img src={composeIcon} alt="compose icon" />
                 </button>
             </div>
+            <div className="user-dashboard-sidebar-main">
+
+            </div>
         </div>
     </div>
 )
