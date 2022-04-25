@@ -14,7 +14,7 @@ const WelcomeNavBar = ({currentUser, logout, demoClicked}) => {
                 </ul>
             </div>
             <div className="welcome-nav-bar-buttons">
-                <Link to="/" className="welcome-nav-bar-button launch-slack-nav">Launch Slack</Link>
+                <Link to="/user-dashboard" className="welcome-nav-bar-button launch-slack-nav">Launch Slack</Link>
                 <button onClick={logout} className="welcome-nav-bar-button sign-out">Sign out of Slack</button>
             </div>
         </div>

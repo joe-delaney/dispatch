@@ -25,7 +25,7 @@ const MainSplashPageSection = ({demoClicked, currentUser}) => {
                             <span className="welcome-back-user-display-name">{currentUser.displayName}</span>
                             <span className="welcome-back-user-title">{title}</span>
                         </div>
-                        <Link to="/" className="welcome-back-launch-slack">Launch Slack</Link>
+                        <Link to="/user-dashboard" className="welcome-back-launch-slack">Launch Slack</Link>
                     </div>
 
                 </div>

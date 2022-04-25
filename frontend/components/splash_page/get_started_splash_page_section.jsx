@@ -44,7 +44,7 @@ const GetStartedSplashPageSection = ({demoClicked, currentUser, logout}) => {
             <div className="splash-page-final-section-content">
                 <h3 className="splash-page-final-section-h3">Welcome to where the future works</h3>
                 <div className="splash-page-final-section-buttons">
-                    <button onClick={demoClicked} className="splash-page-final-section-button try-demo-final">Launch Slack</button>
+                    <Link to="/user-dashboard" className="splash-page-final-section-button try-demo-final">Launch Slack</Link>
                     <button onClick={logout} className="splash-page-final-section-button signup-final">Sign Out of Slack</button>
                 </div>
             </div>
