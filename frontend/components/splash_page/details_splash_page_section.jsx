@@ -14,7 +14,7 @@ const DetailsSplashPageSection = ({currentUser}) => {
         <div className="splash-page-details-container">
             <div className={backgroundColor}>
                 <div className="splash-page-details-section-left">
-                    <img className="splash-page-details-image-1" src={splashPageDetails1} alt="Build a better tomorrow" />
+                    <img className="splash-page-details-image-1" src={window.splashPageDetails1} alt="Build a better tomorrow" />
                 </div>
                 <div className="splash-page-details-section-right">
                     <h2 className={textColorh2}>Now is your moment to build a better tomorrow</h2>
