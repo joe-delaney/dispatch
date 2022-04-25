@@ -6,6 +6,7 @@
     grid-template-rows: 44px 1fr;
 }
 
+/* User Dashboard Nav Bar */
 .user-dashboard-nav-bar {
     background: #121016;
     box-shadow: 0 1px 0 0 rgb(209 210 211 / 10%);
@@ -17,6 +18,44 @@
     position: relative;
     color: #D1D2D3;
     z-index: 203;
+}
+
+.user-dashboard-nav-bar-left {
+    min-width: 0px;
+}
+
+.user-dashboard-nav-bar-center {
+    min-width: 0px;
+    width: 732px;
+    display: flex;
+    position:relative;
+    justify-content: flex-start;
+}
+
+.user-dashboard-nav-bar-search-input {
+    height: 26px;
+    min-width: 0;
+    width: 732px;
+    padding: 0 8px;
+    border-radius: 6px;
+    color: #D1D2D3;
+    background-color: rgba(209, 210, 211, 0.2);
+    box-shadow: 0 0 0 1px #525055;
+    border: none;
+    text-align: center;
+}
+
+.user-dashboard-nav-bar-search-input::placeholder {
+    color: #D1D2D3;
+    font-size: 13px;
+    line-height: 1.38463;
+    font-weight: 400;
+    font-family: FontAwesome, Lato;
+    
+}
+
+.user-dashboard-nav-bar-search-input:focus {
+    outline: none;
 }
 
 .user-dashboard-main {
