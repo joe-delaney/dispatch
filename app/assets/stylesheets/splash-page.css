@@ -191,6 +191,7 @@
     margin: 0 auto;
     max-width: none;
     padding-bottom: 2rem;
+    grid-gap: normal;
 }
 
 .splash-page-section-main-left {
