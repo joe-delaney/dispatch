@@ -10,7 +10,7 @@ export default class UserDashboard extends React.Component {
     render() {
         return (
             <div className="user-dashboard">
-                <UserDashboardNav/>
+                <UserDashboardNav searchUsers={this.props.searchUsers} userSearchResults={this.props.userSearchResults}/>
                 <UserDashboardMain/>
             </div>
         )

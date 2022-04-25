@@ -12,6 +12,12 @@ class Api::UsersController < ApplicationController
         end
     end
 
+    #This will be used for the user search feature
+    def index 
+        @users = User.search(params[:query])
+        render :index
+    end
+
     private
     def user_params
         params.require(:user).permit(:email, :password, :display_name, :title, :status)

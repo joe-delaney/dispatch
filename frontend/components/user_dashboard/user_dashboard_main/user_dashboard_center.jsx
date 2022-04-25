@@ -17,7 +17,6 @@ export default class UserDashboardCenter extends React.Component {
                     </div>
                 </div>
             </div>
-
         </div>
         )
     }

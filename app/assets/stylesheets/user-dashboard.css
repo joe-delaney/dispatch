@@ -194,7 +194,7 @@
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
-    color: white;
+    color: #D1D2D3;
     font-family: Lato;
     resize: none;
 }
@@ -210,7 +210,7 @@
 .send-message-button {
     margin-right: 20px;
     background-color: transparent;
-    color: white;
+    color: #D1D2D3;
     border: none;
     cursor: pointer;
 }
