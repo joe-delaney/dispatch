@@ -10,6 +10,6 @@ User.destroy_all
 
 puts "Creating users..."
 
-joe = User.create!(email: "joe@test.com", password: "123456", display_name: "Joe")
-sasha = User.create!(email: "sasha@test.com", password: "123456", display_name: "Sasha")
+joe = User.create!(email: "joe@test.com", password: "123456", display_name: "Joe", title: "Full Stack Engineer")
+sasha = User.create!(email: "sasha@test.com", password: "123456", display_name: "Sasha", title: "iOS Developer")
 

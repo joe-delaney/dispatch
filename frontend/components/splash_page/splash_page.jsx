@@ -12,7 +12,7 @@ const SplashPage = ({currentUser, logout, demoClicked}) => {
             </section>
             <section>
                 <MainSplashPageSection currentUser={currentUser} demoClicked={demoClicked}/>
-                <DetailsSplashPageSection />
+                <DetailsSplashPageSection currentUser={currentUser}/>
                 <GetStartedSplashPageSection demoClicked={demoClicked}/>
             </section>
         </div>

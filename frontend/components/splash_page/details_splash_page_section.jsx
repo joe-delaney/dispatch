@@ -4,17 +4,21 @@ import splashPageDetails2 from "./../../../app/assets/images/splash-page-details
 import splashPageDetails3 from "./../../../app/assets/images/splash-page-details/splash-page-details3.gif"
 import splashPageDetails4 from "./../../../app/assets/images/splash-page-details/splash-page-details4.gif"
 
-const DetailsSplashPageSection = () => {
+const DetailsSplashPageSection = ({currentUser}) => {
+
+    const backgroundColor = currentUser ? "splash-page-details-section logged-in" : "splash-page-details-section logged-out"
+    const textColorh2 = currentUser ? "splash-page-details-h2 white-text" : "splash-page-details-h2 black-text"
+    const textColorp = currentUser ? "splash-page-details-p white-text" : "splash-page-details-p black-text"
 
     return (
         <div className="splash-page-details-container">
-            <div className="splash-page-details-section logged-out">
+            <div className={backgroundColor}>
                 <div className="splash-page-details-section-left">
                     <img className="splash-page-details-image-1" src={splashPageDetails1} alt="Build a better tomorrow" />
                 </div>
                 <div className="splash-page-details-section-right">
-                    <h2 className="splash-page-details-h2">Now is your moment to build a better tomorrow</h2>
-                    <p className="splash-page-details-p">We've seen what the future can be. Now it's time to decide what it will be</p>
+                    <h2 className={textColorh2}>Now is your moment to build a better tomorrow</h2>
+                    <p className={textColorp}>We've seen what the future can be. Now it's time to decide what it will be</p>
                 </div>
             </div>
             <div className="splash-page-details-section">
