@@ -22,7 +22,6 @@
 .form-sidebar-heading {
     text-align: right;
     font-size: 13px;
-    color: rgba(var(--sk_foreground_max_solid,97,96,97),1);
     padding-right: 40px;
     display: block;
     font-family: Lato;
@@ -64,7 +63,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(var(--sk_primary_background,255,255,255),1);
     min-height: 100%;
 }
 
