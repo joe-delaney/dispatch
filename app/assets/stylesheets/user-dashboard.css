@@ -16,6 +16,7 @@
     justify-content: center;
     position: relative;
     color: #D1D2D3;
+    z-index: 203;
 }
 
 .user-dashboard-main {
@@ -50,6 +51,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: #19171D;
+    border-bottom: 1px solid #2B2A2F;
 }
 .user-dashboard-sidebar-logo{
     width: 100px;
@@ -89,37 +91,36 @@
     position: relative;
     min-width: 0;
     min-height: 0;
-    display: grid;
     grid-column: 2/-1;
+    border-left: 1px solid #2B2A30;
 }
 
 .user-dashboard-center-header  {
     background: #1B1D21;
-    height: 49px;
+    height: 50px;
     display: flex;
     align-items: center;
     padding: 0 16px 0 20px;
     box-shadow: 0 1px 0 0 #36373B;
     flex-shrink: 0;
     font-family: Lato;
+    z-index: 202;
 }
 
 .user-dashboard-center-main {
     display: flex;
     flex-direction: column;
-    flex: 1;
     position: relative;
     min-height: 0;
+    height: 100%; 
+    z-index: -1;
 }
 
 .user-dashboard-center-main-feed {
     background: #1B1D21;
-    height: auto;
-    top: -8px;
-    bottom: 0;
+    height: 100%;
     padding-left: 0;
     width: 100%;
-    position: absolute;
 }
 
 .user-dashboard-center-main-message-composer {
