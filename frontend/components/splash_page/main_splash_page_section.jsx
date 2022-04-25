@@ -6,8 +6,6 @@ import welcomeWaving from "../../../app/assets/images/welcome-waving.gif";
 const MainSplashPageSection = ({demoClicked, currentUser}) => {
 
     const title = currentUser && currentUser.title ? currentUser.title : "";
-    console.log(currentUser);
-
     const display = currentUser ? (
         <div className="splash-page-section-main-logged-in logged-in">
             <div className="welcome-back-header">
