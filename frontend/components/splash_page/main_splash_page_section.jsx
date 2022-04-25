@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import mainSectionImage from "../../../app/assets/images/img-campaign-hero.png";
-import welcomeWaving from "../../../app/assets/images/welcome-waving.gif";
 
 const MainSplashPageSection = ({demoClicked, currentUser}) => {
 
@@ -10,7 +8,7 @@ const MainSplashPageSection = ({demoClicked, currentUser}) => {
         <div className="splash-page-section-main-logged-in logged-in">
             <div className="welcome-back-header">
                 <h1 className="welcome-back-h1">
-                    <img className="waving-gif" src={welcomeWaving} alt="hello" />
+                    <img className="waving-gif" src={window.welcomeWaving} alt="hello" />
                     <span className="welcome-back-header-text">Welcome back</span>
                 </h1>
             </div>
@@ -40,7 +38,7 @@ const MainSplashPageSection = ({demoClicked, currentUser}) => {
                 </div>
             </div>
             <div className="splash-page-section-main-right">
-                <img className="splash-page-main-section-image" src={mainSectionImage} />
+                <img className="splash-page-main-section-image" src={window.mainSectionImage} />
             </div>
         </div>
     )
