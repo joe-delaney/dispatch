@@ -116,6 +116,8 @@ export default class SessionForm extends React.Component {
                         className="form-button" 
                     />
                 </form>
+                <span className="session-form-span">or</span>
+                <button onClick={this.props.demoClicked} className="form-button">Try a Demo</button>
             </section>
             {errors.map(error => <div className="form-session-error">
                                     <p className="form-session-error-icon">⚠</p>

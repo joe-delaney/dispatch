@@ -10,7 +10,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     processForm: (user) => dispatch(login(user)),
     receiveErrors: (errors) => dispatch(receiveErrors(errors)),
-    clearErrors: () => dispatch(clearErrors())
+    clearErrors: () => dispatch(clearErrors()),
+    demoClicked: () => dispatch(login({ email: "joe@test.com", password: "123456" }))
 })
 
 const LoginFormContainer = connect(mapStateToProps, mapDispatchToProps)(SessionForm);
