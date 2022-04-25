@@ -58,12 +58,48 @@
     outline: none;
 }
 
+.user-dashboard-nav-bar-search-results {
+    position: fixed;
+    width: 730px;
+    margin-top: 28px;
+    background-color: #1B1D21;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.user-dashboard-nav-search-result {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 4px 28px 4px 8px; 
+    height: 40px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.user-dashboard-nav-search-result:hover {
+    background-color: #1264A3 ;
+}
+
+.profile-img-nav-bar-search-result {
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+}
+
 .user-dashboard-main {
     display: grid;
     overflow: hidden;
     position: relative;
     grid-row: 2/-1;
     grid-template-columns: 306px 2fr;
+}
+
+.display-text-nav-bar-search-result {
+    color: white;
+    font-family: Lato;
 }
 
 /*User dashboard sidebar */
