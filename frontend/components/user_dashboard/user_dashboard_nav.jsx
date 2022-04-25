@@ -15,15 +15,8 @@ class UserDashboardNav extends React.Component {
         this.setState({
             query: e.target.value
         })
-        if(e.target.value = "")  {
-            this.props.clearSearchResults();
-            this.setState({
-                query: ""
-            })
-        } else {
-            console.log(this.state.query);
-            this.props.searchUsers(this.state.query);
-        }
+        console.log(e.target.value)
+        this.props.searchUsers(e.target.value);
     }
 
     render() {

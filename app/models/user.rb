@@ -43,7 +43,7 @@ class User < ApplicationRecord
         self.session_token
     end
 
-    def search(query) 
+    def self.search(query) 
         users = User.where("users.display_name ILIKE '%#{query}%'" )
         users
     end

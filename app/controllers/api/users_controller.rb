@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
     skip_before_action :verify_authenticity_token
-    before_action :redirect_if_logged_in
+    before_action :redirect_if_logged_in, only: :create
 
     def create 
         @user = User.new(user_params)
