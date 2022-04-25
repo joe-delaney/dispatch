@@ -3,7 +3,8 @@ import UserDashboard from "./user_dashboard";
 import { searchUsers, clearSearchResults } from "../../actions/search_actions";
 
 const mapStateToProps = (state, ownProps) => ({
-    userSearchResults: Object.values(state.entities.searchResults.users)
+    userSearchResults: Object.values(state.entities.searchResults.users),
+    currentUser: state.entities.users[state.session.currentUserId]
 })
 
 const mapDispatchToProps = dispatch => ({

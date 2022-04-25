@@ -10,6 +10,7 @@ class UserDashboardNav extends React.Component {
         }
 
         this.handleInput = this.handleInput.bind(this);
+        this.handleUserProfileClicked = this.handleUserProfileClicked.bind(this);
     }
 
     handleInput(e) {
@@ -21,6 +22,10 @@ class UserDashboardNav extends React.Component {
         } else {
             this.props.clearSearchResults();
         }
+    }
+
+    handleUserProfileClicked(e) {
+        console.log(this.props.currentUser);
     }
 
     render() {
@@ -37,7 +42,9 @@ class UserDashboardNav extends React.Component {
                         ))}
                     </ul>
                 </div>
-                <div className="user-dashboard-nav-bar-right"></div>
+                <div className="user-dashboard-nav-bar-right">
+                    <img onClick={this.handleUserProfileClicked} className="user-dashboard-nav-bar-profile-icon" src="https://cdn.bfldr.com/5H442O3W/at/pl546j-7le8zk-6gwiyo/Slack_Mark.svg?auto=webp&format=png" alt="" />
+                </div>
             </nav>
         )
     }
