@@ -21,7 +21,10 @@
 }
 
 .user-dashboard-nav-bar-left {
-    min-width: 0px;
+    min-width: 260px;
+    color: #121016;
+    flex-grow: 0;
+    width: 400px;
 }
 
 .user-dashboard-nav-bar-center {
@@ -29,7 +32,18 @@
     width: 732px;
     display: flex;
     position:relative;
-    justify-content: flex-start;
+    flex: 2;
+}
+
+.user-dashboard-nav-bar-right {
+    margin-left: 0 auto;
+    min-width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 16px;
+    padding-left: 32px;
+    position: relative;
 }
 
 .user-dashboard-nav-bar-search-input {
@@ -100,6 +114,12 @@
 .display-text-nav-bar-search-result {
     color: white;
     font-family: Lato;
+}
+
+.user-dashboard-nav-bar-profile-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 5px;
 }
 
 /*User dashboard sidebar */

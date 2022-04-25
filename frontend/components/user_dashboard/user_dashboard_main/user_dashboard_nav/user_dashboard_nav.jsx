@@ -33,7 +33,7 @@ class UserDashboardNav extends React.Component {
 
         return (
             <nav className="user-dashboard-nav-bar">
-                <div className="user-dashboard-nav-bar-left"></div>
+                <div className="user-dashboard-nav-bar-left">X</div>
                 <div className="user-dashboard-nav-bar-center">
                     <input onChange={this.handleInput} className="user-dashboard-nav-bar-search-input" type="text" value={this.state.query} placeholder="&#xF002;  Search Slack"/>
                     <ul className="user-dashboard-nav-bar-search-results">
