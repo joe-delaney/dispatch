@@ -44,7 +44,7 @@ class User < ApplicationRecord
     end
 
     def self.search(query) 
-        users = User.where("users.display_name ILIKE '%#{query}%'" )
+        users = User.where("users.display_name ILIKE '#{query}%'" )
         users
     end
 end
