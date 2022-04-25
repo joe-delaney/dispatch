@@ -430,8 +430,6 @@
 }
 
 .splash-page-final-section-button {
-    appearance: none;
-    background: 0 0;
     cursor: pointer;
     border-radius: 4px;
     text-align: center;
@@ -465,6 +463,7 @@
     background-color: #4a154b;
     color: white;
     box-shadow: inset 0 0 0 1px white;
+    border-width: 1px !important;
     fill: #4a154b;
     padding: 19px 40px 20px;
 }
@@ -576,3 +575,50 @@
     transition: box-shadow 0.3s ease-in-out;
 }
 
+.splash-page-footer {
+    padding-top: 3.5rem;
+    padding-bottom: 0;
+    padding: 0 16vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.splash-page-footer-logo {
+    width: 54px;
+    height: 54px;
+}
+
+.splash-page-footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.splash-page-footer-h3 {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+    font-size: .875rem;
+    height: 40px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.splash-page-footer-link {
+    color: #454245;
+    text-decoration: none;
+    font-size: .875rem;
+    height: 40px;
+    position: relative;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    word-break: break-word;
+}
+
+.splash-page-footer-link:hover {
+    text-decoration: underline;
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const GetStartedSplashPageSection = ({demoClicked}) => (
-    <div>
+const GetStartedSplashPageSection = ({demoClicked, currentUser, logout}) => {
+    const getStartedSection = currentUser ? <div></div> : (
         <div className="get-started-section  logged-out">
             <header className="get-started-header">
                 <h2 className="get-started-h2">Get started with Slack</h2>
@@ -37,6 +37,19 @@ const GetStartedSplashPageSection = ({demoClicked}) => (
                 </div>
             </div>
         </div>
+    )
+
+    const finalSection = currentUser ? (
+        <div className="splash-page-final-section">
+            <div className="splash-page-final-section-content">
+                <h3 className="splash-page-final-section-h3">Welcome to where the future works</h3>
+                <div className="splash-page-final-section-buttons">
+                    <button onClick={demoClicked} className="splash-page-final-section-button try-demo-final">Launch Slack</button>
+                    <button onClick={logout} className="splash-page-final-section-button signup-final">Sign Out of Slack</button>
+                </div>
+            </div>
+        </div>
+    ) : (
         <div className="splash-page-final-section">
             <div className="splash-page-final-section-content">
                 <h3 className="splash-page-final-section-h3">Welcome to where the future works</h3>
@@ -46,9 +59,14 @@ const GetStartedSplashPageSection = ({demoClicked}) => (
                 </div>
             </div>
         </div>
-    </div>
-)
+    )
 
-
+    return (
+        <div>
+            {getStartedSection}
+            {finalSection}
+        </div>
+    )
+}
 
 export default GetStartedSplashPageSection;
