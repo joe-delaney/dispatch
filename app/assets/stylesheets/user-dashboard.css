@@ -23,15 +23,51 @@
     overflow: hidden;
     position: relative;
     grid-row: 2/-1;
-    grid-template-columns: 16.25rem 2fr;
+    grid-template-columns: 306px 2fr;
 }
 
+/*User dashboard sidebar */
 .user-dashboard-sidebar {
     overflow: auto;
     display: grid;
     position: relative;
     grid-column: 1/2;
+}
+
+.user-dashboard-sidebar-contents {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+}
+.user-dashboard-sidebar-header{
+    color: #D1D2D3;
+    height: 50px;
+    font-size: 18px;
+    line-height: 1.33334;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #19171D;
+}
+.user-dashboard-sidebar-logo{
+    width: 100px;
+    margin-left: 8px;
+}
+.new-message-button {
+    height: 34px;
+    width: 34px;
+    top: 8px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #19171D;
+    background: white;
+    border: none;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .user-dashboard-center {
