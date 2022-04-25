@@ -6,8 +6,6 @@ import welcomeWaving from "../../../app/assets/images/welcome-waving.gif";
 const MainSplashPageSection = ({demoClicked, currentUser}) => {
 
     const title = currentUser && currentUser.title ? currentUser.title : "";
-    console.log(currentUser);
-
     const display = currentUser ? (
         <div className="splash-page-section-main-logged-in logged-in">
             <div className="welcome-back-header">
@@ -25,7 +23,7 @@ const MainSplashPageSection = ({demoClicked, currentUser}) => {
                             <span className="welcome-back-user-display-name">{currentUser.displayName}</span>
                             <span className="welcome-back-user-title">{title}</span>
                         </div>
-                        <Link to="/" className="welcome-back-launch-slack">Launch Slack</Link>
+                        <Link to="/user-dashboard" className="welcome-back-launch-slack">Launch Slack</Link>
                     </div>
 
                 </div>

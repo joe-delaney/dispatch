@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
     skip_before_action :verify_authenticity_token
-    before_action :redirect_if_logged_in
+    before_action :redirect_if_logged_in, only: :create
 
     def create 
         @user = User.new(user_params)
@@ -10,6 +10,12 @@ class Api::UsersController < ApplicationController
         else
             render json: @user.errors.full_messages, status: 401
         end
+    end
+
+    #This will be used for the user search feature
+    def index 
+        @users = User.search(params[:query])
+        render :index
     end
 
     private

@@ -1,0 +1,216 @@
+.user-dashboard {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 44px 1fr;
+}
+
+/* User Dashboard Nav Bar */
+.user-dashboard-nav-bar {
+    background: #121016;
+    box-shadow: 0 1px 0 0 rgb(209 210 211 / 10%);
+    grid-row: 1/2;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #D1D2D3;
+    z-index: 203;
+}
+
+.user-dashboard-nav-bar-left {
+    min-width: 0px;
+}
+
+.user-dashboard-nav-bar-center {
+    min-width: 0px;
+    width: 732px;
+    display: flex;
+    position:relative;
+    justify-content: flex-start;
+}
+
+.user-dashboard-nav-bar-search-input {
+    height: 26px;
+    min-width: 0;
+    width: 732px;
+    padding: 0 8px;
+    border-radius: 6px;
+    color: #D1D2D3;
+    background-color: rgba(209, 210, 211, 0.2);
+    box-shadow: 0 0 0 1px #525055;
+    border: none;
+    text-align: center;
+}
+
+.user-dashboard-nav-bar-search-input::placeholder {
+    color: #D1D2D3;
+    font-size: 13px;
+    line-height: 1.38463;
+    font-weight: 400;
+    font-family: FontAwesome, Lato;
+    
+}
+
+.user-dashboard-nav-bar-search-input:focus {
+    outline: none;
+}
+
+.user-dashboard-main {
+    display: grid;
+    overflow: hidden;
+    position: relative;
+    grid-row: 2/-1;
+    grid-template-columns: 306px 2fr;
+}
+
+/*User dashboard sidebar */
+.user-dashboard-sidebar {
+    overflow: auto;
+    display: grid;
+    position: relative;
+    grid-column: 1/2;
+}
+
+.user-dashboard-sidebar-contents {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+}
+.user-dashboard-sidebar-header{
+    color: #D1D2D3;
+    height: 50px;
+    font-size: 18px;
+    line-height: 1.33334;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #19171D;
+    border-bottom: 1px solid #2B2A2F;
+}
+.user-dashboard-sidebar-logo{
+    width: 100px;
+    margin-left: 8px;
+}
+.new-message-button {
+    height: 34px;
+    width: 34px;
+    top: 8px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #19171D;
+    background: white;
+    border: none;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-dashboard-sidebar-main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: auto;
+    width: 100%;
+    min-height: 0;
+    font-size: 15px;
+    color: rgb(163, 163, 166);
+    background-color: #19171D;
+}
+
+
+/* User Dashboard center */
+.user-dashboard-center {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    grid-column: 2/-1;
+    border-left: 1px solid #2B2A30;
+}
+
+.user-dashboard-center-header  {
+    background: #1B1D21;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px 0 20px;
+    border-bottom: 1px solid #36373B;
+    flex-shrink: 0;
+    font-family: Lato;
+}
+
+.user-dashboard-center-main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 0;
+    height: 100%; 
+}
+
+.user-dashboard-center-main-feed {
+    background: #1B1D21;
+    height: 100%;
+    padding-left: 0;
+    width: 100%;
+}
+
+.user-dashboard-center-main-message-composer {
+    height: 240px;
+    background-color: #1B1D21;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.user-dashboard-message-container {
+    border-radius: 8px;
+    font-family: Lato;
+    border-color: #565856;
+    background-color: #232529;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 118px;
+    align-items: center;
+}
+
+.user-dashboard-message-container:focus {
+    border-color: white;
+}
+
+.message-input {
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    color: #D1D2D3;
+    font-family: Lato;
+    resize: none;
+}
+
+.message-input:focus {
+    outline: none;
+}
+
+.message-input::placeholder {
+    color: #58595C;
+}
+
+.send-message-button {
+    margin-right: 20px;
+    background-color: transparent;
+    color: #D1D2D3;
+    border: none;
+    cursor: pointer;
+}
