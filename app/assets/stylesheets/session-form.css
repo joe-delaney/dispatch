@@ -82,7 +82,7 @@
     font-size: 18px;
     line-height: 1.33333333;
     border-radius: 4px;
-    border: 1px solid rgba(29,28,29,.3);
+    border: 1px solid #1d1c1d4d;
     box-sizing: border-box;
     margin: 0 0 20px;
     width: 400px;
@@ -118,8 +118,8 @@
 
 .form-session-error {
     border-radius: 4px;
-    background-color: rgba(224,30,90,.1);
-    border: 1px solid rgba(224,30,90,.4);
+    background-color: #e01e5a1a;
+    border: 1px solid #e01e5a66;
     font-weight: 400;
     display: flex;
     justify-content: flex-start;

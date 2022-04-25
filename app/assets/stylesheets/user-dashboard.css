@@ -9,7 +9,7 @@
 /* User Dashboard Nav Bar */
 .user-dashboard-nav-bar {
     background: #121016;
-    box-shadow: 0 1px 0 0 rgb(209 210 211 / 10%);
+    box-shadow: 0 1px 0 0 #d1d2d31a;
     grid-row: 1/2;
     min-width: 0;
     display: flex;
@@ -39,7 +39,7 @@
     padding: 0 8px;
     border-radius: 6px;
     color: #D1D2D3;
-    background-color: rgba(209, 210, 211, 0.2);
+    background-color: #d1d2d333;
     box-shadow: 0 0 0 1px #525055;
     border: none;
     text-align: center;
@@ -120,7 +120,7 @@
     width: 100%;
     min-height: 0;
     font-size: 15px;
-    color: rgb(163, 163, 166);
+    color: #a3a3a6;
     background-color: #19171D;
 }
 
