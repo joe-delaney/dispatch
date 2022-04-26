@@ -64,7 +64,7 @@ export default class UserEditModal extends React.Component {
                             <div className="user-edit-modal-input-container">
                                 <label for="statusInput" className="user-edit-modal-input-label">Status</label>
                                 <input id="statusInput" className="user-edit-modal-input" type="text" value={this.state.status} onChange={this.handleInput("status")} placeholder="status (optional)" />
-                                <span className="user-edit-modal-input-description">What's your current status?</span>
+                                <span className="user-edit-modal-input-description">Let people know what you are currently up to.</span>
                             </div>
                         </div>
                         <div className="user-edit-modal-image-container">
