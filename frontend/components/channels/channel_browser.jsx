@@ -11,11 +11,13 @@ export default class ChannelBrowser extends React.Component {
 
     render()  {
         return (
-            <ul>
-                {this.props.channels.map((channel) => (
+            <div>
+                <ul>
+                    {this.props.channels.map((channel) => (
                     <li>{channel.name}</li>
-                ))}
-            </ul>
+                    ))}
+                </ul>
+            </div>     
         )
     }
 }
