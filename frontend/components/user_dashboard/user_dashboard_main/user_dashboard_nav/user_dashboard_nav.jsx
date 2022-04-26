@@ -59,12 +59,16 @@ class UserDashboardNav extends React.Component {
                                 <span className="user-dashboard-nav-bar-profile-dropdown-title">{title}</span>
                             </div>
                         </div>
-                        <div className="user-dashboard-nav-profile-dropdown-links">
-                            <Link to={`/user-dashboard/users/${this.props.currentUser.id}`} className="user-dashboard-nav-bar-profile-dropdown-view-profile">
-                                <span onClick={this.toggleDropdown}>View Profile</span> 
-                            </Link>
-                            <button onClick={this.props.logout} className="user-dashboard-nav-bar-profile-dropdown-view-profile">Sign out of Slack</button>
-                        </div>
+                        <ul className="user-dashboard-nav-profile-dropdown-links">
+                            <li className="dropdown-link">
+                                <Link to={`/user-dashboard/users/${this.props.currentUser.id}`} className="user-dashboard-nav-bar-profile-dropdown-view-profile">
+                                    <span onClick={this.toggleDropdown}>View Profile</span> 
+                                </Link>
+                            </li>
+                            <li className="dropdown-link">
+                                <button onClick={this.props.logout} className="user-dashboard-nav-bar-profile-dropdown-view-profile">Sign out of Slack</button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
