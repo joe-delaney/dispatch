@@ -8,7 +8,9 @@ export default class UserDashboardCenter extends React.Component {
             </div>
             <div className="user-dashboard-center-main">
                 <div className="user-dashboard-center-main-feed">
-
+                    {/* <Switch>
+                        <Route path="/user-dashboard/test"  render={() => <h1>TEST</h1> }></Route>
+                    </Switch>  */}
                 </div>
                 <div className="user-dashboard-center-main-message-composer">
                     <div className="user-dashboard-message-container">
