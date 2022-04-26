@@ -21,6 +21,10 @@
     box-shadow: 0 0 2px #999999;
 }
 
+.user-edit-container-error-active {
+    height: 580px !important;
+}
+
 .close-edit-user-modal-button {
     color: #D1D2D3;
     height: 1.2rem;
@@ -127,6 +131,14 @@
     outline: none;
 }
 
+.edit-error-active:focus {
+    box-shadow: 0 0px 5px #e01e5a  !important;
+}
+
+.edit-error-active {
+    border: 1px solid #e01e5a !important;
+}
+
 .user-edit-modal-input-description {
     color: #ABABAD;
     margin: 4px 0 20px;
@@ -169,4 +181,29 @@
 .user-save-changes {
     background: #007a5a;
     color: #fff;
+}
+
+.edit-error {
+    display: flex;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.edit-error-icon {
+    color:#e01e5a;
+    height: 15px;
+    width: 15px;
+    margin-right: .5rem;
+}
+
+.edit-error-message {
+    color:#e01e5a;
+    cursor:pointer;
+}
+
+.description-error-active {
+    margin-bottom: 0;
 }
