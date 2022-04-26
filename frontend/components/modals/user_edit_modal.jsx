@@ -59,7 +59,6 @@ export default class UserEditModal extends React.Component {
                  <p className="edit-error-icon">⚠</p>
                  <label for="displayNameInput" className="edit-error-message">Unfortunately, you can’t leave this blank.</label>
             </div>) : "";
-
         const inputErrorActive = !this.state.display_name.length ? "edit-error-active" : "";
         const descriptionErrorActive = !this.state.display_name.length ? "description-error-active" : "";
         const containerErrorActive = !this.state.display_name.length ? "user-edit-container-error-active" : "";
