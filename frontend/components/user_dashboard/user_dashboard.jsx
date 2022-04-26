@@ -15,6 +15,7 @@ export default class UserDashboard extends React.Component {
                     userSearchResults={this.props.userSearchResults} 
                     clearSearchResults={this.props.clearSearchResults} 
                     currentUser={this.props.currentUser}
+                    logout={this.props.logout}
                 />
                 <UserDashboardMain/>
             </div>

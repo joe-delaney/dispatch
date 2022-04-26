@@ -119,6 +119,69 @@
     width: 26px;
     height: 26px;
     border-radius: 5px;
+    cursor:pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.user-dashboard-nav-profile-dropdown {
+    position: fixed;
+    margin-top: 170px;
+    margin-left: 5px;
+    width: 250px;
+    height: 110px;
+    background-color: #1A1D21;
+    color: white;
+    border: 1px solid #38393D;
+    border-radius: 5px;
+    padding: 12px 0;
+    font-family: Lato;
+}
+
+.user-dashboard-nav-bar-profile-dropdown-details {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.user-dashboard-nav-bar-profile-dropdown-icon {
+    width: 28px;
+    height: 28px;
+    margin-left: 20px;
+}
+
+.user-dashboard-nav-bar-profile-dropdown-labels {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.user-dashboard-nav-bar-profile-dropdown-displayName {
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.user-dashboard-nav-bar-profile-dropdown-title {
+    font-size: 13px;
+    color: #626365;
+}
+
+.user-dashboard-nav-profile-dropdown-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-dashboard-nav-bar-profile-dropdown-view-profile {
+    font-size: 15px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #D1D2D3;
+    font-family: Lato;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /*User dashboard sidebar */
