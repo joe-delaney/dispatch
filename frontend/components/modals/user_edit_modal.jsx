@@ -14,7 +14,7 @@ export default class UserEditModal extends React.Component {
 
         this.state = {
             id: this.currentUser.id,
-            displayName: this.currentUser.displayName,
+            display_name: this.currentUser.displayName,
             title: this.title,
             status: this.status
         }
@@ -60,7 +60,7 @@ export default class UserEditModal extends React.Component {
                         <div className="user-edit-modal-inputs">
                             <div className="user-edit-modal-input-container">
                                 <label for="displayNameInput" className="user-edit-modal-input-label">Display Name</label>
-                                <input id="displayNameInput" className= "user-edit-modal-input" type="text" value={this.state.displayName} onChange={this.handleInput("displayName")} />
+                                <input id="displayNameInput" className= "user-edit-modal-input" type="text" value={this.state.display_name} onChange={this.handleInput("display_name")} />
                                 <span className="user-edit-modal-input-description">This could be your first name, or a nickname — however you’d like people to refer to you in Slack.</span>
                             </div>
                             <div className="user-edit-modal-input-container">
@@ -77,7 +77,7 @@ export default class UserEditModal extends React.Component {
                         <div className="user-edit-modal-image-container">
                             <strong className="user-edit-modal-input-label">Profile Photo</strong>
                             <div className="user-edit-image">
-                                <strong className="user-edit-initial">{this.state.displayName[0]}</strong>
+                                <strong className="user-edit-initial">{this.state.display_name[0]}</strong>
                             </div>
                         </div>
                     </div>
