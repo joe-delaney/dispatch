@@ -4,4 +4,9 @@ class Channel < ApplicationRecord
     belongs_to :channel_creator,
         foreign_key: :creator_id,
         class_name: :User
+
+    def self.search(query) 
+        channels = Channel.where("channels.name ILIKE '#{query}%'")
+        channels
+    end
 end
