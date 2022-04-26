@@ -100,7 +100,7 @@
     background-color: #611f69;
     border: none;
     margin-bottom: 20px;
-    width: 400px;
+    width: 370px;
     font-size: 18px;
     font-weight: 900;
     height: 44px;
@@ -109,6 +109,7 @@
     text-decoration: none;
     font-family: Lato;
     border-radius: 4px;
+    text-align: center;
 }
 
 .form-button:hover {

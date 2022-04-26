@@ -257,7 +257,8 @@
     white-space: nowrap;
     flex-basis: auto;
     border: none;
-    padding: 19px 40px 20px;
+    padding-top: 19px;
+    padding-bottom: 20px;
 }
 
 .try-demo-main:hover {
@@ -360,14 +361,15 @@
     background-color: #4a154b;
     color: white;
     margin-top:0;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin-bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .get-started-h3 {
@@ -376,6 +378,7 @@
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.444;
     letter-spacing: normal;
+    margin-bottom: 14px;
 
 }
 
