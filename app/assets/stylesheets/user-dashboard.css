@@ -242,13 +242,12 @@
     background-color: #19171D;
 }
 
-
 /* User Dashboard center */
 .user-dashboard-center {
     position: relative;
     min-width: 0;
     min-height: 0;
-    grid-column: 2/-1;
+    grid-column: 2/3;
     border-left: 1px solid #2B2A30;
 }
 

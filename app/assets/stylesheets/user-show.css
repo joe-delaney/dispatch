@@ -1,0 +1,42 @@
+.user-dashboard-user-show {
+    grid-column: 3/-1;
+    width: 400px;
+    border-left: 1px solid #2B2A30;
+    background: #1B1D21;
+}
+
+.user-show-header {
+    height: 50px;
+    border-bottom: 1px solid #36373B;
+    font-family: Lato;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 16px;
+    align-items: center;
+}
+
+.user-show-header-title {
+    font-size: 18px;
+    font-family: Lato;
+    font-weight: 900;
+    line-height: 1.33334;
+    color: #D1D2D3;
+}
+
+.user-show-close-button {
+    color: #D1D2D3;
+    height: 1.2rem;
+    width: 1.2rem;
+    font-size: 24px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-show-close-button:hover {
+    background-color: #26282C;
+}
