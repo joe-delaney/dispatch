@@ -5,6 +5,8 @@ class Channel < ApplicationRecord
         foreign_key: :creator_id,
         class_name: :User
 
+    has_many :subscriptions, as: :subscribable
+
     def self.search(query) 
         channels = Channel.where("channels.name ILIKE '#{query}%'")
         channels
