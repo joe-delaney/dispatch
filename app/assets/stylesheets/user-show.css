@@ -18,8 +18,8 @@
 
 .user-show-header-title {
     font-size: 18px;
-    font-family: Lato;
-    font-weight: 900;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-weight: 700;
     line-height: 1.33334;
     color: #D1D2D3;
 }
@@ -39,4 +39,70 @@
 
 .user-show-close-button:hover {
     background-color: #26282C;
+}
+
+.user-show-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-show-image {
+    height: 256px;
+    width: 256px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+.user-show-initial {
+    font-size: 50px;
+    color: white
+}
+
+.user-show-display-name {
+    padding-right: 12px;
+    color: #D1D2D3;
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.user-show-title {
+    font-size: 15px;
+    font-family: Lato, sans-serif;
+    color: #D1D2D3;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.user-show-button {
+    border-radius: 50%;
+    color: #D1D2D3;
+    background-color: #26282C;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.user-show-button:hover {
+    background-color:#313337;
+    cursor: pointer;
+}
+
+.user-show-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-show-action-label {
+    font-size: 13px;
+    font-family: Lato;
+    color: #E8E8E8B3;
+    margin-top: 5px;
 }
