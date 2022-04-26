@@ -16,7 +16,7 @@
     background-color: #1A1D21;
     border-radius: 8px;
     position: relative;
-    height: 60%;
+    height: 560px;
     margin-top: 4rem;
     box-shadow: 0 0 2px #999999;
 }
@@ -136,3 +136,37 @@
     font-weight: 400;
 }
 
+.user-edit-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 0 0 8px 8px;
+    height: 84px;
+    padding: 24px 28px;
+}
+
+.user-edit-button {
+    font-size: 15px;
+    height: 36px;
+    min-width: 80px;
+    padding: 0 12px 1px;
+    font-family: Lato;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+.user-cancel-edit {
+    margin-right: 12px;
+    border: 1px solid #d3d1d24d;
+    color: #D1D2D3;
+}
+
+.user-save-changes {
+    background: #007a5a;
+    color: #fff;
+}

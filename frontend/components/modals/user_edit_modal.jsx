@@ -6,6 +6,7 @@ export default class UserEditModal extends React.Component {
 
         this.closeModal = this.closeModal.bind(this);
         this.handleInput = this.handleInput.bind(this);
+        this.saveUserChanges = this.saveUserChanges.bind(this);
 
         this.currentUser = this.props.currentUser;
         this.title = this.currentUser.title ? this.currentUser.title : "";
@@ -34,6 +35,12 @@ export default class UserEditModal extends React.Component {
             title: this.title,
             status: this.status
         })
+        this.props.toggleEditModal();
+    }
+
+    saveUserChanges(e) {
+        e.preventDefault();
+        this.props.updateUser(this.state);
         this.props.toggleEditModal();
     }
 
@@ -75,7 +82,8 @@ export default class UserEditModal extends React.Component {
                         </div>
                     </div>
                     <div className="user-edit-modal-footer">
-                        
+                        <button onClick={this.closeModal} className="user-edit-button user-cancel-edit">Cancel</button>
+                        <button onClick={this.saveUserChanges} className="user-edit-button user-save-changes">Save Changes</button>
                     </div>
                 </div>
             </section>
