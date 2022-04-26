@@ -8,15 +8,14 @@ export default class UserEditModal extends React.Component {
         this.handleInput = this.handleInput.bind(this);
         this.saveUserChanges = this.saveUserChanges.bind(this);
 
-        this.currentUser = this.props.currentUser;
-        this.title = this.currentUser.title ? this.currentUser.title : "";
-        this.status = this.currentUser.status ? this.currentUser.status : "";
+        const title = this.props.currentUser.title ? this.props.currentUser.title : "";
+        const status = this.props.currentUser.status ? this.props.currentUser.status : "";
 
         this.state = {
-            id: this.currentUser.id,
-            display_name: this.currentUser.displayName,
-            title: this.title,
-            status: this.status
+            id: this.props.currentUser.id,
+            display_name: this.props.currentUser.displayName,
+            title: title,
+            status: status
         }
     }
 
@@ -29,19 +28,26 @@ export default class UserEditModal extends React.Component {
     }
 
     closeModal(e) {
+        const title = this.props.currentUser.title ? this.props.currentUser.title : "";
+        const status = this.props.currentUser.status ? this.props.currentUser.status : "";
         this.setState({
-            id: this.currentUser.id,
-            displayName: this.currentUser.displayName,
-            title: this.title,
-            status: this.status
+            id: this.props.currentUser.id,
+            display_name: this.props.currentUser.displayName,
+            title: title,
+            status: status
         })
         this.props.toggleEditModal();
     }
 
     saveUserChanges(e) {
         e.preventDefault();
-        this.props.updateUser(this.state);
-        this.props.toggleEditModal();
+        this.props.updateUser(this.state)
+            .then(() => {
+                this.props.toggleEditModal();
+            },
+            (errors) => {
+
+            });
     }
 
     render() {
