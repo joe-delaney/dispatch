@@ -5,10 +5,3 @@ export const fetchUsers = (query) => (
         data: { query }
     })
 )
-
-export const fetchUser = (userId) => (
-    $.ajax({
-        method: "GET",
-        url: `/api/users/${userId}`
-    })
-)

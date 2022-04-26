@@ -1,5 +1,5 @@
 import { RECEIVE_CURRENT_USER } from "../../actions/session_actions";
-import { RECEIVE_SELECTED_USER } from "../../actions/search_actions";
+import { RECEIVE_SELECTED_USER } from "../../actions/user_actions";
 
 export const usersReducer = (state = {}, action) => {
     Object.freeze(state);
