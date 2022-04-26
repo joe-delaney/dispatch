@@ -65,7 +65,7 @@ s4 = Subscription.create!(subscriber_id: joe3.id, subscribable_id: general.id, s
 s5 = Subscription.create!(subscriber_id: sasha.id, subscribable_id: general.id, subscribable_type: "Channel")
 s6 = Subscription.create!(subscriber_id: shannon.id, subscribable_id: general.id, subscribable_type: "Channel")
 s7 = Subscription.create!(subscriber_id: mike.id, subscribable_id: general.id, subscribable_type: "Channel")
-s8 = Subscription.create!(subscriber_id: tommy.id, subscribable_id: general.id, subscribable_type: "Channel")
+s8 = Subscription.create!(subscriber_id: tom.id, subscribable_id: general.id, subscribable_type: "Channel")
 s9 = Subscription.create!(subscriber_id: jeff.id, subscribable_id: general.id, subscribable_type: "Channel")
 s10 = Subscription.create!(subscriber_id: anna.id, subscribable_id: general.id, subscribable_type: "Channel")
 
