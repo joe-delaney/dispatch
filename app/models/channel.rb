@@ -7,6 +7,10 @@ class Channel < ApplicationRecord
 
     has_many :subscriptions, as: :subscribable
 
+    has_many :channel_members,
+        through: :subscriptions,
+        source: :subscriber
+
     def self.search(query) 
         channels = Channel.where("channels.name ILIKE '#{query}%'")
         channels
