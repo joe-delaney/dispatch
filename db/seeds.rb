@@ -49,10 +49,50 @@ sandycheeks = User.create!(email: "sandycheeks@bikinibottom.com", password: "123
 plankton = User.create!(email: "plankton@bikinibottom.com", password: "123456", display_name: "Sheldon J. Plankton", title: "Owner of the Chum Bucket")
 
 puts "Creating channels..."
-general = Channel.create(creator_id: joe.id, name: "general", topic: "General information", description: "To be used for general info and announcements")
-general = Channel.create(creator_id: joe.id, name: "The Office", topic: "Dunder Mifflin", description: "Providing all of your paper needs")
-general = Channel.create(creator_id: joe.id, name: "Avengers", topic: "Stopping supervillains", description: "Secure channel for saving the world")
-general = Channel.create(creator_id: joe.id, name: "Bikini Bottom", topic: "Underwater shenanigans", description: "Friends of the sponge who lives in a pineapple under the sea")
+general = Channel.create!(creator_id: joe.id, name: "general", topic: "General information", description: "To be used for general info and announcements")
+office = Channel.create!(creator_id: joe.id, name: "The Office", topic: "Dunder Mifflin", description: "Providing all of your paper needs")
+avengers = Channel.create!(creator_id: joe.id, name: "Avengers", topic: "Stopping supervillains", description: "Secure channel for saving the world")
+bikini_bottom = Channel.create!(creator_id: joe.id, name: "Bikini Bottom", topic: "Underwater shenanigans", description: "Friends of the sponge who lives in a pineapple under the sea")
 
 
+puts "Creating subscriptions..."
 
+# General 
+s1 = Subscription.create!(subscriber_id: joe.id, subscribable_id: general.id, subscribable_type: "Channel")
+s2 = Subscription.create!(subscriber_id: joe1.id, subscribable_id: general.id, subscribable_type: "Channel")
+s3 = Subscription.create!(subscriber_id: joe2.id, subscribable_id: general.id, subscribable_type: "Channel")
+s4 = Subscription.create!(subscriber_id: joe3.id, subscribable_id: general.id, subscribable_type: "Channel")
+s5 = Subscription.create!(subscriber_id: sasha.id, subscribable_id: general.id, subscribable_type: "Channel")
+s6 = Subscription.create!(subscriber_id: shannon.id, subscribable_id: general.id, subscribable_type: "Channel")
+s7 = Subscription.create!(subscriber_id: mike.id, subscribable_id: general.id, subscribable_type: "Channel")
+s8 = Subscription.create!(subscriber_id: tommy.id, subscribable_id: general.id, subscribable_type: "Channel")
+s9 = Subscription.create!(subscriber_id: jeff.id, subscribable_id: general.id, subscribable_type: "Channel")
+s10 = Subscription.create!(subscriber_id: anna.id, subscribable_id: general.id, subscribable_type: "Channel")
+
+# The Office
+s11 = Subscription.create!(subscriber_id: joe.id, subscribable_id: office.id, subscribable_type: "Channel")
+s12 = Subscription.create!(subscriber_id: michael.id, subscribable_id: office.id, subscribable_type: "Channel")
+s13 = Subscription.create!(subscriber_id: jim.id, subscribable_id: office.id, subscribable_type: "Channel")
+s14 = Subscription.create!(subscriber_id: pam.id, subscribable_id: office.id, subscribable_type: "Channel")
+s15 = Subscription.create!(subscriber_id: dwight.id, subscribable_id: office.id, subscribable_type: "Channel")
+s16 = Subscription.create!(subscriber_id: kelly.id, subscribable_id: office.id, subscribable_type: "Channel")
+s16 = Subscription.create!(subscriber_id: stanley.id, subscribable_id: office.id, subscribable_type: "Channel")
+
+# Avengers
+s17 = Subscription.create!(subscriber_id: joe.id, subscribable_id: avengers.id, subscribable_type: "Channel")
+s18 = Subscription.create!(subscriber_id: captain.id, subscribable_id: avengers.id, subscribable_type: "Channel")
+s19 = Subscription.create!(subscriber_id: ironman.id, subscribable_id: avengers.id, subscribable_type: "Channel")
+s20 = Subscription.create!(subscriber_id: thor.id, subscribable_id: avengers.id, subscribable_type: "Channel")
+s21 = Subscription.create!(subscriber_id: hulk.id, subscribable_id: avengers.id, subscribable_type: "Channel")
+s22 = Subscription.create!(subscriber_id: tchalla.id, subscribable_id: avengers.id, subscribable_type: "Channel")
+s23 = Subscription.create!(subscriber_id: scarletwitch.id, subscribable_id: avengers.id, subscribable_type: "Channel")
+s24 = Subscription.create!(subscriber_id: blackwidow.id, subscribable_id: avengers.id, subscribable_type: "Channel")
+
+#Spongebob
+s25 = Subscription.create!(subscriber_id: joe.id, subscribable_id: bikini_bottom.id, subscribable_type: "Channel")
+s26 = Subscription.create!(subscriber_id: spongebob.id, subscribable_id: bikini_bottom.id, subscribable_type: "Channel")
+s27 = Subscription.create!(subscriber_id: patrick.id, subscribable_id: bikini_bottom.id, subscribable_type: "Channel")
+s28 = Subscription.create!(subscriber_id: sandycheeks.id, subscribable_id: bikini_bottom.id, subscribable_type: "Channel")
+s29 = Subscription.create!(subscriber_id: plankton.id, subscribable_id: bikini_bottom.id, subscribable_type: "Channel")
+s30 = Subscription.create!(subscriber_id: mrkrabs.id, subscribable_id: bikini_bottom.id, subscribable_type: "Channel")
+s31 = Subscription.create!(subscriber_id: squidward.id, subscribable_id: bikini_bottom.id, subscribable_type: "Channel")
