@@ -18,20 +18,22 @@ export default class ChannelBrowser extends React.Component {
 
     handleInput(e) {
         this.setState({query: e.target.value})
-        this.props.fetchChannels(e.target.value)
+        // this.props.fetchChannels(e.target.value)
+        // this.props.fetchChannels(e.target.value) -- SearchResult
     }
 
     render()  {
-        const channelsLabel = this.props.channels.length === 1 ? "channel" : "channels"
+        const channels = this.props.channels(this.state.query)
+        const channelsLabel = channels.length === 1 ? "channel" : "channels"
 
         return (
             <div className="user-dashboard-center-main">
                     <div className="user-dashboard-center-main-feed">
                         <div className="channel-browser-container">
                         <input className="channel-browser-search-bar" type="text" value={this.state.query} onChange={this.handleInput} placeholder='Search by channel name'/>
-                            <span className="channels-browser-label">{this.props.channels.length} {channelsLabel}</span>
+                            <span className="channels-browser-label">{channels.length} {channelsLabel}</span>
                              <ul>
-                                {this.props.channels.map((channel, idx) => (
+                                {channels.map((channel, idx) => (
                                     <ChannelBrowserItem key={`${channel.name}${idx}`} channel={channel}/>
                                 ))}
                             </ul>
