@@ -16,12 +16,10 @@ export const selectSearchedChannels = ({channels}, query) => {
 export const selectCurrentUserChannels = ({channels}, user) => {
     let subscribedChannels = [];
 
-    if(user && user.subscribedChannels) {
-        user.subscribedChannels.forEach((channel_id) => {
-            console.log(channel_id)
-            subscribedChannels.push(channels[channel_id])
+    if(user && user.subscribedChannelIds) {
+        user.subscribedChannelIds.forEach((channel_id) => {
+            if(channels[channel_id]) subscribedChannels.push(channels[channel_id]);
         })
     }
-
     return subscribedChannels;
 }

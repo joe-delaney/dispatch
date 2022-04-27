@@ -3,7 +3,7 @@ import ChannelSidebarList from "./channel_sidebar_list";
 import { selectCurrentUserChannels } from "../../../actions/channel_selectors";
 
 const mapStateToProps = (state, ownProps) => ({
-     
+     channels: selectCurrentUserChannels(state.entities, state.entities.users[state.session.currentUserId])
 })
 
 const mapDisptachToProps = dispatch => ({
