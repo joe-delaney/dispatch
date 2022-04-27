@@ -1,4 +1,5 @@
 import * as SessionAPIUtil from "../util/session_api_util";
+import { fetchChannels } from "./channel_actions";
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const REMOVE_CURRENT_USER = "REMOVE_CURRENT_USER";
@@ -25,7 +26,10 @@ export const clearErrors = () => ({
 
 //Login thunk action
 export const login = (user) => dispatch => SessionAPIUtil.login(user)
-    .then(currentUser => dispatch(receiveCurrentUser(currentUser)))
+    .then(currentUser => {
+        dispatch(receiveCurrentUser(currentUser));
+        dispatch(fetchChannels());
+    })
 
 //Signup thunk action
 export const signup = (user) => dispatch => SessionAPIUtil.signup(user)

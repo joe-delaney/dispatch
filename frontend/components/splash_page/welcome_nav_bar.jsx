@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const WelcomeNavBar = ({currentUser, logout, demoClicked, fetchChannels}) => {
-    if(currentUser) fetchChannels();
-
+const WelcomeNavBar = ({currentUser, logout, demoClicked}) => {
     const display = currentUser ? (
         <div className="welcome-nav-bar logged-in">
             <div className="welcome-nav-bar-left-section">
@@ -15,7 +13,7 @@ const WelcomeNavBar = ({currentUser, logout, demoClicked, fetchChannels}) => {
                 </ul>
             </div>
             <div className="welcome-nav-bar-buttons">
-                <Link to="/user-dashboard" className="welcome-nav-bar-button launch-slack-nav">Launch Slack</Link>
+                <Link to="/user-dashboard/browse-channels" className="welcome-nav-bar-button launch-slack-nav">Launch Slack</Link>
                 <button onClick={logout} className="welcome-nav-bar-button sign-out">Sign out of Slack</button>
             </div>
         </div>
