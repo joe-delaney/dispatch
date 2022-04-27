@@ -26,7 +26,7 @@ export default class ChannelBrowser extends React.Component {
                         <div className="channel-browser-container">
                         <input className="channel-browser-search-bar" type="text" value={this.state.query} onChange={this.handleInput} placeholder='Search by channel name'/>
                             <span className="channels-browser-label">{channels.length} {channelsLabel}</span>
-                             <ul>
+                             <ul className="channel-browser-items">
                                 {channels.map((channel, idx) => (
                                     <ChannelBrowserItem key={`${channel.name}${idx}`} channel={channel}/>
                                 ))}

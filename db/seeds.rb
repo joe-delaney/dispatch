@@ -48,11 +48,51 @@ squidward = User.create!(email: "squidward@bikinibottom.com", password: "123456"
 sandycheeks = User.create!(email: "sandycheeks@bikinibottom.com", password: "123456", display_name: "Sandy Cheeks", title: "Scientist")
 plankton = User.create!(email: "plankton@bikinibottom.com", password: "123456", display_name: "Sheldon J. Plankton", title: "Owner of the Chum Bucket")
 
+# Friends
+joey = User.create!(email: "joey@friends.com", password: "123456", display_name: "Joey Tribiani", title: "Actor on Days of Our Lives")
+rachel = User.create!(email: "rachel@friends.com", password: "123456", display_name: "Rachel Green", title: "Buyer for Ralph Lauren")
+ross = User.create!(email: "ross@friends.com", password: "123456", display_name: "Ross Geller", title: "Paleontologist")
+chandler = User.create!(email: "chandler@friends.com", password: "123456", display_name: "Chandler Bing", title: "Transponster")
+phoebe = User.create!(email: "phoebe@friends.com", password: "123456", display_name: "Phoebe Buffay", title: "Masseuse / Singer")
+monica = User.create!(email: "monica@friends.com", password: "123456", display_name: "Monica Geller", title: "Lead Chef")
+
+# HIMYM
+ted = User.create!(email: "ted@himym.com", password: "123456", display_name: "Ted Mosby", title: "Architect")
+lily = User.create!(email: "lily@himym.com", password: "123456", display_name: "Lily Aldrin", title: "Art Buyer")
+marshall = User.create!(email: "marshall@himym.com", password: "123456", display_name: "Marshall Eriksen", title: "Environmental Lawyer")
+barney = User.create!(email: "barney@himym.com", password: "123456", display_name: "Barney Stinson", title: "Employee at Goliath National Bank")
+robin = User.create!(email: "robin@himym.com", password: "123456", display_name: "Robin Scherbatsky", title: "News Anchor")
+
+
+# Knicks
+ewing = User.create!(email: "patrickewing@knicks.com", password: "123456", display_name: "Patrick Ewing", title: "Hall of Famer")
+barrett = User.create!(email: "RJbarrett@knicks.com", password: "123456", display_name: "RJ Barrett", title: "Shooting guard")
+starks = User.create!(email: "johnstarks@knicks.com", password: "123456", display_name: "John Starks", title: "Knicks legend")
+
+# dogs
+duke = User.create!(email: "duke@dogs.com", password: "123456", display_name: "Duke", title: "Samoyed")
+scooby = User.create!(email: "scooby@dogs.com", password: "123456", display_name: "Scooby", title: "Golden Doodle")
+lucy = User.create!(email: "lucy@dogs.com", password: "123456", display_name: "Lucy", title: "Australian Shepard")
+scout = User.create!(email: "scout@dogs.com", password: "123456", display_name: "Scout", title: "Border Collie")
+
+# harry potter
+harry = User.create!(email: "harry@hogwarts.com", password: "123456", display_name: "Harry Potter", title: "The Chosen One")
+ron = User.create!(email: "ron@hogwarts.com", password: "123456", display_name: "Ron Weasley", title: "One of many Weasleys")
+hermione = User.create!(email: "hermione@hogwarts.com", password: "123456", display_name: "Hermione Granger", title: "Star student")
+voldemort = User.create!(email: "voldemort@hogwarts.com", password: "123456", display_name: "Voldemort", title: "The one who shall not be named")
+dumbledore = User.create!(email: "dumbledore@hogwarts.com", password: "123456", display_name: "Albus Dumbledore", title: "Head of Hogwarts")
+snape = User.create!(email: "snape@hogwarts.com", password: "123456", display_name: "Professor Snape", title: "Defense Against the Dark Arts professor")
+
 puts "Creating channels..."
 general = Channel.create!(creator_id: joe.id, name: "general", topic: "General information", description: "To be used for general info and announcements")
 office = Channel.create!(creator_id: joe.id, name: "The Office", topic: "Dunder Mifflin", description: "Providing all of your paper needs")
 avengers = Channel.create!(creator_id: joe.id, name: "Avengers", topic: "Stopping supervillains", description: "Secure channel for saving the world")
 bikini_bottom = Channel.create!(creator_id: joe.id, name: "Bikini Bottom", topic: "Underwater shenanigans", description: "Friends of the sponge who lives in a pineapple under the sea")
+friends = Channel.create!(creator_id: joe.id, name: "Friends", topic: "Central Perk", description: "I'll be there for you")
+himym = Channel.create!(creator_id: joe.id, name: "How I Met Your Mother", topic: "5 friends in NYC", description: "Follow Ted on his quest to find love")
+knicks = Channel.create!(creator_id: joe.id, name: "Knicks", topic: "Go NY Go NY Go", description: "Trying to win the NBA Championship")
+dogs = Channel.create!(creator_id: joe.id, name: "Dogs", topic: "Woof Woof", description: "Woof woof Woof woof Woof woof bark bark")
+harrypotter = Channel.create!(creator_id: joe.id, name: "Hogwarts", topic: "Casting spells", description: "Learning witchcraft and wizardry")
 
 
 puts "Creating subscriptions..."
@@ -96,3 +136,42 @@ s28 = Subscription.create!(subscriber_id: sandycheeks.id, subscribable_id: bikin
 s29 = Subscription.create!(subscriber_id: plankton.id, subscribable_id: bikini_bottom.id, subscribable_type: "Channel")
 s30 = Subscription.create!(subscriber_id: mrkrabs.id, subscribable_id: bikini_bottom.id, subscribable_type: "Channel")
 s31 = Subscription.create!(subscriber_id: squidward.id, subscribable_id: bikini_bottom.id, subscribable_type: "Channel")
+
+#Friends
+s32 = Subscription.create!(subscriber_id: joe.id, subscribable_id: friends.id, subscribable_type: "Channel")
+s33 = Subscription.create!(subscriber_id: ross.id, subscribable_id: friends.id, subscribable_type: "Channel")
+s34 = Subscription.create!(subscriber_id: rachel.id, subscribable_id: friends.id, subscribable_type: "Channel")
+s35 = Subscription.create!(subscriber_id: chandler.id, subscribable_id: friends.id, subscribable_type: "Channel")
+s36 = Subscription.create!(subscriber_id: monica.id, subscribable_id: friends.id, subscribable_type: "Channel")
+s37 = Subscription.create!(subscriber_id: phoebe.id, subscribable_id: friends.id, subscribable_type: "Channel")
+s38 = Subscription.create!(subscriber_id: joey.id, subscribable_id: friends.id, subscribable_type: "Channel")
+
+#HIMYM
+s39 = Subscription.create!(subscriber_id: joe.id, subscribable_id: himym.id, subscribable_type: "Channel")
+s40 = Subscription.create!(subscriber_id: barney.id, subscribable_id: himym.id, subscribable_type: "Channel")
+s41 = Subscription.create!(subscriber_id: ted.id, subscribable_id: himym.id, subscribable_type: "Channel")
+s42 = Subscription.create!(subscriber_id: robin.id, subscribable_id: himym.id, subscribable_type: "Channel")
+s43 = Subscription.create!(subscriber_id: marshall.id, subscribable_id: himym.id, subscribable_type: "Channel")
+s44 = Subscription.create!(subscriber_id: lily.id, subscribable_id: himym.id, subscribable_type: "Channel")
+
+#Knicks
+s45 = Subscription.create!(subscriber_id: joe.id, subscribable_id: knicks.id, subscribable_type: "Channel")
+s46 = Subscription.create!(subscriber_id: ewing.id, subscribable_id: knicks.id, subscribable_type: "Channel")
+s47 = Subscription.create!(subscriber_id: barrett.id, subscribable_id: knicks.id, subscribable_type: "Channel")
+s48 = Subscription.create!(subscriber_id: starks.id, subscribable_id: knicks.id, subscribable_type: "Channel")
+
+#dogs
+s49 = Subscription.create!(subscriber_id: joe.id, subscribable_id: dogs.id, subscribable_type: "Channel")
+s50 = Subscription.create!(subscriber_id: duke.id, subscribable_id: dogs.id, subscribable_type: "Channel")
+s51 = Subscription.create!(subscriber_id: scooby.id, subscribable_id: dogs.id, subscribable_type: "Channel")
+s52 = Subscription.create!(subscriber_id: lucy.id, subscribable_id: dogs.id, subscribable_type: "Channel")
+s53 = Subscription.create!(subscriber_id: scout.id, subscribable_id: dogs.id, subscribable_type: "Channel")
+
+#Harry Potter
+s54 = Subscription.create!(subscriber_id: joe.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
+s55 = Subscription.create!(subscriber_id: harry.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
+s56 = Subscription.create!(subscriber_id: ron.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
+s57 = Subscription.create!(subscriber_id: hermione.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
+s58 = Subscription.create!(subscriber_id: voldemort.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
+s59 = Subscription.create!(subscriber_id: dumbledore.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
+s60 = Subscription.create!(subscriber_id: snape.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")

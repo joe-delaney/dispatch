@@ -48,10 +48,28 @@
     background-color: #222529;
 }
 
+.channel-browser-label-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .channel-browser-item-title  {
     font-weight: 400;
     font-family: Lato;
     font-size: 15px;
     line-height: 1.46668;
     color: #d1d2d3;
+}
+
+.channel-browser-item-subtitle {
+    color: #E8E8E8B3;
+    font-size: 13px;
+    font-family: Lato;
+    line-height: 1.38463;
+    font-weight: 400;
+}
+
+.channel-browser-items {
+    overflow:hidden;
+    overflow-y:scroll;
 }
