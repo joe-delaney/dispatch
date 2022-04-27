@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import UserDashBoardNavSearchResult from "./user_dashboard_nav_search_result";
+import UserDashBoardNavUserSearchResult from "./user_dashboard_nav_user_search_result";
+import UserDashBoardNavChannelSearchResult from "./user_dashboard_nav_channel_search_result";
 
 class UserDashboardNav extends React.Component {
 
@@ -33,7 +34,8 @@ class UserDashboardNav extends React.Component {
     }
 
     render() {
-        const searchResults = (this.props.userSearchResults.length || !this.state.query.length) ? this.props.userSearchResults : [{displayName: "No results found"}];
+        const channels = this.state.query === "" ? [] : this.props.channels(this.state.query);
+        const searchResults = (this.props.userSearchResults.length || !this.state.query.length || channels.length) ? this.props.userSearchResults : [{ displayName: "No results found" }];
         const title = this.props.currentUser.title ? this.props.currentUser.title : "";
         const dropdownClass = this.state.dropdownOpen ? "user-dashboard-nav-profile-dropdown" :
             "user-dashboard-nav-profile-dropdown hidden"
@@ -45,7 +47,10 @@ class UserDashboardNav extends React.Component {
                     <input onChange={this.handleInput} className="user-dashboard-nav-bar-search-input" type="text" value={this.state.query} placeholder="&#xF002;  Search Slack"/>
                     <ul className="user-dashboard-nav-bar-search-results">
                         {searchResults.map((user) => (
-                            <UserDashBoardNavSearchResult user={user}/>
+                            <UserDashBoardNavUserSearchResult user={user}/>
+                        ))}
+                        {channels.map((channel) => (
+                            <UserDashBoardNavChannelSearchResult channel={channel}/>
                         ))}
                     </ul>
                 </div>

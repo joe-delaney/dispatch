@@ -4,11 +4,14 @@ import { searchUsers, clearUserSearchResults } from "../../actions/search_action
 import {logout} from "../../actions/session_actions"
 import { toggleEditModal } from "../../actions/modal_actions";
 import { updateUser } from "../../actions/user_actions";
+import { fetchChannels } from "../../actions/channel_actions";
+import { selectSearchedChannels } from "../../actions/channel_selectors";
 
 const mapStateToProps = (state, ownProps) => ({
     userSearchResults: Object.values(state.entities.searchResults.users),
     currentUser: state.entities.users[state.session.currentUserId],
-    editModalDisplayed: state.ui.modals.editModalDisplayed
+    editModalDisplayed: state.ui.modals.editModalDisplayed,
+    channels: (query) => selectSearchedChannels(state.entities, query)
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -16,7 +19,8 @@ const mapDispatchToProps = dispatch => ({
     clearUserSearchResults: () => dispatch(clearUserSearchResults()),
     logout: () => dispatch(logout()),
     toggleEditModal: () => dispatch(toggleEditModal()),
-    updateUser: (user) => dispatch(updateUser(user))
+    updateUser: (user) => dispatch(updateUser(user)),
+    fetchChannels: () => dispatch(fetchChannels())
 })
 
 const UserDashboardContainer = connect(mapStateToProps, mapDispatchToProps)(UserDashboard);

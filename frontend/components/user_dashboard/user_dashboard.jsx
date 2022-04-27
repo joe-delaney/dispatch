@@ -8,6 +8,10 @@ export default class UserDashboard extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        this.props.fetchChannels();
+    }
+
     render() {
 
         return (
@@ -18,6 +22,7 @@ export default class UserDashboard extends React.Component {
                     clearUserSearchResults={this.props.clearUserSearchResults} 
                     currentUser={this.props.currentUser}
                     logout={this.props.logout}
+                    channels={this.props.channels}
                 />
                 <UserDashboardMain/>
                 <UserEditModal 

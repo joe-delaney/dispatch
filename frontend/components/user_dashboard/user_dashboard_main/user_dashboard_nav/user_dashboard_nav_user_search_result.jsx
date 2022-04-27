@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class UserDashBoardNavSearchResult extends React.Component {
+export default class UserDashBoardNavUserSearchResult extends React.Component {
     constructor(props) {
         super(props);
     }

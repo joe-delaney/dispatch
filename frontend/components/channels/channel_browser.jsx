@@ -18,8 +18,6 @@ export default class ChannelBrowser extends React.Component {
 
     handleInput(e) {
         this.setState({query: e.target.value})
-        // this.props.fetchChannels(e.target.value)
-        // this.props.fetchChannels(e.target.value) -- SearchResult
     }
 
     render()  {

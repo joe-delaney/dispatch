@@ -2,8 +2,7 @@ import { RECEIVE_SEARCHED_USERS, CLEAR_USER_SEARCH_RESULTS, RECEIVE_CHANNELS } f
 import { merge } from "lodash";
 
 const initialState = {
-    users: {},
-    channels: {}
+    users: {}
 }
 
 export const searchResultsReducer = (state = initialState, action) => {
@@ -17,10 +16,6 @@ export const searchResultsReducer = (state = initialState, action) => {
         case CLEAR_USER_SEARCH_RESULTS:
             nextState = merge({}, state);
             nextState.users = {};
-            return nextState;
-        case RECEIVE_CHANNELS:
-            nextState = merge({}, state);
-            nextState.channels = action.channels
             return nextState;
         default:
             return state;
