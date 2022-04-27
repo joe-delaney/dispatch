@@ -22,7 +22,7 @@ class UserDashboardNav extends React.Component {
         if(e.target.value !== "") {
             this.props.searchUsers(e.target.value);
         } else {
-            this.props.clearSearchResults();
+            this.props.clearUserSearchResults();
         }
     }
 

@@ -1,7 +1,7 @@
 import * as SearchAPIUtil from "../util/search_api_util";
 
 export const RECEIVE_SEARCHED_USERS = "RECEIVE_SEARCHED_USERS";
-export const CLEAR_SEARCH_RESULTS = "CLEAR_SEARCH_RESULTS";
+export const CLEAR_USER_SEARCH_RESULTS = "CLEAR_USER_SEARCH_RESULTS";
 export const RECEIVE_CHANNELS = "RECEIVE_CHANNELS";
 
 export const receiveSearchedUsers = (users) => ({
@@ -14,8 +14,8 @@ const receiveChannels = (channels) => ({
     channels
 })
 
-export const clearSearchResults = () => ({
-    type: CLEAR_SEARCH_RESULTS
+export const clearUserSearchResults = () => ({
+    type: CLEAR_USER_SEARCH_RESULTS
 });
 
 //search user thunk action
