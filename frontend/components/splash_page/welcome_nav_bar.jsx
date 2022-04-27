@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const WelcomeNavBar = ({currentUser, logout, demoClicked}) => {
+const WelcomeNavBar = ({currentUser, logout, demoClicked, fetchChannels}) => {
+    if(currentUser) fetchChannels();
 
     const display = currentUser ? (
         <div className="welcome-nav-bar logged-in">

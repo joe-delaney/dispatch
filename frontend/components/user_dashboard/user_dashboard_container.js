@@ -4,8 +4,8 @@ import { searchUsers, clearUserSearchResults } from "../../actions/search_action
 import {logout} from "../../actions/session_actions"
 import { toggleEditModal } from "../../actions/modal_actions";
 import { updateUser } from "../../actions/user_actions";
-import { fetchChannels } from "../../actions/channel_actions";
 import { selectSearchedChannels } from "../../actions/channel_selectors";
+import { fetchChannels } from "../../actions/channel_actions";
 
 const mapStateToProps = (state, ownProps) => ({
     userSearchResults: Object.values(state.entities.searchResults.users),

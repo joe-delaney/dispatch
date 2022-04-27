@@ -14,4 +14,4 @@ export const fetchUser = (userId) => dispatch => UserAPIUtil.fetchUser(userId)
 
 //update user thunk action
 export const updateUser = (user) => dispatch => UserAPIUtil.updateUser(user)
-    .then(user => dispatch(receiveUser(user)))
+    .then(user => dispatch(receiveUser(user)));
