@@ -14,6 +14,7 @@ class Api::UsersController < ApplicationController
 
     def index 
         @users = User.all
+        @current_user_id = current_user.id
         render :index
     end
 

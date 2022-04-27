@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import ChannelSidebarList from "./channel_sidebar_list";
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
 
 })
 
