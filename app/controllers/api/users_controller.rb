@@ -12,9 +12,8 @@ class Api::UsersController < ApplicationController
         end
     end
 
-    #This will be used for the user search feature
     def index 
-        @users = User.search(params[:query], current_user.id)
+        @users = User.all
         render :index
     end
 

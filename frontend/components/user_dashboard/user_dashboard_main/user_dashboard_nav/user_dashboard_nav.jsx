@@ -20,11 +20,11 @@ class UserDashboardNav extends React.Component {
         this.setState({
             query: e.target.value
         })
-        if(e.target.value !== "") {
-            this.props.searchUsers(e.target.value);
-        } else {
-            this.props.clearUserSearchResults();
-        }
+        // if(e.target.value !== "") {
+        //     this.props.searchUsers(e.target.value);
+        // } else {
+        //     this.props.clearUserSearchResults();
+        // }
     }
 
     toggleDropdown(e) {
@@ -34,8 +34,9 @@ class UserDashboardNav extends React.Component {
     }
 
     render() {
-        const channels = this.state.query === "" ? [] : this.props.channels(this.state.query);
-        const searchResults = (this.props.userSearchResults.length || !this.state.query.length || channels.length) ? this.props.userSearchResults : [{ displayName: "No results found" }];
+        const channels = this.state.query === "" ? [] : this.props.selectedChannels(this.state.query);
+        const users = this.state.query === "" ? [] : this.props.selectedUsers(this.state.query);
+        const emptyResults = (!channels.length && !users.length & this.state.query !== "") ? [{ displayName: "No results found" }] : [];
         const title = this.props.currentUser.title ? this.props.currentUser.title : "";
         const dropdownClass = this.state.dropdownOpen ? "user-dashboard-nav-profile-dropdown" :
             "user-dashboard-nav-profile-dropdown hidden"
@@ -46,11 +47,14 @@ class UserDashboardNav extends React.Component {
                 <div className="user-dashboard-nav-bar-center">
                     <input onChange={this.handleInput} className="user-dashboard-nav-bar-search-input" type="text" value={this.state.query} placeholder="&#xF002;  Search Slack"/>
                     <ul className="user-dashboard-nav-bar-search-results">
-                        {searchResults.map((user) => (
+                        {users.map((user) => (
                             <UserDashBoardNavUserSearchResult user={user}/>
                         ))}
                         {channels.map((channel) => (
                             <UserDashBoardNavChannelSearchResult channel={channel}/>
+                        ))}
+                        {emptyResults.map((emptyResult) => (
+                            <UserDashBoardNavUserSearchResult user={emptyResult} />
                         ))}
                     </ul>
                 </div>

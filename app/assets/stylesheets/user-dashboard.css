@@ -78,6 +78,9 @@
     background-color: #1B1D21;
     border-radius: 4px;
     width: inherit;
+    max-height: 40vh;
+    overflow:hidden;
+    overflow-y:scroll;
 }
 
 .user-dashboard-nav-search-result {
