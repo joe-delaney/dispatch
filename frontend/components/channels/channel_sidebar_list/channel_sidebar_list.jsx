@@ -1,7 +1,7 @@
 import React from "react";
 import ChannelSidebarListItem from "./channel_sidebar_list_item";
 
-class ChannelSidebarList {
+class ChannelSidebarList extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -11,7 +11,9 @@ class ChannelSidebarList {
             <div className="sidebar-list">
                 <div className="sidebar-list-header">
                     <div className="sidebar-list-header-left">
-                        <button className="sidebar-button">^</button>
+                        <div className="sidebar-button-image-container">
+                            <img src={window.downArrow} alt="down arrow" className="sidebar-button"></img>
+                        </div>
                         <span className="sidebar-list-header-title">Channels</span>
                     </div>
                     <button className="sidebar-button">+</button>
