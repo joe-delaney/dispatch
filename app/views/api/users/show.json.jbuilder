@@ -1,1 +1,1 @@
-json.extract! @user, :email, :id, :display_name, :status, :title
+json.extract! @user, :email, :id, :display_name, :status, :title, :subscribed_channel_ids

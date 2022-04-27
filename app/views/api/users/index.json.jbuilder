@@ -10,6 +10,5 @@
             end
             json.subscribed_channels subscribed_channel_ids
         end
-
-    end
+    end  
 end

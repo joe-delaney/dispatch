@@ -5,7 +5,7 @@ export const CLEAR_USER_SEARCH_RESULTS = "CLEAR_USER_SEARCH_RESULTS";
 
 export const receiveSearchedUsers = (users) => ({
     type: RECEIVE_SEARCHED_USERS,
-    users
+    users: users.users
 });
 
 export const clearUserSearchResults = () => ({
