@@ -12,7 +12,7 @@ class Channel < ApplicationRecord
         source: :subscriber
 
     def self.search(query) 
-        channels = Channel.where("channels.name ILIKE '#{query}%'")
+        channels = Channel.where("channels.name ILIKE '%#{query}%'")
         channels
     end
 end

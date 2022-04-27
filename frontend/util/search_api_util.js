@@ -5,3 +5,11 @@ export const fetchUsers = (query) => (
         data: { query }
     })
 )
+
+export const fetchChannels = (query) => (
+    $.ajax({
+        method: "GET",
+        url: "/api/channels",
+        data: { query }
+    })
+);
