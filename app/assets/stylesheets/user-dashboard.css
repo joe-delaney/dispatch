@@ -342,3 +342,11 @@
     border: none;
     cursor: pointer;
 }
+
+.user-dashboard-center-header {
+    font-size: 18px;
+    line-height: 1.33334;
+    font-weight: 900;
+    font-family: Lato;
+    color: #D1D2D3;
+}
