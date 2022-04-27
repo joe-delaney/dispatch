@@ -1,8 +1,9 @@
 import { connect } from "react-redux";
 import ChannelSidebarList from "./channel_sidebar_list";
+import { selectCurrentUserChannels } from "../../../actions/channel_selectors";
 
-const mapStateToProps = state => ({
-
+const mapStateToProps = (state, ownProps) => ({
+     
 })
 
 const mapDisptachToProps = dispatch => ({

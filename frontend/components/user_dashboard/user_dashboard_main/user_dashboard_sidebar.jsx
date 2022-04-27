@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import ChannelSidebarListContainer from "../../channels/channel_sidebar_list/channel_sidebar_list_container";
 
-const UserDashboardSidebar = () => (
+const UserDashboardSidebar = ({currentUser}) => (
     <div className="user-dashboard-sidebar">
         <div className="user-dashboard-sidebar-contents">
             <div className="user-dashboard-sidebar-header">
@@ -13,7 +14,7 @@ const UserDashboardSidebar = () => (
                 </button>
             </div>
             <div className="user-dashboard-sidebar-main">
-                
+                <ChannelSidebarListContainer/>
             </div>
         </div>
     </div>

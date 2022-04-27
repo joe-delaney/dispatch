@@ -12,10 +12,3 @@ export const updateUser = (user) => (
         data: {user}
     })
 )
-
-export const fetchUsers = () => (
-    $.ajax({
-        method: "GET",
-        url: "/api/users"
-    })
-)

@@ -13,8 +13,8 @@ class Api::UsersController < ApplicationController
     end
 
     def index 
-        @users = User.all
         @current_user_id = current_user.id
+        @users = User.search(params[:query], @current_user_id)
         render :index
     end
 

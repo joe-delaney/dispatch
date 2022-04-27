@@ -1,7 +1,7 @@
 import React from "react";
 import { BlankDashboardCenter } from "./blank_dashboard-center";
-import ChannelBrowserContainer from "../../channels/channel_browser_container";
-import ChannelBrowserHeader from "../../channels/channel_browser_header";
+import ChannelBrowserContainer from "../../channels/channel_browser/channel_browser_container";
+import ChannelBrowserHeader from "../../channels/channel_browser/channel_browser_header";
 import { ProtectedRoute } from "../../../util/route_util";
 import { Switch, Route } from "react-router-dom";
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 const ChannelSidebarList = () => {
-    return null;
+    return <h1>TEST</h1>;
 }
 
 export default ChannelSidebarList;
