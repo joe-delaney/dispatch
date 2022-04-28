@@ -1,6 +1,7 @@
 import * as UserAPIUtil from "../util/user_api_util";
 
 export const RECEIVE_USER = "RECEIVE_USER";
+export const RECEIVE_USERS = "RECEIVE_USERS";
 export const UPDATE_USER = "UPDATE_USER";
 
 export const receiveUser = (user) => ({
