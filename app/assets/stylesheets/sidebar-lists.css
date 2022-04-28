@@ -103,3 +103,7 @@
 .sidebar-list-header-left {
     width: 100%;
 }
+
+.sidebar-link {
+    text-decoration: none;
+}

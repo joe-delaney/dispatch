@@ -1,5 +1,6 @@
 import React from "react";
 import ChannelSidebarListItem from "./channel_sidebar_list_item";
+import { Link } from "react-router-dom";
 
 class ChannelSidebarList extends React.Component {
     constructor(props) {
@@ -38,6 +39,7 @@ class ChannelSidebarList extends React.Component {
                     {this.props.channels.map((channel, idx) => <ChannelSidebarListItem key={idx} channel={channel} />)}
                 </ul>
                 <ul>
+                    <Link to="/user-dashboard/browse-channels" className="sidebar-link">
                     <li className={`sidebar-list-item last-item ${hidden}`}>
                         <div className="add-margin-right">
                             <div className="sidebar-button-image-container-bottom">
@@ -46,6 +48,7 @@ class ChannelSidebarList extends React.Component {
                         </div>
                         <span className="sidebar-item-name">Add Channels</span>
                     </li>
+                    </Link>
                 </ul>
             </div>
         )

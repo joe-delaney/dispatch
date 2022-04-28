@@ -9,7 +9,8 @@ class Api::ChannelsController < ApplicationController
     end
 
     def show 
-
+        @channel = Channel.find_by(id: params[:id])
+        render :show
     end
 
     def update 
