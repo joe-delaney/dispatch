@@ -94,3 +94,11 @@
 .add-margin-right {
     margin-right: 8px;
 }
+
+.rotate-90 {
+    transform: rotate(-90deg);
+}
+
+.sidebar-list-header-left {
+    width: 100%;
+}

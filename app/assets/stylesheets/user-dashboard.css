@@ -83,6 +83,10 @@
     overflow-y:scroll;
 }
 
+.user-dashboard-nav-bar-search-results::-webkit-scrollbar {
+    background-color: #1b1d21;
+}
+
 .user-dashboard-nav-search-result {
     display: flex;
     list-style: none;

@@ -73,3 +73,7 @@
     overflow:hidden;
     overflow-y:scroll;
 }
+
+.channel-browser-items::-webkit-scrollbar {
+        background-color: #1b1d21;
+}
