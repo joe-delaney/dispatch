@@ -23,3 +23,11 @@ export const selectCurrentUserChannels = ({channels}, user) => {
     }
     return subscribedChannels;
 }
+
+export const selectChannelMembers = ({users}, channelMemberIds) => {
+    let channelMembers = [];
+    channelMemberIds.forEach((id) => {
+        channelMembers.push(users[id]);
+    })
+    return channelMembers;
+}

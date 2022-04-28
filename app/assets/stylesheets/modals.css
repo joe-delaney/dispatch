@@ -267,6 +267,10 @@
     border-bottom: 1px solid #35373b;
 }
 
+.about-channel-list-item:hover {
+    background-color: #26282C;
+}
+
 .about-channel-list-item-top {
     display: flex;
     justify-content: space-between;
@@ -311,3 +315,77 @@
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 }
+
+.leave-channel-modal-button:hover {
+    background-color: #26282C;
+}
+
+.push-right {
+    margin-left: 6px;
+    font-weight: 400;
+}
+
+.channel-modal-member {
+    padding: 0 16px;
+    height: 60px;
+    width: 100%;
+}
+
+.channel-modal-member:hover {
+    cursor: pointer;
+    background-color: #e8e8e80a;
+}
+
+.channel-modal-member-contents {
+    display: flex;
+    padding: 12px;
+}
+
+.channel-modal-member-labels {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.channel-modal-member-image {
+    height: 40px;
+    width: 40px;
+    background-color: lightseagreen;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.channel-modal-member-initial {
+    color: #D1D2D3;
+    font-size: 18px;
+    font-family: Lato;
+    font-weight: 700;
+}
+
+.channel-modal-member-name {
+    color: #D1D2D3;
+    font-size: 15px;
+    font-family: Lato;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.channel-modal-member-title {
+    color: #e8e8e8b3;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.channel-details-modal-content {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.channel-details-modal-content::-webkit-scrollbar {
+    background-color: #232529;
+}
+
+
