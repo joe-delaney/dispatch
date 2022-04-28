@@ -306,14 +306,25 @@
     text-decoration: underline;
 }
 
-.leave-channel-modal-button {
+.channel-modal-button {
     cursor: pointer;
-    color: #E10E5A;
     font-family: Lato;
     font-weight: 700;
     padding: 16px 20px;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
+}
+
+.leave-channel-modal-button { 
+    color: #E10E5A;
+}
+
+.join-channel-modal-button {
+    color:#007a5a;
+}
+
+.leave-channel-link {
+    color: #E10E5A;
 }
 
 .leave-channel-modal-button:hover {

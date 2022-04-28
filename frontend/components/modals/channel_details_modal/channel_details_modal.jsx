@@ -42,7 +42,14 @@ export default class ChannelDetailsModal extends React.Component {
         const aboutSelected = this.state.aboutSelected ? "currently-selected" : "";
         const membersSelected = this.state.membersSelected ? "currently-selected" : "";
 
-        const aboutSection = <AboutChannel channel={this.props.channel} creator={this.props.channel_creator}/>;
+        const aboutSection = <AboutChannel 
+                                channel={this.props.channel} 
+                                creator={this.props.channel_creator}
+                                unsubscribe={this.props.unsubscribe}
+                                subscribe={this.props.subscribe}
+                                currentUser={this.props.currentUser}
+                                toggleModal={this.props.toggleModal}
+                            />;
         const membersSection = <ChannelMembers members={this.props.members}/>;
         const content = this.state.aboutSelected ? aboutSection : membersSection;
 
