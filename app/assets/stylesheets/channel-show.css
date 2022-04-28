@@ -45,3 +45,16 @@
     margin-left: 5px;
     margin-top: 10px;
 }
+
+.channel-show-topic {
+    margin-left: 20px;
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #E8E8E8B3;
+}
+
+.channel-show-header-left {
+    display: flex;
+    align-items: center;
+}
