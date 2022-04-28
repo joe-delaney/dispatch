@@ -1,4 +1,5 @@
 import { connect } from "react-redux"
+import { toggleChannelDetailsModal } from "../../../actions/modal_actions";
 import ChannelShowHeader from "./channel_show_header";
 
 const mapStateToProps = (state, ownProps) => ({
@@ -6,7 +7,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    
+    toggleModal: () => dispatch(toggleChannelDetailsModal())
 })
 
 const ChannelShowHeaderContainer = connect(mapStateToProps, mapDispatchToProps)(ChannelShowHeader);
