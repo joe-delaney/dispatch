@@ -1,5 +1,8 @@
 import React from "react";
 
-const ChannelShowHeader = ({channel}) => <h1>TEST</h1>
+const ChannelShowHeader = ({channel}) => {
+    const channelName = channel ? channel.name : "";
+    return <h1>{channelName}</h1>
+}
 
 export default ChannelShowHeader;

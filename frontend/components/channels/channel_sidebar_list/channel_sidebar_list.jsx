@@ -46,7 +46,7 @@ class ChannelSidebarList extends React.Component {
                                 <img src={window.plusThick} alt="plus" className="sidebar-button-plus-bottom"></img>
                             </div>
                         </div>
-                        <span className="sidebar-item-name">Add Channels</span>
+                        <span className="sidebar-item-name">Browse Channels</span>
                     </li>
                     </Link>
                 </ul>

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 class ChannelBrowserItem extends React.Component {
 
@@ -38,14 +39,17 @@ class ChannelBrowserItem extends React.Component {
         }
 
         return (
+            
             <li onMouseEnter={this.toggleButtons} onMouseLeave={this.toggleButtons} className="channel-browser-item">
-                <div className="channel-browser-label-container">
-                    <span className="channel-browser-item-title">{`# ${this.props.channel.name}`}</span>
-                    <span className="channel-browser-item-subtitle">{`${this.props.channel.channelMemberIds.length} members`}</span>
-                </div>
-                <div className="channel-browser-item-buttons">
-                    {subscribedButton}
-                </div>
+                    <Link className="channel-browser-link-to-channel" to={`/user-dashboard/channels/${this.props.channel.id}`}>
+                        <div className="channel-browser-label-container">
+                            <span className="channel-browser-item-title">{`# ${this.props.channel.name}`}</span>
+                            <span className="channel-browser-item-subtitle">{`${this.props.channel.channelMemberIds.length} members`}</span>
+                        </div>
+                    </Link >
+                    <div className="channel-browser-item-buttons">
+                        {subscribedButton}
+                    </div>
             </li>
         )
     }

@@ -55,6 +55,10 @@
     flex-direction: column;
 }
 
+.channel-browser-link-to-channel {
+    width: 100%;
+}
+
 .channel-browser-item-title  {
     font-weight: 400;
     font-family: Lato;

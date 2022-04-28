@@ -13,7 +13,6 @@ export default class ChannelShow extends React.Component {
         return (
             <div className="user-dashboard-center-main">
                 <div className="user-dashboard-center-main-feed">
-                    <h1>TEST</h1>
                 </div>
             </div> 
         )
