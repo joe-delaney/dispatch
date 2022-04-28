@@ -16,15 +16,21 @@ class ChannelSidebarList extends React.Component {
                         </div>
                         <span className="sidebar-list-header-title">Channels</span>
                     </div>
-                    <button className="sidebar-button">+</button>
+                    <div className="sidebar-button-image-container">
+                        <img src={window.plus} alt="plus" className="sidebar-button-plus"></img>
+                    </div>
                 </div>
                 <ul>
                     {this.props.channels.map((channel, idx) => <ChannelSidebarListItem key={idx} channel={channel} />)}
                 </ul>
                 <ul>
-                    <li className="sidebar-list-item">
-                        <button>+</button>
-                        <span>Add Channels</span>
+                    <li className="sidebar-list-item last-item">
+                        <div className="add-margin-right">
+                            <div className="sidebar-button-image-container-bottom">
+                                <img src={window.plusThick} alt="plus" className="sidebar-button-plus-bottom"></img>
+                            </div>
+                        </div>
+                        <span className="sidebar-item-name">Add Channels</span>
                     </li>
                 </ul>
             </div>
