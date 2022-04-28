@@ -43,6 +43,7 @@
     align-items: center;
     padding: 12px 12px;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .channel-browser-item:hover {
