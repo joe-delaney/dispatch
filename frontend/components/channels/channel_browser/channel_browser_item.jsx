@@ -21,14 +21,19 @@ class ChannelBrowserItem extends React.Component {
     render() {
 
         let hidden = this.state.showButtons ? "" : "hidden"
+        let subscription = {
+            subscriber_id: this.props.currentUser.id,
+            subscribable_id: this.props.channel.id,
+            subscribable_type: "Channel"
+        }
 
         let subscribedButton = <div></div>;
         if (this.props.currentUser) {
             let subscribed = this.props.currentUser.subscribedChannelIds.includes(this.props.channel.id);
             subscribedButton = subscribed ? (
-                <button className={`channel-browser-item-button browser-button-light ${hidden}`}>Leave</button>
+                <button onClick={() => this.props.unsubscribe(subscription)} className={`channel-browser-item-button browser-button-light ${hidden}`}>Leave</button>
             ) : (
-                <button className={`channel-browser-item-button browser-button-dark ${hidden}`}>Join</button>
+                <button onClick={() => this.props.subscribe(subscription)} className={`channel-browser-item-button browser-button-dark ${hidden}`}>Join</button>
             )
         }
 

@@ -32,6 +32,8 @@ export default class ChannelBrowser extends React.Component {
                                         key={`${channel.name}${idx}`} 
                                         channel={channel}
                                         currentUser={this.props.currentUser}
+                                        subscribe={this.props.subscribe}
+                                        unsubscribe={this.props.unsubscribe}
                                     />
                                 ))}
                             </ul>
