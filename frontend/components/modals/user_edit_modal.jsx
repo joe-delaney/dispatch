@@ -65,9 +65,9 @@ export default class UserEditModal extends React.Component {
 
         return (
             <section className={editModalClass} >
-                <div className={`user-edit-modal-content-container ${containerErrorActive}`}>
-                    <div className="user-edit-modal-header">
-                        <div className="user-edit-modal-title">Edit your profile</div>
+                <div className={`modal-container user-edit-modal-content-container ${containerErrorActive}`}>
+                    <div className="modal-header">
+                        <div className="modal-title">Edit your profile</div>
                         <button onClick={this.closeModal} className="close-modal-button">
                             <span>&times;</span>
                         </button>
