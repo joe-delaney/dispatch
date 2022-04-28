@@ -28,7 +28,11 @@ export default class ChannelBrowser extends React.Component {
                             <span className="channels-browser-label">{channels.length} {channelsLabel}</span>
                              <ul className="channel-browser-items">
                                 {channels.map((channel, idx) => (
-                                    <ChannelBrowserItem key={`${channel.name}${idx}`} channel={channel}/>
+                                    <ChannelBrowserItem 
+                                        key={`${channel.name}${idx}`} 
+                                        channel={channel}
+                                        currentUser={this.props.currentUser}
+                                    />
                                 ))}
                             </ul>
                         </div>

@@ -42,6 +42,7 @@
     border-top: 1px solid #35373b;
     align-items: center;
     padding: 12px 12px;
+    justify-content: space-between;
 }
 
 .channel-browser-item:hover {
@@ -76,4 +77,38 @@
 
 .channel-browser-items::-webkit-scrollbar {
         background-color: #1b1d21;
+}
+
+.channel-browser-item-button {
+    font-size: 15px;
+    height: 36px;
+    min-width: 80px;
+    font-weight: 700;
+    font-family: Lato;
+    border-radius: 4px;
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.browser-button-light {
+    box-shadow: 0 0 0 1px #E8E8E8B3;
+    color: #E8E8E8B3;
+    background-color: #1b1d21;
+}
+
+.browser-button-light:hover {
+    background-color: #222529;
+}
+
+.browser-button-dark {
+    background-color: #007a5a;
+    color: white;
+    border: none;
+}   
+
+.browser-button-dark:hover {
+    background-color: #148567;
+    box-shadow: 0 1px 4px #0000004d;
 }

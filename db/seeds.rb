@@ -92,7 +92,7 @@ friends = Channel.create!(creator_id: joe.id, name: "Friends", topic: "Central P
 himym = Channel.create!(creator_id: joe.id, name: "How I Met Your Mother", topic: "5 friends in NYC", description: "Follow Ted on his quest to find love")
 knicks = Channel.create!(creator_id: joe.id, name: "Knicks", topic: "Go NY Go NY Go", description: "Trying to win the NBA Championship")
 dogs = Channel.create!(creator_id: joe.id, name: "Dogs", topic: "Woof Woof", description: "Woof woof Woof woof Woof woof bark bark")
-harrypotter = Channel.create!(creator_id: joe.id, name: "Hogwarts", topic: "Casting spells", description: "Learning witchcraft and wizardry")
+harrypotter = Channel.create!(creator_id: harry.id, name: "Hogwarts", topic: "Casting spells", description: "Learning witchcraft and wizardry")
 
 
 puts "Creating subscriptions..."
@@ -168,7 +168,7 @@ s52 = Subscription.create!(subscriber_id: lucy.id, subscribable_id: dogs.id, sub
 s53 = Subscription.create!(subscriber_id: scout.id, subscribable_id: dogs.id, subscribable_type: "Channel")
 
 #Harry Potter
-s54 = Subscription.create!(subscriber_id: joe.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
+# s54 = Subscription.create!(subscriber_id: joe.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
 s55 = Subscription.create!(subscriber_id: harry.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
 s56 = Subscription.create!(subscriber_id: ron.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
 s57 = Subscription.create!(subscriber_id: hermione.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
