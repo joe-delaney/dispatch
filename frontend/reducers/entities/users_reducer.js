@@ -15,7 +15,11 @@ export const usersReducer = (state = {}, action) => {
             return nextState;
         case RECEIVE_INFO:
             // Add the relevant users to state when needed (i.e. loading a channel)
-            Object.values(action.info.members).forEach(member => nextState[member.id] = member);
+            Object.values(action.info.members).forEach(member => {
+                if(member.id !== action.info.currentUser.id) {
+                    nextState[member.id] = member
+                }
+            });
             return nextState;
         default:
             return state;

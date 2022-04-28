@@ -10,6 +10,7 @@ class Api::ChannelsController < ApplicationController
 
     def show 
         @channel = Channel.find_by(id: params[:id])
+        @current_user = current_user
         render :show
     end
 

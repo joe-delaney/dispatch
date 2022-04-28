@@ -6,10 +6,16 @@ export default class ChannelShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchChannelInfo(this.props.match.params.channelId);
+        this.props.fecthChannelInfo(this.props.match.params.channelId);
     }
 
     render() {
-        return <h1>TEST</h1>;
+        return (
+            <div className="user-dashboard-center-main">
+                <div className="user-dashboard-center-main-feed">
+                    <h1>TEST</h1>
+                </div>
+            </div> 
+        )
     }
 }

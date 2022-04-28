@@ -9,6 +9,10 @@ json.set! :members do
     end
 end
 
+json.set! :current_user do
+    json.extract! @current_user, :id
+end
+
 json.set! :messages do 
-    
+
 end
