@@ -53,7 +53,7 @@ export default class UserEditModal extends React.Component {
     }
 
     render() {
-        const editModalClass = this.props.editModalDisplayed ? "user-edit-modal" : "user-edit-modal hidden"
+        const editModalClass = this.props.editModalDisplayed ? "modal" : "modal hidden"
         const errorMessage = !this.state.display_name.length ? (
             <div className="edit-error">
                  <p className="edit-error-icon">⚠</p>
@@ -68,7 +68,7 @@ export default class UserEditModal extends React.Component {
                 <div className={`user-edit-modal-content-container ${containerErrorActive}`}>
                     <div className="user-edit-modal-header">
                         <div className="user-edit-modal-title">Edit your profile</div>
-                        <button onClick={this.closeModal} className="close-edit-user-modal-button">
+                        <button onClick={this.closeModal} className="close-modal-button">
                             <span>&times;</span>
                         </button>
                     </div>

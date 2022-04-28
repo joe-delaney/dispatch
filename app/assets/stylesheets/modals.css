@@ -1,4 +1,6 @@
-.user-edit-modal {
+/* Shared */
+
+.modal {
     z-index: 1000;
     height: 100%;
     width: 100%;
@@ -9,6 +11,23 @@
     opacity: 1;
     background: #00000099;
 }
+
+.close-modal-button {
+    color: #D1D2D3;
+    height: 1.2rem;
+    width: 1.2rem;
+    font-size: 22px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 28px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* User Edit Modal */
 
 .user-edit-modal-content-container {
     width: 700px;
@@ -22,20 +41,6 @@
 
 .user-edit-container-error-active {
     height: 580px !important;
-}
-
-.close-edit-user-modal-button {
-    color: #D1D2D3;
-    height: 1.2rem;
-    width: 1.2rem;
-    font-size: 22px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin: 10px 28px;
-    border-radius: 5px;
 }
 
 .close-edit-user-modal-button:hover {
