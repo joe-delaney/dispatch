@@ -252,3 +252,62 @@
     height: 100%;
     width: 100%;
 }
+
+.about-channel-container {
+    background-color: #1b1d21;
+    margin: 28px 28px;
+    border: 1px solid #1b1d21;
+    border-radius: 12px;
+}
+
+.about-channel-list-item {
+    display: flex;
+    padding: 16px 20px;
+    flex-direction: column;
+    border-bottom: 1px solid #35373b;
+}
+
+.about-channel-list-item-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-item-title {
+    font-size: 17px;
+    line-height: 1.46668;
+    font-weight: 700;
+    font-family: Lato;
+    color: #d1d2d3;
+}
+
+.about-item-detail {
+    color: #d1d2d3e1;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Lato;
+}
+
+.about-channel-edit-button {
+    cursor: pointer;
+}
+
+.about-channel-edit-button {
+    color: #1d9bd1;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: Lato;
+}
+
+.about-channel-edit-button:hover {
+    text-decoration: underline;
+}
+
+.leave-channel-modal-button {
+    cursor: pointer;
+    color: #E10E5A;
+    font-family: Lato;
+    font-weight: 700;
+    padding: 16px 20px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}

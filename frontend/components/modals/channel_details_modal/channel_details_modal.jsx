@@ -42,7 +42,7 @@ export default class ChannelDetailsModal extends React.Component {
         const aboutSelected = this.state.aboutSelected ? "currently-selected" : "";
         const membersSelected = this.state.membersSelected ? "currently-selected" : "";
 
-        const aboutSection = <AboutChannel/>;
+        const aboutSection = <AboutChannel channel={this.props.channel} creator={this.props.channel_creator}/>;
         const membersSection = <ChannelMembers />;
         const content = this.state.aboutSelected ? aboutSection : membersSection;
 
@@ -60,7 +60,7 @@ export default class ChannelDetailsModal extends React.Component {
                             About
                         </button>
                         <button onClick={this.selectMembers} className={`modal-tab-button ${membersSelected}`}>
-                            {`Members ${channelMembers}`}
+                            {`Members  ${channelMembers}`}
                         </button>
                     </div>
                     <div className="channel-details-modal-content">

@@ -7,9 +7,11 @@ const mapStateToProps = (state, ownProps) => {
     let pathnameComponents = ownProps.location.pathname.split("/");
     let channelId = pathnameComponents[pathnameComponents.indexOf('channels')+1];
     let channel = !isNaN(channelId) ? state.entities.channels[channelId] : undefined;
+    let creator = channel ? state.entities.users[channel.creatorId] : undefined;
     return {
         channel: channel,
-        displayModal: state.ui.modals.channelDetailsModalDisplayed
+        displayModal: state.ui.modals.channelDetailsModalDisplayed,
+        channel_creator: creator
     }
 }
 
