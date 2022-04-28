@@ -64,6 +64,7 @@
     font-weight: 700;
     font-family: Lato;
     margin-bottom: 5px;
+    color: #a3a3a6;
 }
 
 .sidebar-item-name {
@@ -105,5 +106,9 @@
 }
 
 .sidebar-link {
+    text-decoration: none;
+}
+
+.sidebar-list-item-container {
     text-decoration: none;
 }
