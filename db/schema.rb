@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_26_195048) do
+ActiveRecord::Schema.define(version: 2022_04_28_022832) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2022_04_26_195048) do
     t.datetime "updated_at", null: false
     t.index ["subscribable_id", "subscribable_type"], name: "index_subscriptions_on_subscribable_id_and_subscribable_type"
     t.index ["subscribable_type", "subscribable_id"], name: "index_subscriptions_on_subscribable_type_and_subscribable_id"
+    t.index ["subscriber_id", "subscribable_id", "subscribable_type"], name: "unique_subscriptions", unique: true
     t.index ["subscriber_id"], name: "index_subscriptions_on_subscriber_id"
   end
 

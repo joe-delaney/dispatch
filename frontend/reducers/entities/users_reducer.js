@@ -6,7 +6,9 @@ export const usersReducer = (state = {}, action) => {
     let nextState;
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            return Object.assign({}, { [action.currentUser.id]: action.currentUser });
+            nextState = Object.assign({}, state);
+            nextState[action.currentUser.id] = action.currentUser;
+            return nextState;
         case RECEIVE_USER: 
             //This should add the selected user to state so we can access their info
             nextState = Object.assign({}, state);
