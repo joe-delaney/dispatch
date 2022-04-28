@@ -1,0 +1,47 @@
+.channel-show-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.channel-show-header-text {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 18px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.channel-show-header-text:hover {
+    background-color: #222529;
+}
+
+.channel-show-members-icon {
+    border-radius: 4px;
+    height: 28px;
+    box-shadow: 0 0 0 1px #E8E8E8B3;
+    cursor:pointer;
+}
+
+.channel-show-members-icon:hover {
+    background-color: #222529;
+}
+
+.channel-show-members-icon-label {
+    padding: 0px 8px 0px 12px;
+    color: #E8E8E8B3;
+    font-size: 13px;
+    font-family: Lato;
+}
+
+.channel-show-down-carret {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
