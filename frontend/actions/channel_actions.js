@@ -4,6 +4,8 @@ import { subscribe } from "./subscription_actions";
 export const RECEIVE_CHANNELS = "RECEIVE_CHANNELS";
 export const  RECEIVE_INFO = "RECEIVE_INFO";
 export const RECEIVE_CHANNEL = "RECEIVE_CHANNEL";
+export const RECEIVE_SUBSCRIBED_USER = "RECEIVE_SUBSCRIBED_USER";
+export const RECEIVE_UNSUBSCRIBED_USER = "RECEIVE_UNSUBSCRIBED_USER";
 
 const receiveChannels = (channels) => ({
     type: RECEIVE_CHANNELS,
@@ -19,6 +21,19 @@ const receiveChannel = (channel) => ({
     type: RECEIVE_CHANNEL,
     channel
 })
+
+export const receiveSubscribedUser = (userId, channelId) => ({
+    type: RECEIVE_SUBSCRIBED_USER,
+    userId,
+    channelId
+})
+
+export const receiveUnsubscribedUser = (userId, channelId) => ({
+    type: RECEIVE_UNSUBSCRIBED_USER,
+    userId,
+    channelId
+})
+
 
 export const fetchChannels = () => dispatch => ChannelAPIUtil.fetchChannels()
     .then(channels => dispatch(receiveChannels(channels)));

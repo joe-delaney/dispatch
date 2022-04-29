@@ -3,6 +3,7 @@
     flex-direction: column;
     padding-left: 20px;
     padding-right: 20px;
+    height: 100%;
 }
 
 .channel-browser-search-bar {
@@ -78,6 +79,7 @@
 .channel-browser-items {
     overflow:hidden;
     overflow-y:scroll;
+    margin-bottom: 70px;
 }
 
 .channel-browser-items::-webkit-scrollbar {
