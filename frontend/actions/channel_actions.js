@@ -2,7 +2,7 @@ import * as ChannelAPIUtil from "../util/channel_api_util";
 import { subscribe } from "./subscription_actions";
 
 export const RECEIVE_CHANNELS = "RECEIVE_CHANNELS";
-export const  RECEIVE_INFO = "RECEIVE_INFO";
+export const RECEIVE_INFO = "RECEIVE_INFO";
 export const RECEIVE_CHANNEL = "RECEIVE_CHANNEL";
 export const RECEIVE_SUBSCRIBED_USER = "RECEIVE_SUBSCRIBED_USER";
 export const RECEIVE_UNSUBSCRIBED_USER = "RECEIVE_UNSUBSCRIBED_USER";
