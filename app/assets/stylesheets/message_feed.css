@@ -11,8 +11,20 @@
 .message-feed-item-content {
     display: flex;
     flex-direction: column;
+    margin-left: 12px;
 }
 
 .message-feed-item-content-top {
     display: flex;
+    align-items: baseline;
+}
+
+.message-feed-author {
+    font-weight: 900;
+}
+
+.message-feed-time {
+    font-size: 12px;
+    color: #ABABAD;
+    margin-left: 10px;
 }

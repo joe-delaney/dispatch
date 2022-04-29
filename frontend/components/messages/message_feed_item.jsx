@@ -15,8 +15,8 @@ export default class MessageFeedItem extends React.Component {
                 </div>
                 <div className="message-feed-item-content">
                     <div className="message-feed-item-content-top">
-                        <span className="message-feed-author">Author Name</span>
-                        <span className="messsage-feed-time">Created Date</span>
+                        <span className="message-feed-author">Joe Delaney</span>
+                        <span className="message-feed-time">3:30 PM</span>
                     </div>
                     <span className="message-feed-text">{this.props.message.text}</span>
                 </div>
