@@ -201,3 +201,53 @@ m17 = Message.create!(author_id: dwight.id, text: "I am faster than 80 percent o
 m18 = Message.create!(author_id: michael.id, text: "It takes an advanced sense of humor. I don't expect everybody to understand.", messagable_id: office.id, messagable_type: "Channel")
 m19 = Message.create!(author_id: dwight.id, text: "You only live once? False. You live every day. You only die once.", messagable_id: office.id, messagable_type: "Channel")
 m20 = Message.create!(author_id: kelly.id, text: "I am one of the few people who looks hot eating a cupcake.", messagable_id: office.id, messagable_type: "Channel")
+
+# # Avengers
+m21 = Message.create!(author_id: captain.id, text: "Avengers. Assemble.", messagable_id: avengers.id, messagable_type: "Channel")
+m22 = Message.create!(author_id: ironman.id, text: "I am Iron Man", messagable_id: avengers.id, messagable_type: "Channel")
+m23 = Message.create!(author_id: thor.id, text: "You people are so petty. And tiny.", messagable_id: avengers.id, messagable_type: "Channel")
+m24 = Message.create!(author_id: hulk.id, text: "I'm always angry", messagable_id: avengers.id, messagable_type: "Channel")
+m25 = Message.create!(author_id: tchalla.id, text: "Wakanda will no longer watch from the shadows. We can not. We must not. We will work to be an example of how we, as brothers and sisters on this earth, should treat each other. ", messagable_id: avengers.id, messagable_type: "Channel")
+m26 = Message.create!(author_id: blackwidow.id, text: "Yes, the world is a vulnerable place, and yes, we helped make it that way. But we’re also the ones best qualified to defend it. So if you want to arrest me, arrest me. You’ll know where to find me.", messagable_id: avengers.id, messagable_type: "Channel")
+m27 = Message.create!(author_id: scarletwitch.id, text: "Don't Worry, Darling. I Have Everything Under Control.", messagable_id: avengers.id, messagable_type: "Channel")
+
+# # Spongebob
+m28 = Message.create!(author_id: spongebob.id, text: "I'm Ready. I'm Ready. I'm Ready", messagable_id: bikini_bottom.id, messagable_type: "Channel")
+m29 = Message.create!(author_id: patrick.id, text: "Oh Boy, 3 AM!", messagable_id: bikini_bottom.id, messagable_type: "Channel")
+m30 = Message.create!(author_id: plankton.id, text: "I'll get that Krabby Patty formula Krabs", messagable_id: bikini_bottom.id, messagable_type: "Channel")
+m32 = Message.create!(author_id: mrkrabs.id, text: "I love money", messagable_id: bikini_bottom.id, messagable_type: "Channel")
+m33 = Message.create!(author_id: squidward.id, text: "Spongebob, leave me alone", messagable_id: bikini_bottom.id, messagable_type: "Channel")
+m34 = Message.create!(author_id: spongebob.id, text: "The Krusty Krab pizza is the pizza for you and me", messagable_id: bikini_bottom.id, messagable_type: "Channel")
+
+#Friends
+m35 = Message.create!(author_id: ross.id, text: "We were on a break!", messagable_id: friends.id, messagable_type: "Channel")
+m36 = Message.create!(author_id: monica.id, text: "They don’t know that we know they know we know.", messagable_id: friends.id, messagable_type: "Channel")
+m37 = Message.create!(author_id: rachel.id, text: "Well, maybe I don’t need your money. Wait, wait, I said maybe!", messagable_id: friends.id, messagable_type: "Channel")
+m38 = Message.create!(author_id: phoebe.id, text: "Come on, Ross, you’re a paleontologist. Dig a little deeper.", messagable_id: friends.id, messagable_type: "Channel")
+m39 = Message.create!(author_id: joey.id, text: "What’s not to like? Custard: good. Jam: good. Meat: good!", messagable_id: friends.id, messagable_type: "Channel")
+m40 = Message.create!(author_id: chandler.id, text: "Hi, I’m Chandler. I make jokes when I’m uncomfortable.", messagable_id: friends.id, messagable_type: "Channel")
+m41 = Message.create!(author_id: ross.id, text: "Pivot!", messagable_id: friends.id, messagable_type: "Channel")
+m42 = Message.create!(author_id: phoebe.id, text: "They don’t know that we know they know we know.", messagable_id: friends.id, messagable_type: "Channel")
+m43 = Message.create!(author_id: joey.id, text: "Joey doesn't share food", messagable_id: friends.id, messagable_type: "Channel")
+
+#HIMYM
+m44 = Message.create!(author_id: ted.id, text: "Because sometimes even if you know how something’s gonna end, that doesn’t mean you can’t enjoy the ride.", messagable_id: himym.id, messagable_type: "Channel")
+m45 = Message.create!(author_id: barney.id, text: "Whenever I’m sad, I stop being sad and be awesome instead.", messagable_id: himym.id, messagable_type: "Channel")
+m46 = Message.create!(author_id: robin.id, text: "The future is scary, but you can’t just run back to the past because it’s familiar. Yes, it’s tempting, but it’s a mistake.", messagable_id: himym.id, messagable_type: "Channel")
+m47 = Message.create!(author_id: marshall.id, text: "That cake. Best cake I ever had. Seriously, my stomach was like, ‘Hey bro, I don’t know what you’re eating cause I don’t have any eyes but it’s basically awesome, so keep sending it down Gullet Alley.’", messagable_id: himym.id, messagable_type: "Channel")
+m48 = Message.create!(author_id: lily.id, text: "So really the biggest mistake would be not to make that mistake, because then you’ll go your whole life not knowing if something was a mistake or not.", messagable_id: himym.id, messagable_type: "Channel")
+m49 = Message.create!(author_id: ted.id, text: "I finally found the one, Marshall. Her name is Bacon.", messagable_id: himym.id, messagable_type: "Channel")
+m50 = Message.create!(author_id: robin.id, text: "The best I can give you is a fake smile and dead eyes.", messagable_id: himym.id, messagable_type: "Channel")
+m51 = Message.create!(author_id: marshall.id, text: "Lily, there are a million reasons why I love you. You make me laugh, you take care of me when I’m sick, you’re sweet, caring and you even created an egg dish and named it after me. She puts a little Italian dressing on the eggs before she cooks them, it’s called Eggs Marshall and it’s awesome. But the main reason is you’re my best friend, Lily. You’re the best friend I’ve ever had.", messagable_id: himym.id, messagable_type: "Channel")
+m52 = Message.create!(author_id: barney.id, text: "Believe it or not, I was not always as awesome as I am today.", messagable_id: himym.id, messagable_type: "Channel")
+
+#Knicks 
+m53 = Message.create!(author_id: ewing.id, text: "Go Hoyas and Go Knicks", messagable_id: knicks.id, messagable_type: "Channel")
+m54 = Message.create!(author_id: barrett.id, text: "Putting in work to win next year", messagable_id: knicks.id, messagable_type: "Channel")
+
+#Dogs
+m55 = Message.create!(author_id: duke.id, text: "Woof woof woof", messagable_id: dogs.id, messagable_type: "Channel")
+m56 = Message.create!(author_id: scout.id, text: "Bark bark", messagable_id: dogs.id, messagable_type: "Channel")
+m57 = Message.create!(author_id: lucy.id, text: "WOOOOOOF", messagable_id: dogs.id, messagable_type: "Channel")
+m58 = Message.create!(author_id: scooby.id, text: "Ruff ruff Ruff ruff", messagable_id: dogs.id, messagable_type: "Channel")
+m59 = Message.create!(author_id: duke.id, text: "Woof woof woof Woof", messagable_id: dogs.id, messagable_type: "Channel")

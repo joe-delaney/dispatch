@@ -45,8 +45,10 @@
 }
 
 .message-feed-author-image {
-    height: 36px;
-    width: 36px;
+    height: 40px;
+    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
     background-color: lightcoral;
     border-radius: 4px;
     display: flex;
