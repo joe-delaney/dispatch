@@ -1,0 +1,18 @@
+.message-feed-item {
+    padding: 8px 20px;
+    display: flex;
+    line-height: 1.46668;
+    font-size: 15px;
+    font-family: Lato;
+    font-weight: 400;
+    color: #d1d2d3;
+}
+
+.message-feed-item-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-feed-item-content-top {
+    display: flex;
+}
