@@ -14,6 +14,7 @@ class UserDashboardNav extends React.Component {
 
         this.handleInput = this.handleInput.bind(this);
         this.toggleDropdown = this.toggleDropdown.bind(this);
+        this.clearSearchBar = this.clearSearchBar.bind(this);
     }
 
     handleInput(e) {
@@ -25,6 +26,13 @@ class UserDashboardNav extends React.Component {
         } else {
             this.props.clearUserSearchResults();
         }
+    }
+
+    clearSearchBar(e) {
+        this.setState({
+            query: ""
+        });
+        this.props.clearUserSearchResults();
     }
 
     toggleDropdown(e) {
@@ -50,7 +58,10 @@ class UserDashboardNav extends React.Component {
                             <UserDashBoardNavUserSearchResult user={user}/>
                         ))}
                         {channels.map((channel) => (
-                            <UserDashBoardNavChannelSearchResult channel={channel}/>
+                            <UserDashBoardNavChannelSearchResult 
+                                channel={channel}
+                                clearSearchBar={this.clearSearchBar}
+                            />
                         ))}
                     </ul>
                 </div>

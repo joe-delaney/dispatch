@@ -133,6 +133,11 @@
     font-family: Lato;
 }
 
+.search-result-link {
+    color: #D1D2D3;
+    width: 100%;
+}
+
 .user-dashboard-nav-bar-profile-icon {
     width: 26px;
     height: 26px;
