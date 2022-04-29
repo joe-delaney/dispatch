@@ -10,6 +10,11 @@ class User < ApplicationRecord
         class_name: :Channel,
         dependent: :destroy
 
+    has_many :authored_messages,
+        foreign_key: :author_id,
+        class_name: :Message,
+        dependent: :destroy
+
     has_many :subscriptions, 
         foreign_key: :subscriber_id,
         class_name: :Subscription,
