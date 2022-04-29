@@ -5,7 +5,13 @@ class Api::ChannelsController < ApplicationController
     end
 
     def create 
+        @channel = Channel.new(channel_params)
 
+        if @channel.save 
+            
+        else
+            render json: @channel.errors.full_messages
+        end
     end
 
     def show 
@@ -20,5 +26,10 @@ class Api::ChannelsController < ApplicationController
 
     def destroy 
 
+    end
+
+    private
+    def channel_params 
+        params.require(:channel).permit(:name, :topic, :description)
     end
 end

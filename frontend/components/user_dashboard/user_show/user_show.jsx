@@ -10,6 +10,7 @@ export default class UserShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchUser(this.props.match.params.userId)
+        .then(() => {}, () => this.props.history.push("/user-dashboard/browse-channels"));
     }
 
     displayEditModal(e) {
