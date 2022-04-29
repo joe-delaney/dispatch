@@ -12,7 +12,8 @@ const mapStateToProps = (state, ownProps) => {
     return {
         parent: ownProps.parent,
         messages: messages,
-        getAuthor: (authorId) => selectUserById(state.entities, authorId)
+        getAuthor: (authorId) => selectUserById(state.entities, authorId),
+        currentUser: state.entities.users[state.session.currentUserId] 
     }
 };
 

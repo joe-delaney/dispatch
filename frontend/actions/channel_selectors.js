@@ -39,5 +39,5 @@ export const selectChannelMessages = ({messages}, messageIds) => {
             if (messages[id]) channelMessages.push(messages[id]);
         })
     }       
-    return channelMessages;
+    return channelMessages.sort((a, b) => (a.createdAt > b.createdAt) ? 1 : -1);
 }

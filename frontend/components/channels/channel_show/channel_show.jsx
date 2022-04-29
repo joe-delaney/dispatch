@@ -31,7 +31,11 @@ export default class ChannelShow extends React.Component {
         if (this.props.currentUser && this.props.channel) {
             let subscribed = this.props.currentUser.subscribedChannelIds.includes(this.props.channel.id);
             bottomComponent = subscribed ? (
-                <MessageComposerContainer/>
+                <MessageComposerContainer
+                    parent={this.props.channel}
+                    type={"Channel"}
+                    currentUser={this.props.currentUser}
+                />
             ) : (
                 <UnsubscribedBottomComponent
                     channel={this.props.channel}
