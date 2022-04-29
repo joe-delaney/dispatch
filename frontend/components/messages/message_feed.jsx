@@ -13,6 +13,7 @@ export default class MessageFeed extends React.Component {
                     <MessageFeedItem 
                         key={idx}
                         message={message}
+                        getAuthor={this.props.getAuthor}
                     />
                 ))}
             </ul>

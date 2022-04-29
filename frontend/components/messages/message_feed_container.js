@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import MessageFeed from "./message_feed";
 import { selectChannelMessages } from "../../actions/channel_selectors";
+import { selectUserById } from "../../actions/user_selectors";
 
 const mapStateToProps = (state, ownProps) => {
     let messages = [];
@@ -10,7 +11,8 @@ const mapStateToProps = (state, ownProps) => {
 
     return {
         parent: ownProps.parent,
-        messages: messages
+        messages: messages,
+        getAuthor: (authorId) => selectUserById(state.entities, authorId)
     }
 };
 

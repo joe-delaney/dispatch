@@ -12,3 +12,7 @@ export const selectSearchedUsers = ({ users }, query) => {
         return searchResults;
     }
 }
+
+export const selectUserById = ({users}, id) => {
+    return users[id]
+};
