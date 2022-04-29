@@ -34,8 +34,10 @@ export const selectChannelMembers = ({users}, channelMemberIds) => {
 
 export const selectChannelMessages = ({messages}, messageIds) => {
     let channelMessages = [];
-    messageIds.forEach((id) => {
-        if (messages[id]) channelMessages.push(messages[id]);
-    })
+    if(messageIds) {
+        messageIds.forEach((id) => {
+            if (messages[id]) channelMessages.push(messages[id]);
+        })
+    }       
     return channelMessages;
 }
