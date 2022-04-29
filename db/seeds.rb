@@ -175,3 +175,26 @@ s57 = Subscription.create!(subscriber_id: hermione.id, subscribable_id: harrypot
 s58 = Subscription.create!(subscriber_id: voldemort.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
 s59 = Subscription.create!(subscriber_id: dumbledore.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
 s60 = Subscription.create!(subscriber_id: snape.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
+
+puts "Creating messages..."
+
+#General
+m1 = Message.create!(author_id: joe.id, text: "Welcome to the general slack channel", messagable_id: general.id, messagable_type: "Channel")
+m2 = Message.create!(author_id: sasha.id, text: "How is everyone doing?", messagable_id: general.id, messagable_type: "Channel")
+m3 = Message.create!(author_id: shannon.id, text: "What's up team!", messagable_id: general.id, messagable_type: "Channel")
+m4 = Message.create!(author_id: jeff.id, text: "Ready to get to work", messagable_id: general.id, messagable_type: "Channel")
+m5 = Message.create!(author_id: joe.id, text: "Feel free to reach out with any questions", messagable_id: general.id, messagable_type: "Channel")
+m6 = Message.create!(author_id: sasha.id, text: "Thanks Joe!", messagable_id: general.id, messagable_type: "Channel")
+
+#The Office
+m7 = Message.create!(author_id: michael.id, text: "Sometimes I’ll start a sentence and I don’t even know where it’s going. I just hope I find it along the way.", messagable_id: office.id, messagable_type: "Channel")
+m8 = Message.create!(author_id: kelly.id, text: "I talk a lot, so I’ve learned to tune myself out.", messagable_id: office.id, messagable_type: "Channel")
+m9 = Message.create!(author_id: michael.id, text: "Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.", messagable_id: office.id, messagable_type: "Channel")
+m10 = Message.create!(author_id: stanley.id, text: "If I don’t have some cake soon, I might die.", messagable_id: office.id, messagable_type: "Channel")
+m11 = Message.create!(author_id: michael.id, text: "The worst thing about prison was the dementors.", messagable_id: office.id, messagable_type: "Channel")
+m12 = Message.create!(author_id: jim.id, text: "Bears. Beets. Battlestar Galactica", messagable_id: office.id, messagable_type: "Channel")
+m13 = Message.create!(author_id: dwight.id, text: "Identity theft is not a joke, Jim! Millions of families suffer every year.", messagable_id: office.id, messagable_type: "Channel")
+m14 = Message.create!(author_id: michael.id, text: "I am running away from my responsibilities. And it feels good.", messagable_id: office.id, messagable_type: "Channel")
+m15 = Message.create!(author_id: pam.id, text: "There’s a lot of beauty in ordinary things. Isn’t that kind of the point?", messagable_id: office.id, messagable_type: "Channel")
+m16 = Message.create!(author_id: michael.id, text: "I am Beyoncé, always.", messagable_id: office.id, messagable_type: "Channel")
+m17 = Message.create!(author_id: dwight.id, text: "I am faster than 80 percent of all snakes.", messagable_id: office.id, messagable_type: "Channel")

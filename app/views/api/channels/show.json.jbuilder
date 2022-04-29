@@ -18,5 +18,9 @@ json.set! :current_user do
 end
 
 json.set! :messages do 
-
+    @channel.messages.each do |message|
+        json.set! message.id do 
+            json.extract! message, :text, :id, :author_id, :messagable_id, :messagable_type
+        end
+    end
 end

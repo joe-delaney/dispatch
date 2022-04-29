@@ -1,6 +1,7 @@
 import React from "react";
 import UnsubscribedBottomComponent from "./unsubscribedBottomComponent";
 import MessageComposer from "../../messages/message_composer";
+import MessageFeedContainer from "../../messages/message_feed_container";
 
 export default class ChannelShow extends React.Component {
     constructor(props) {
@@ -26,6 +27,7 @@ export default class ChannelShow extends React.Component {
 
     render() {
         let bottomComponent = <div></div>;
+        let mainFeedComponent = <div></div>
         if (this.props.currentUser && this.props.channel) {
             let subscribed = this.props.currentUser.subscribedChannelIds.includes(this.props.channel.id);
             bottomComponent = subscribed ? (
@@ -38,11 +40,12 @@ export default class ChannelShow extends React.Component {
                     toggleModal={this.props.toggleModal}
                 />
             )
-            
+            if(subscribed) mainFeedComponent = <MessageFeedContainer />
         }
         return (
             <div className="user-dashboard-center-main">
                 <div className="user-dashboard-center-main-feed">
+                    {mainFeedComponent}
                 </div>
                 {bottomComponent}
             </div> 
