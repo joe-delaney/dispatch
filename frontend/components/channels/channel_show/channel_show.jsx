@@ -1,5 +1,6 @@
 import React from "react";
 import UnsubscribedBottomComponent from "./unsubscribedBottomComponent";
+import MessageComposer from "../../messages/message_composer";
 
 export default class ChannelShow extends React.Component {
     constructor(props) {
@@ -28,7 +29,7 @@ export default class ChannelShow extends React.Component {
         if (this.props.currentUser && this.props.channel) {
             let subscribed = this.props.currentUser.subscribedChannelIds.includes(this.props.channel.id);
             bottomComponent = subscribed ? (
-                <div></div>
+                <MessageComposer/>
             ) : (
                 <UnsubscribedBottomComponent
                     channel={this.props.channel}
