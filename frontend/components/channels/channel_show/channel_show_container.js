@@ -1,6 +1,8 @@
 import { connect } from "react-redux";
 import { fetchChannelInfo } from "../../../actions/channel_actions";
+import { subscribe } from "../../../actions/subscription_actions";
 import ChannelShow from "./channel_show";
+import { toggleChannelDetailsModal } from "../../../actions/modal_actions";
 
 const mapStateToProps = (state, ownProps) => ({
     channel: state.entities.channels[ownProps.match.params.channelId],
@@ -8,7 +10,9 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    fecthChannelInfo: (channelId) => dispatch(fetchChannelInfo(channelId))
+    toggleModal: () => dispatch(toggleChannelDetailsModal()),
+    fecthChannelInfo: (channelId) => dispatch(fetchChannelInfo(channelId)),
+    subscribe: (subscription) => dispatch(subscribe(subscription))
 })
 
 const ChannelShowContainer = connect(mapStateToProps, mapDispatchToProps)(ChannelShow);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import UnsubscribedBottomComponent from "./unsubscribedBottomComponent";
 
 export default class ChannelShow extends React.Component {
     constructor(props) {
@@ -24,22 +24,18 @@ export default class ChannelShow extends React.Component {
     }
 
     render() {
-        let headerText = this.props.channel ? this.props.channel.name : "";
-
         let bottomComponent = <div></div>;
         if (this.props.currentUser && this.props.channel) {
             let subscribed = this.props.currentUser.subscribedChannelIds.includes(this.props.channel.id);
             bottomComponent = subscribed ? (
                 <div></div>
             ) : (
-                <div className="unsubscribed-to-channel-container">
-                    <span className="channel-show-header-text">{`# ${headerText}`}</span>
-                    <div className="unsubscribed-to-channel-buttons">
-                        <button className="unsubscribed-to-channel-button unsubscribed-details">Details</button>
-                        <button className="unsubscribed-to-channel-button unsubscribed-join">Join Channel</button>
-                    </div>
-                    <Link to="/user-dashboard/browse-channels" className="back-to-channel-browser">Back to Channel Browser</Link>
-                </div>
+                <UnsubscribedBottomComponent
+                    channel={this.props.channel}
+                    currentUser={this.props.currentUser}
+                    subscribe={this.props.subscribe}
+                    toggleModal={this.props.toggleModal}
+                />
             )
             
         }
