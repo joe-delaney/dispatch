@@ -6,6 +6,12 @@ export default class MessageFeed extends React.Component {
     }
 
     render() {
-        return <div>TEST</div>
+        return (
+            <ul>
+                {this.props.messages.map((message) => (
+                    <li>{message.text}</li>
+                ))}
+            </ul>
+            )
     }
 }

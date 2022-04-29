@@ -40,7 +40,10 @@ export default class ChannelShow extends React.Component {
                     toggleModal={this.props.toggleModal}
                 />
             )
-            if(subscribed) mainFeedComponent = <MessageFeedContainer />
+            if(subscribed) mainFeedComponent = <MessageFeedContainer 
+                                                    parent={this.props.channel}
+                                                    messagable_type={"Channel"}
+                                                />
         }
         return (
             <div className="user-dashboard-center-main">
