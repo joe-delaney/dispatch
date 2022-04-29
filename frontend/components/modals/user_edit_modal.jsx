@@ -73,26 +73,26 @@ export default class UserEditModal extends React.Component {
                         </button>
                     </div>
                     <div className="user-edit-modal-content">
-                        <div className="user-edit-modal-inputs">
-                            <div className="user-edit-modal-input-container">
-                                <label for="displayNameInput" className="user-edit-modal-input-label">Display Name</label>
-                                <input autocomplete="off" id="displayNameInput" className= {`user-edit-modal-input ${inputErrorActive}`} type="text" value={this.state.display_name} onChange={this.handleInput("display_name")} />
-                                <span className={`user-edit-modal-input-description ${descriptionErrorActive}`}>This could be your first name, or a nickname — however you’d like people to refer to you in Slack.</span>
+                        <div className="modal-inputs">
+                            <div className="modal-input-container">
+                                <label for="displayNameInput" className="modal-input-label">Display Name</label>
+                                <input autocomplete="off" id="displayNameInput" className={`modal-input ${inputErrorActive}`} type="text" value={this.state.display_name} onChange={this.handleInput("display_name")} />
+                                <span className={`modal-input-description ${descriptionErrorActive}`}>This could be your first name, or a nickname — however you’d like people to refer to you in Slack.</span>
                                 {errorMessage}
                             </div>
-                            <div className="user-edit-modal-input-container">
-                                <label for="titleInput" className="user-edit-modal-input-label">What I do</label>
-                                <input autocomplete="off" id="titleInput" className="user-edit-modal-input" type="text" value={this.state.title} onChange={this.handleInput("title")} placeholder="title (optional)" />
-                                <span className="user-edit-modal-input-description">Let people know what you do.</span>
+                            <div className="modal-input-container">
+                                <label for="titleInput" className="modal-input-label">What I do</label>
+                                <input autocomplete="off" id="titleInput" className="modal-input" type="text" value={this.state.title} onChange={this.handleInput("title")} placeholder="title (optional)" />
+                                <span className="modal-input-description">Let people know what you do.</span>
                             </div>
-                            <div className="user-edit-modal-input-container">
-                                <label for="statusInput" className="user-edit-modal-input-label">Status</label>
-                                <input autocomplete="off" id="statusInput" className="user-edit-modal-input" type="text" value={this.state.status} onChange={this.handleInput("status")} placeholder="status (optional)" />
-                                <span className="user-edit-modal-input-description">Let people know what you are currently up to.</span>
+                            <div className="modal-input-container">
+                                <label for="statusInput" className="modal-input-label">Status</label>
+                                <input autocomplete="off" id="statusInput" className="modal-input" type="text" value={this.state.status} onChange={this.handleInput("status")} placeholder="status (optional)" />
+                                <span className="modal-input-description">Let people know what you are currently up to.</span>
                             </div>
                         </div>
                         <div className="user-edit-modal-image-container">
-                            <strong className="user-edit-modal-input-label">Profile Photo</strong>
+                            <strong className="modal-input-label">Profile Photo</strong>
                             <div className="user-edit-image">
                                 <strong className="user-edit-initial">{this.state.display_name[0]}</strong>
                             </div>

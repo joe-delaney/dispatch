@@ -1,4 +1,6 @@
 class Api::ChannelsController < ApplicationController
+    skip_before_action :verify_authenticity_token
+    
     def index 
         @channels = Channel.search(params[:query])
         render :index
@@ -6,9 +8,10 @@ class Api::ChannelsController < ApplicationController
 
     def create 
         @channel = Channel.new(channel_params)
-
+        @channel.creator_id = current_user.id
+        
         if @channel.save 
-            
+
         else
             render json: @channel.errors.full_messages
         end

@@ -61,6 +61,69 @@
     color: #D1D2D3;
 }
 
+.modal-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-input-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 28px;
+}
+
+.modal-input-label {
+    color: #D1D2D3;
+    font-size: 15px;
+    padding-bottom: 8px;
+    font-family: Lato;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 1.46666667;
+}
+
+.modal-input {
+    padding: 12px;
+    height: 20px;
+    padding-top: 11px;
+    padding-bottom: 13px;
+    font-size: 18px;
+    line-height: 1.33333333;
+    border-radius: 4px;
+    margin-right: 20px;
+    color: #D1D2D3;
+    font-family: Lato;
+    font-weight: 400;
+    border: 1px solid #d3d1d24d;
+}
+
+.modal-input-description {
+    color: #ABABAD;
+    margin: 4px 0 20px;
+    font-size: 13px;
+    line-height: 1.38461538;
+    font-family: Lato;
+    font-weight: 400;
+}
+
+.modal-title-description {
+    color: #ABABAD;
+    margin: 4px 0 20px;
+    font-size: 13px;
+    line-height: 1.38461538;
+    font-family: Lato;
+    font-weight: 400;
+    padding-left: 28px;
+    margin-right: 24px;
+}
+
+.modal-input:focus {
+    border: 1px solid #1d9bd1;
+    box-shadow: 0 0px 5px #439ec5;
+    transition: border 80ms ease-out;
+    outline: none;
+}
+
 /* User Edit Modal */
 
 .user-edit-modal-content-container {
@@ -75,21 +138,10 @@
     display: flex;
 }
 
-.user-edit-modal-inputs {
-    display: flex;
-    flex-direction: column;
-}
-
 .user-edit-modal-image-container {
     display: flex;
     flex-direction: column;
     padding-right: 28px;
-}
-
-.user-edit-modal-input-container {
-    display: flex;
-    flex-direction: column;
-    padding-left: 28px;
 }
 
 .user-edit-image {
@@ -107,53 +159,12 @@
     color: white
 }
 
-.user-edit-modal-input-label {
-    color: #D1D2D3;
-    font-size: 15px;
-    padding-bottom: 8px;
-    font-family: Lato;
-    font-weight: 700;
-    cursor: pointer;
-    line-height: 1.46666667;
-}
-
-.user-edit-modal-input {
-    padding: 12px;
-    height: 20px;
-    padding-top: 11px;
-    padding-bottom: 13px;
-    font-size: 18px;
-    line-height: 1.33333333;
-    border-radius: 4px;
-    margin-right: 20px;
-    color: #D1D2D3;
-    font-family: Lato;
-    font-weight: 400;
-    border: 1px solid #d3d1d24d;
-}
-
-.user-edit-modal-input:focus {
-    border: 1px solid #1d9bd1;
-    box-shadow: 0 0px 5px #439ec5;
-    transition: border 80ms ease-out;
-    outline: none;
-}
-
 .edit-error-active:focus {
     box-shadow: 0 0px 5px #e01e5a  !important;
 }
 
 .edit-error-active {
     border: 1px solid #e01e5a !important;
-}
-
-.user-edit-modal-input-description {
-    color: #ABABAD;
-    margin: 4px 0 20px;
-    font-size: 13px;
-    line-height: 1.38461538;
-    font-family: Lato;
-    font-weight: 400;
 }
 
 .user-edit-modal-footer {
@@ -227,7 +238,6 @@
     display: flex;
     padding-left: 18px;
     box-shadow: inset 0 -1px 0 0 #35373b
-    
 }
 
 .modal-tab-button {
@@ -399,4 +409,14 @@
     background-color: #232529;
 }
 
+/* Create Channel Modal */
+.create-channel-modal-content-container {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+}
+
+.margin-bottom {
+    margin-bottom: 10px;
+}
 

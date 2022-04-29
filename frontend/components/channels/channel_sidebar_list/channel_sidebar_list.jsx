@@ -40,7 +40,7 @@ class ChannelSidebarList extends React.Component {
                         </div>
                         <span className="sidebar-list-header-title">Channels</span>
                     </div>
-                    <div className={`sidebar-button-image-container ${hideAddChannelButton}`}>
+                    <div onClick={this.props.toggleModal} className={`sidebar-button-image-container ${hideAddChannelButton}`}>
                         <img src={window.plus} alt="plus" className="sidebar-button-plus"></img>
                     </div>
                 </div>

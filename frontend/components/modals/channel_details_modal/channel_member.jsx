@@ -1,9 +1,15 @@
 import React from "react";
 
-export const ChannelMember = ({member}) => {
+export const ChannelMember = ({member, currentUser}) => {
     const title = (member && member.title) ? member.title : "";
-    const displayName = member ? member.displayName : " ";
-
+    let displayName = " ";
+    if(member) {
+        if(currentUser && currentUser.id === member.id) {
+            displayName = `${member.displayName} (you)`
+        } else {
+            displayName = member.displayName
+        }
+    }
     return (
         <li className="channel-modal-member">
             <div className="channel-modal-member-contents">
