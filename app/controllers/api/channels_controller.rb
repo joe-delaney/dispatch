@@ -12,11 +12,6 @@ class Api::ChannelsController < ApplicationController
         @current_user = current_user
         
         if @channel.save 
-            Subscription.create!({
-                subscriber_id: current_user.id,
-                subscribable_id: @channel.id,
-                subscribable_type: "Channel"
-            })
             render :show
         else
             render json: @channel.errors.full_messages

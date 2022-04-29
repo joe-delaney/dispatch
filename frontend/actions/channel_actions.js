@@ -1,4 +1,5 @@
 import * as ChannelAPIUtil from "../util/channel_api_util";
+import { subscribe } from "./subscription_actions";
 
 export const RECEIVE_CHANNELS = "RECEIVE_CHANNELS";
 export const  RECEIVE_INFO = "RECEIVE_INFO";
@@ -26,4 +27,12 @@ export const fetchChannelInfo = (channelId) => dispatch => ChannelAPIUtil.fetchC
     .then(info => dispatch(receiveChannelInfo(info)));
 
 export const createChannel = channel => dispatch => ChannelAPIUtil.createChannel(channel)
-    .then(info => { dispatch(receiveChannel(info.channel))});
+    .then(info => { 
+        dispatch(receiveChannel(info.channel));
+        let subscription = {
+            subscriber_id: info.currentUser.id,
+            subscribable_id: info.channel.id,
+            subscribable_type: "Channel"
+        }
+        dispatch(subscribe(subscription));
+    });
