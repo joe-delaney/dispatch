@@ -55,11 +55,11 @@ export default class UserEditModal extends React.Component {
     render() {
         const editModalClass = this.props.editModalDisplayed ? "modal" : "modal hidden"
         const errorMessage = !this.state.display_name.length ? (
-            <div className="edit-error">
-                 <p className="edit-error-icon">⚠</p>
-                 <label for="displayNameInput" className="edit-error-message">Unfortunately, you can’t leave this blank.</label>
+            <div className="modal-error">
+                 <p className="modal-error-icon">⚠</p>
+                 <label for="displayNameInput" className="modal-error-message">Unfortunately, you can’t leave this blank.</label>
             </div>) : "";
-        const inputErrorActive = !this.state.display_name.length ? "edit-error-active" : "";
+        const inputErrorActive = !this.state.display_name.length ? "modal-error-active" : "";
         const descriptionErrorActive = !this.state.display_name.length ? "description-error-active" : "";
         const containerErrorActive = !this.state.display_name.length ? "user-edit-container-error-active" : "";
 

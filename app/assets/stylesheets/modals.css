@@ -124,6 +124,35 @@
     outline: none;
 }
 
+.modal-error {
+    display: flex;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-error-icon {
+    color: #e01e5a;
+    height: 15px;
+    width: 15px;
+    margin-right: .5rem;
+}
+
+.modal-error-message {
+    color: #e01e5a;
+    cursor: pointer;
+}
+
+.modal-error-active {
+    border: 1px solid #e01e5a !important;
+}
+
+.modal-error-active:focus {
+    box-shadow: 0 0px 5px #e01e5a !important;
+}
+
 /* User Edit Modal */
 
 .user-edit-modal-content-container {
@@ -159,14 +188,6 @@
     color: white
 }
 
-.edit-error-active:focus {
-    box-shadow: 0 0px 5px #e01e5a  !important;
-}
-
-.edit-error-active {
-    border: 1px solid #e01e5a !important;
-}
-
 .user-edit-modal-footer {
     display: flex;
     align-items: center;
@@ -200,27 +221,6 @@
 .user-save-changes {
     background: #007a5a;
     color: #fff;
-}
-
-.edit-error {
-    display: flex;
-    font-family: Lato;
-    font-weight: 400;
-    font-size: 15px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.edit-error-icon {
-    color:#e01e5a;
-    height: 15px;
-    width: 15px;
-    margin-right: .5rem;
-}
-
-.edit-error-message {
-    color:#e01e5a;
-    cursor:pointer;
 }
 
 .description-error-active {

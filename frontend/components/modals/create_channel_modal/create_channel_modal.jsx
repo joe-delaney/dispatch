@@ -7,7 +7,8 @@ export default class CreateChannelModal extends React.Component {
         this.state = {
             name: "",
             topic: "",
-            description: ""
+            description: "",
+            nameError: false
         }
 
         this.closeModal = this.closeModal.bind(this);
@@ -19,7 +20,8 @@ export default class CreateChannelModal extends React.Component {
         this.setState({
             name: "",
             topic: "",
-            description: ""
+            description: "",
+            nameError: false
         });
         this.props.toggleModal();
     }
@@ -28,6 +30,10 @@ export default class CreateChannelModal extends React.Component {
         if(this.state.name !== "") {
             this.props.createChannel(this.state)
             this.props.toggleModal();
+        } else {
+            this.setState({
+                nameError: true
+            })
         }
     }
 
@@ -36,11 +42,27 @@ export default class CreateChannelModal extends React.Component {
             this.setState({
                 [type]: e.target.value
             })
+
+            if(type === "name" && e.target.value !== "") {
+                this.setState({
+                    nameError: false
+                })
+            } else if(type === "name" && e.target.value === "") {
+                this.setState({
+                    nameError: true
+                })
+            }
         }
     }
 
     render() {
         const channelDetailsModalClass = this.props.displayModal ? "modal" : "modal hidden"
+        const errorMessage = this.state.nameError ? (
+            <div className="modal-error">
+                <p className="modal-error-icon">⚠</p>
+                <label for="nameInput" className="modal-error-message">Unfortunately, you can’t leave this blank.</label>
+            </div>) : "";
+        const inputErrorActive = this.state.nameError ? "modal-error-active" : "";
 
         return (
             <section className={channelDetailsModalClass} >
@@ -55,7 +77,8 @@ export default class CreateChannelModal extends React.Component {
                     <div className="modal-inputs">
                         <div className="modal-input-container margin-bottom">
                             <label for="nameInput" className="modal-input-label">Name</label>
-                            <input autocomplete="off" id="nameInput" className={`modal-input`} type="text" value={this.state.name} onChange={this.handleInput("name")} />
+                            <input autocomplete="off" id="nameInput" className={`modal-input ${inputErrorActive}`} type="text" value={this.state.name} onChange={this.handleInput("name")} />
+                            {errorMessage}
                         </div>
                         <div className="modal-input-container margin-bottom">
                             <label for="topicInput" className="modal-input-label">Topic</label>
