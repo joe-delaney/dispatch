@@ -313,6 +313,8 @@
     overflow: hidden;
     overflow-y: scroll;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .user-dashboard-center-main-feed::-webkit-scrollbar {

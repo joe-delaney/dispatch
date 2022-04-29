@@ -1,6 +1,8 @@
 .message-feed-list {
     overflow: hidden;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .message-feed-list::-webkit-scrollbar {
