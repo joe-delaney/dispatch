@@ -198,3 +198,6 @@ m14 = Message.create!(author_id: michael.id, text: "I am running away from my re
 m15 = Message.create!(author_id: pam.id, text: "There’s a lot of beauty in ordinary things. Isn’t that kind of the point?", messagable_id: office.id, messagable_type: "Channel")
 m16 = Message.create!(author_id: michael.id, text: "I am Beyoncé, always.", messagable_id: office.id, messagable_type: "Channel")
 m17 = Message.create!(author_id: dwight.id, text: "I am faster than 80 percent of all snakes.", messagable_id: office.id, messagable_type: "Channel")
+m18 = Message.create!(author_id: michael.id, text: "It takes an advanced sense of humor. I don't expect everybody to understand.", messagable_id: office.id, messagable_type: "Channel")
+m19 = Message.create!(author_id: dwight.id, text: "You only live once? False. You live every day. You only die once.", messagable_id: office.id, messagable_type: "Channel")
+m20 = Message.create!(author_id: kelly.id, text: "I am one of the few people who looks hot eating a cupcake.", messagable_id: office.id, messagable_type: "Channel")

@@ -1,3 +1,8 @@
+.message-feed-list {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
 .message-feed-item {
     padding: 8px 20px;
     display: flex;
@@ -6,6 +11,7 @@
     font-family: Lato;
     font-weight: 400;
     color: #d1d2d3;
+    align-items: center;
 }
 
 .message-feed-item-content {
@@ -27,4 +33,21 @@
     font-size: 12px;
     color: #ABABAD;
     margin-left: 10px;
+}
+
+.message-feed-author-image {
+    height: 36px;
+    width: 36px;
+    background-color: lightcoral;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-feed-author-initial {
+    color: #D1D2D3;
+    font-size: 18px;
+    font-family: Lato;
+    font-weight: 700;
 }

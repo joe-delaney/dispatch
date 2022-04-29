@@ -8,7 +8,7 @@ export default class MessageFeed extends React.Component {
 
     render() {
         return (
-            <ul>
+            <ul className="message-feed-list">
                 {this.props.messages.map((message, idx) => (
                     <MessageFeedItem 
                         key={idx}
