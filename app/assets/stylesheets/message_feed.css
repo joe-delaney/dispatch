@@ -14,6 +14,10 @@
     align-items: center;
 }
 
+.message-feed-item:hover {
+    background-color: #222529;
+}
+
 .message-feed-item-content {
     display: flex;
     flex-direction: column;
@@ -27,6 +31,11 @@
 
 .message-feed-author {
     font-weight: 900;
+}
+
+.message-feed-author:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .message-feed-time {
