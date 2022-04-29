@@ -315,6 +315,10 @@
     margin-bottom: 40px;
 }
 
+.user-dashboard-center-main-feed::-webkit-scrollbar {
+    background: #1B1D21;
+}
+
 
 .user-dashboard-center-header {
     font-size: 18px;

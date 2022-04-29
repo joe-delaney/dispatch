@@ -3,6 +3,10 @@
     overflow-y: scroll;
 }
 
+.message-feed-list::-webkit-scrollbar {
+    background: #1B1D21;
+}
+
 .message-feed-item {
     padding: 8px 20px;
     display: flex;
