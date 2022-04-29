@@ -26,7 +26,7 @@ export default class CreateChannelModal extends React.Component {
 
     createChannel(e) {
         if(this.state.name !== "") {
-            this.props.createChannel(this.state);
+            this.props.createChannel(this.state)
             this.props.toggleModal();
         }
     }

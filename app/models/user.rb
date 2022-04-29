@@ -12,7 +12,8 @@ class User < ApplicationRecord
 
     has_many :subscriptions, 
         foreign_key: :subscriber_id,
-        class_name: :Subscription
+        class_name: :Subscription,
+        dependent: :destroy
     
     has_many :subscribed_channels,
         through: :subscriptions,

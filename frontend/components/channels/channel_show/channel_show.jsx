@@ -40,9 +40,6 @@ export default class ChannelShow extends React.Component {
             )
             
         }
-
-
-
         return (
             <div className="user-dashboard-center-main">
                 <div className="user-dashboard-center-main-feed">

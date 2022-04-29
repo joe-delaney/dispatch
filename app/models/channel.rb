@@ -5,7 +5,7 @@ class Channel < ApplicationRecord
         foreign_key: :creator_id,
         class_name: :User
 
-    has_many :subscriptions, as: :subscribable
+    has_many :subscriptions, as: :subscribable, dependent: :destroy
 
     has_many :channel_members,
         through: :subscriptions,
