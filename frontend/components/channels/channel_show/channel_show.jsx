@@ -2,6 +2,7 @@ import React from "react";
 import UnsubscribedBottomComponent from "./unsubscribedBottomComponent";
 import MessageComposerContainer from "../../messages/message_composer_container";
 import MessageFeedContainer from "../../messages/message_feed_container";
+import consumer from "../../../consumer";
 
 export default class ChannelShow extends React.Component {
     constructor(props) {
@@ -12,8 +13,20 @@ export default class ChannelShow extends React.Component {
         }
     }
 
+    enterRoom() {
+        this.subscription = consumer.subscriptions.create(
+            { channel: 'ChannelsChannel', id: this.props.match.params.channelId },
+            {
+                received: message => {
+                    console.log('Received message: ', message);
+                }
+            }
+        );
+    }
+
     componentDidMount() {
         this.props.fecthChannelInfo(this.props.match.params.channelId);
+        this.enterRoom();
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -22,7 +35,13 @@ export default class ChannelShow extends React.Component {
             this.setState({
                 id: this.props.match.params.channelId
             })
+            this.subscription?.unsubscribe();
+            this.enterRoom();
         }
+    }
+
+    componentWillUnmount() {
+        this.subscription?.unsubscribe();
     }
 
     render() {

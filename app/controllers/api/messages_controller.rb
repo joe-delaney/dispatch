@@ -7,6 +7,7 @@ class Api::MessagesController < ApplicationController
         if @message.save 
             if params[:message][:messagable_type] == "Channel"
                 @channel = Channel.find_by(id: params[:message][:messagable_id])
+                ChannelsChannel.broadcast_to(@channel, @message)
                 render "api/channels/show"
             else 
                 render json: ["Insert Message Group Here"]
