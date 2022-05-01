@@ -4,9 +4,9 @@ export default class EditMessageComposer extends React.Component {
     constructor(props) {
         super(props);
 
-        let initialText = this.props.message ? this.props.message.text : "";
+        this.initialText = this.props.message ? this.props.message.text : "";
         this.state = {
-            text: initialText
+            text: this.initialText
         }
 
         this.saveMessage = this.saveMessage.bind(this);
@@ -23,7 +23,7 @@ export default class EditMessageComposer extends React.Component {
     }
 
     saveMessage() {
-        if(this.props.message) {
+        if(this.props.message && this.state.text !== "") {
             let newMessage = {
                 id: this.props.message.id,
                 author_id: this.props.message.authorId,
@@ -36,6 +36,9 @@ export default class EditMessageComposer extends React.Component {
             this.setState({
                 text: newMessage.text
             });
+            this.props.toggleEditMessage();
+        } else if (this.props.message && this.state.text === "") {
+            //Don't let the user edit to a blank message
             this.props.toggleEditMessage();
         }
     }
