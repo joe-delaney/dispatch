@@ -13,7 +13,8 @@ class UserDashboardNav extends React.Component {
         }
 
         this.handleInput = this.handleInput.bind(this);
-        this.toggleDropdown = this.toggleDropdown.bind(this);
+        this.showDropdown = this.showDropdown.bind(this);
+        this.hideDropdown = this.hideDropdown.bind(this);
         this.clearSearchBar = this.clearSearchBar.bind(this);
         this.showCurrentUserProfile = this.showCurrentUserProfile.bind(this);
     }
@@ -36,14 +37,22 @@ class UserDashboardNav extends React.Component {
         this.props.clearUserSearchResults();
     }
 
-    toggleDropdown(e) {
+    showDropdown() {
         this.setState({
-            dropdownOpen: !this.state.dropdownOpen
+            dropdownOpen: true
+        });
+    }
+
+    hideDropdown() {
+        this.setState({
+            dropdownOpen: false
         });
     }
 
     showCurrentUserProfile() {
-        this.props.ownProps.history.push(`${this.props.ownProps.history.location.pathname}/users/${this.props.currentUser.id}`)
+        this.hideDropdown();
+        let base = this.props.ownProps.history.location.pathname.split("/users")[0];
+        this.props.ownProps.history.push(`${base}/users/${this.props.currentUser.id}`)
     }
 
     render() {
@@ -75,8 +84,8 @@ class UserDashboardNav extends React.Component {
                     </ul>
                 </div>
                 <div className="user-dashboard-nav-bar-right">
-                    <img onClick={this.toggleDropdown} className="user-dashboard-nav-bar-profile-icon" src="https://cdn.bfldr.com/5H442O3W/at/pl546j-7le8zk-6gwiyo/Slack_Mark.svg?auto=webp&format=png" alt="" />
-                    <div onMouseLeave={this.toggleDropdown} className={dropdownClass}>
+                    <img onClick={this.showDropdown} className="user-dashboard-nav-bar-profile-icon" src="https://cdn.bfldr.com/5H442O3W/at/pl546j-7le8zk-6gwiyo/Slack_Mark.svg?auto=webp&format=png" alt="" />
+                    <div onMouseLeave={this.hideDropdown} className={dropdownClass}>
                         <div className="user-dashboard-nav-bar-profile-dropdown-details">
                             <img className="user-dashboard-nav-bar-profile-dropdown-icon" src="https://cdn.bfldr.com/5H442O3W/at/pl546j-7le8zk-6gwiyo/Slack_Mark.svg?auto=webp&format=png" alt="" />
                             <div className="user-dashboard-nav-bar-profile-dropdown-labels">
@@ -86,11 +95,8 @@ class UserDashboardNav extends React.Component {
                         </div>
                         <ul className="user-dashboard-nav-profile-dropdown-links">
                             <li className="dropdown-link">
-                                {/* <Link to={`/user-dashboard/users/${this.props.currentUser.id}`} className="user-dashboard-nav-bar-profile-dropdown-view-profile">
-                                    <span onClick={this.toggleDropdown}>View Profile</span> 
-                                </Link> */}
                                 <button onClick={this.showCurrentUserProfile} className="user-dashboard-nav-bar-profile-dropdown-view-profile">
-                                    <span onClick={this.toggleDropdown}>View Profile</span> 
+                                    <span>View Profile</span> 
                                 </button>
                             </li>
                             <li className="dropdown-link">
