@@ -7,6 +7,7 @@
 
 .message-feed-list::-webkit-scrollbar {
     background: #1B1D21;
+    width: 0px;
 }
 
 .message-feed-item {

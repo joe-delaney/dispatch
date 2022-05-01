@@ -319,6 +319,7 @@
 
 .user-dashboard-center-main-feed::-webkit-scrollbar {
     background: #1B1D21;
+    width: 0px;
 }
 
 

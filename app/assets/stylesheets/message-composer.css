@@ -1,5 +1,5 @@
 .user-dashboard-center-main-message-composer {
-    height: 240px;
+    height: 180px;
     background-color: #1B1D21;
     padding-left: 20px;
     padding-right: 20px;
@@ -15,7 +15,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    height: 118px;
+    height: 60px;
     align-items: center;
 }
 
@@ -24,7 +24,6 @@
 }
 
 .message-input {
-    height: 50px;
     background-color: transparent;
     border: none;
     padding-left: 20px;
