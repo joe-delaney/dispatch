@@ -251,3 +251,13 @@ m56 = Message.create!(author_id: scout.id, text: "Bark bark", messagable_id: dog
 m57 = Message.create!(author_id: lucy.id, text: "WOOOOOOF", messagable_id: dogs.id, messagable_type: "Channel")
 m58 = Message.create!(author_id: scooby.id, text: "Ruff ruff Ruff ruff", messagable_id: dogs.id, messagable_type: "Channel")
 m59 = Message.create!(author_id: duke.id, text: "Woof woof woof Woof", messagable_id: dogs.id, messagable_type: "Channel")
+
+
+#Hogwarts
+m60 = Message.create!(author_id: harry.id, text: "I solemnly swear I am up to no good.", messagable_id: harrypotter.id, messagable_type: "Channel")
+m61 = Message.create!(author_id: ron.id, text: "You're a little scary sometimes, you know that? Brilliant... but scary.", messagable_id: harrypotter.id, messagable_type: "Channel")
+m62 = Message.create!(author_id: hermione.id, text: "I hope you're pleased with yourselves. We could all have been killed — or worse, expelled. Now if you don't mind, I'm going to bed.", messagable_id: harrypotter.id, messagable_type: "Channel")
+m63 = Message.create!(author_id: voldemort.id, text: "There is no good and evil. There is only power. And those too weak to seek it", messagable_id: harrypotter.id, messagable_type: "Channel")
+m64 = Message.create!(author_id: dumbledore.id, text: "It does not do well to dwell on dreams and forget to live.", messagable_id: harrypotter.id, messagable_type: "Channel")
+m65 = Message.create!(author_id: snape.id, text: "There will be no foolish wand-waving or silly incantations in this class. As such, I don't expect many of you to appreciate the subtle science and exact art that is potion-making. However, for those select few who possess the predisposition, I can teach you how to bewitch the mind and ensnare the senses. I can tell you how to bottle fame, brew glory, and even put a stopper in death. Then again, maybe some of you have come to Hogwarts in possession of abilities so formidable that you feel confident enough to not pay attention!", messagable_id: harrypotter.id, messagable_type: "Channel")
+m66 = Message.create!(author_id: harry.id, text: "I’m going to keep going until I succeed—or I die. Don’t think I don’t know how this might end. I’ve known it for years.", messagable_id: harrypotter.id, messagable_type: "Channel")
