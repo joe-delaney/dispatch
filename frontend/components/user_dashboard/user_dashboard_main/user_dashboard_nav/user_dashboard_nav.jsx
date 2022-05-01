@@ -15,6 +15,7 @@ class UserDashboardNav extends React.Component {
         this.handleInput = this.handleInput.bind(this);
         this.toggleDropdown = this.toggleDropdown.bind(this);
         this.clearSearchBar = this.clearSearchBar.bind(this);
+        this.showCurrentUserProfile = this.showCurrentUserProfile.bind(this);
     }
 
     handleInput(e) {
@@ -41,6 +42,10 @@ class UserDashboardNav extends React.Component {
         });
     }
 
+    showCurrentUserProfile() {
+        this.props.ownProps.history.push(`${this.props.ownProps.history.location.pathname}/users/${this.props.currentUser.id}`)
+    }
+
     render() {
         const channels = this.state.query === "" ? [] : this.props.selectedChannels(this.state.query);
         const searchResults = (this.props.userSearchResults.length || !this.state.query.length || channels.length) ? this.props.userSearchResults : [{ displayName: "No results found" }];
@@ -55,7 +60,11 @@ class UserDashboardNav extends React.Component {
                     <input onChange={this.handleInput} className="user-dashboard-nav-bar-search-input" type="text" value={this.state.query} placeholder="&#xF002;  Search Slack"/>
                     <ul className="user-dashboard-nav-bar-search-results">
                         {searchResults.map((user) => (
-                            <UserDashBoardNavUserSearchResult user={user}/>
+                            <UserDashBoardNavUserSearchResult 
+                                user={user}
+                                ownProps={this.props.ownProps}
+                                clearSearchBar={this.clearSearchBar}
+                            />
                         ))}
                         {channels.map((channel) => (
                             <UserDashBoardNavChannelSearchResult 
@@ -77,9 +86,12 @@ class UserDashboardNav extends React.Component {
                         </div>
                         <ul className="user-dashboard-nav-profile-dropdown-links">
                             <li className="dropdown-link">
-                                <Link to={`/user-dashboard/users/${this.props.currentUser.id}`} className="user-dashboard-nav-bar-profile-dropdown-view-profile">
+                                {/* <Link to={`/user-dashboard/users/${this.props.currentUser.id}`} className="user-dashboard-nav-bar-profile-dropdown-view-profile">
                                     <span onClick={this.toggleDropdown}>View Profile</span> 
-                                </Link>
+                                </Link> */}
+                                <button onClick={this.showCurrentUserProfile} className="user-dashboard-nav-bar-profile-dropdown-view-profile">
+                                    <span onClick={this.toggleDropdown}>View Profile</span> 
+                                </button>
                             </li>
                             <li className="dropdown-link">
                                 <button onClick={this.props.logout} className="user-dashboard-nav-bar-profile-dropdown-view-profile">Sign out of Slack</button>

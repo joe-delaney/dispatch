@@ -1,4 +1,4 @@
-import { TOGGLE_CHANNEL_DETAILS_MODAL, TOGGLE_EDIT_MODAL, TOGGLE_CREATE_CHANNEL_MODAL } from "../../actions/modal_actions";
+import { TOGGLE_CHANNEL_DETAILS_MODAL, TOGGLE_EDIT_MODAL, TOGGLE_CREATE_CHANNEL_MODAL, TOGGLE_PROFILE_VIEW } from "../../actions/modal_actions";
 
 const initialState = {
     editModalDisplayed: false,

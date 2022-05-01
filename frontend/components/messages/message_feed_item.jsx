@@ -14,6 +14,7 @@ export default class MessageFeedItem extends React.Component {
         this.toggleEditMessage = this.toggleEditMessage.bind(this);
         this.toggleMouseOver = this.toggleMouseOver.bind(this);
         this.toggleMouseLeave = this.toggleMouseLeave.bind(this);
+        this.showProfile = this.showProfile.bind(this);
     }
 
     toggleEditMessage() {
@@ -34,6 +35,11 @@ export default class MessageFeedItem extends React.Component {
         this.setState({
             mouseOver: false
         })
+    }
+
+    showProfile() {
+        let base = this.props.ownProps.history.location.pathname.split("/users")[0];
+        this.props.ownProps.history.push(`${base}/users/${this.props.message.authorId}`)
     }
 
     render() {
@@ -66,7 +72,7 @@ export default class MessageFeedItem extends React.Component {
             <div className="message-feed-item-content">
                 <div className="message-feed-item-content-top-wrapper">
                     <div className="message-feed-item-content-top">
-                        <span className="message-feed-author">{displayName}</span>
+                        <span onClick={this.showProfile} className="message-feed-author">{displayName}</span>
                         <span className="message-feed-time">{time}</span>
                     </div>
                     {editButton}

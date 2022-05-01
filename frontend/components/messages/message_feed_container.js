@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import MessageFeed from "./message_feed";
 import { selectChannelMessages } from "../../actions/channel_selectors";
 import { selectUserById } from "../../actions/user_selectors";
+import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state, ownProps) => {
     let messages = [];
@@ -13,7 +14,8 @@ const mapStateToProps = (state, ownProps) => {
         parent: ownProps.parent,
         messages: messages,
         getAuthor: (authorId) => selectUserById(state.entities, authorId),
-        currentUser: state.entities.users[state.session.currentUserId] 
+        currentUser: state.entities.users[state.session.currentUserId],
+        ownProps: ownProps 
     }
 };
 
@@ -22,4 +24,4 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const MessageFeedContainer = connect(mapStateToProps, mapDispatchToProps)(MessageFeed);
-export default MessageFeedContainer;
+export default withRouter(MessageFeedContainer);

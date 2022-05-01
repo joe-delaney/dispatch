@@ -39,6 +39,7 @@
 
 .user-show-close-button:hover {
     background-color: #26282C;
+    cursor: pointer;
 }
 
 .user-show-details {

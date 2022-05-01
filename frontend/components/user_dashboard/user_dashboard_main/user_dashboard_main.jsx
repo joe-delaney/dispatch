@@ -10,9 +10,10 @@ const UserDashboardMain = ({currentUser}) => {
         <div className="user-dashboard-main">
             <UserDashboardSidebar/>
             <UserDashboardCenter />
-            <Switch>
+            {/* <Switch>
                 <ProtectedRoute path="/user-dashboard/users/:userId" component={UserShowContainer} />
-            </Switch>
+            </Switch> */}
+            <UserShowContainer/>
         </div>
     )
 }

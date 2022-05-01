@@ -26,6 +26,7 @@ export default class UserDashboard extends React.Component {
                     currentUser={this.props.currentUser}
                     logout={this.props.logout}
                     selectedChannels={this.props.selectedChannels}
+                    ownProps={this.props.ownProps}
                 />
                 <UserDashboardMain/>
                 <UserEditModal 
