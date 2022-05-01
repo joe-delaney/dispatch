@@ -43,7 +43,9 @@ export default class MessageComposer extends React.Component {
             <div className="user-dashboard-center-main-message-composer">
                 <div className="user-dashboard-message-container">
                     <textarea onChange={this.handleInput("text")} type="text" className="message-input" value={this.state.text} placeholder="Write your message here..." />
-                    <button onClick={this.sendMessage} className="send-message-button">Send</button>
+                    <div className="edit-message-composer-buttons">
+                        <button className="edit-message-button send-message-button" onClick={this.sendMessage}>Send</button>
+                    </div>
                 </div>
             </div>
         )

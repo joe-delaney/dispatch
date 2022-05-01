@@ -97,3 +97,17 @@
     background: #148567;
     box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
 }
+
+.send-message-button {
+    background-color: #007a5a;
+    margin: 0 0 0 8px;
+    color: white;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+    margin-bottom: 5px;
+}
+
+.send-message-button:hover {
+    background: #148567;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+}
