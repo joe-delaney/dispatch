@@ -39,11 +39,18 @@ export default class MessageComposer extends React.Component {
     }
 
     render() {
+        let editedTag = (this.props.message && this.props.message.edited) ? (
+            <span className="message-edited-tag">(edited)</span>
+        ) : (
+            <div></div>
+        )
+
         return (
             <div className="user-dashboard-center-main-message-composer">
                 <div className="user-dashboard-message-container">
                     <textarea onChange={this.handleInput("text")} type="text" className="message-input" value={this.state.text} placeholder="Write your message here..." />
                     <button onClick={this.sendMessage} className="send-message-button">Send</button>
+                    {editedTag}
                 </div>
             </div>
         )

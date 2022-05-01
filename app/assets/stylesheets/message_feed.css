@@ -86,4 +86,10 @@
     cursor: pointer;
 }
 
+.message-edited-tag {
+    font-family: Lato;
+    font-size: 12px;
+    color: #ABABAD;
+}
+
 

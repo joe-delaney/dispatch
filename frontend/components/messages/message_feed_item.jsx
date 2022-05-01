@@ -53,6 +53,7 @@ export default class MessageFeedItem extends React.Component {
             <div className="message-feed-item-content">
                 <EditMessageComposerContainer
                     toggleEditMessage={this.toggleEditMessage}
+                    message={this.props.message}
                 />
             </div>
         ) : (

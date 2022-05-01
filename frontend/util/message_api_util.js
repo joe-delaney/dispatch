@@ -5,3 +5,11 @@ export const createMessage = (message) => (
         data: {message}
     })
 )
+
+export const updateMessage = (message) => (
+    $.ajax({
+        method: "PATCH",
+        url: `/api/messages/${message.id}`,
+        data: {message}
+    })
+)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_29_141939) do
+ActiveRecord::Schema.define(version: 2022_05_01_132405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2022_04_29_141939) do
     t.bigint "messagable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "edited", default: false
     t.index ["author_id"], name: "index_messages_on_author_id"
     t.index ["messagable_id", "messagable_type"], name: "index_messages_on_messagable_id_and_messagable_type"
     t.index ["messagable_type", "messagable_id"], name: "index_messages_on_messagable_type_and_messagable_id"
