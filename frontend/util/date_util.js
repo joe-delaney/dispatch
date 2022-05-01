@@ -31,6 +31,14 @@ const convertHour = hour => {
     }
 }
 
+const convertMinutes = minutes => {
+    if(minutes < 10) {
+        return `0${minutes}`;
+    } else {
+        return minutes;
+    }
+}
+
 export const getCurrentDateTime = (date) => {
     if(twoDaysAgo(date)) {
         return getFullDate(date);
@@ -44,7 +52,7 @@ export const getCurrentDateTime = (date) => {
 const getFullTime = (date) => {
     let dateLabel = getTimeLabel(date.getHours());
     let hours = convertHour(date.getHours())
-    let minutes = date.getMinutes();
+    let minutes = convertMinutes(date.getMinutes());
     return `${hours}:${minutes} ${dateLabel}`
 }
 
