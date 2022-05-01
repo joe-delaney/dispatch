@@ -49,6 +49,12 @@ export default class MessageFeedItem extends React.Component {
             editButton = <button className={`message-edit-button ${editButtonVisible}`} onClick={this.toggleEditMessage}>Edit</button>
         }
 
+        let editedTag = (this.props.message && this.props.message.edited) ? (
+            <span className="message-edited-tag">(edited)</span>
+        ) : (
+            <div></div>
+        )
+
         let messageItemContent = this.state.editMessage ? (
             <div className="message-feed-item-content">
                 <EditMessageComposerContainer
@@ -65,7 +71,10 @@ export default class MessageFeedItem extends React.Component {
                     </div>
                     {editButton}
                 </div>
-                    <span className="message-feed-text">{this.props.message.text}</span>
+                    <div className="message-feed-text-container">
+                        <span className="message-feed-text">{this.props.message.text}</span>
+                        {editedTag}
+                    </div>
             </div>
         )
 

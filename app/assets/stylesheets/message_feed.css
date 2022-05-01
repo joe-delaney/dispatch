@@ -89,7 +89,13 @@
 .message-edited-tag {
     font-family: Lato;
     font-size: 12px;
-    color: #ABABAD;
+    color: #818385;
+    margin-left: 5px;
+}
+
+.message-feed-text-container {
+    display: flex;
+    align-items: baseline;
 }
 
 

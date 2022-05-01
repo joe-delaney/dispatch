@@ -20,7 +20,7 @@ end
 json.set! :messages do 
     @channel.messages.each do |message|
         json.set! message.id do 
-            json.extract! message, :text, :id, :author_id, :messagable_id, :messagable_type, :created_at
+            json.extract! message, :text, :id, :author_id, :messagable_id, :messagable_type, :created_at, :edited
         end
     end
 end

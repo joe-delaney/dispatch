@@ -17,7 +17,6 @@ class Api::MessagesController < ApplicationController
     end
 
     def update
-        debugger
         @message = Message.find_by(id: params[:message][:id])
         @current_user = current_user
         if @message.update(message_params) 
