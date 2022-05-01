@@ -10,12 +10,19 @@ class ChannelBrowserItem extends React.Component {
             showButtons: false
         }
 
-        this.toggleButtons = this.toggleButtons.bind(this);
+        this.showButtons = this.showButtons.bind(this);
+        this.hideButtons = this.hideButtons.bind(this);
     }
 
-    toggleButtons(e) {
+    showButtons() {
         this.setState({
-            showButtons: !this.state.showButtons
+            showButtons: true
+        })
+    }
+    
+    hideButtons() {
+        this.setState({
+            showButtons: false
         })
     }
 
@@ -40,7 +47,7 @@ class ChannelBrowserItem extends React.Component {
 
         return (
             
-            <li onMouseEnter={this.toggleButtons} onMouseLeave={this.toggleButtons} className="channel-browser-item">
+            <li onMouseOver={this.showButtons} onMouseLeave={this.hideButtons} className="channel-browser-item">
                     <Link className="channel-browser-link-to-channel" to={`/user-dashboard/channels/${this.props.channel.id}`}>
                         <div className="channel-browser-label-container">
                             <span className="channel-browser-item-title">{`# ${this.props.channel.name}`}</span>
