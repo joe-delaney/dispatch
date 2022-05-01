@@ -14,6 +14,7 @@ export default class MessageFeed extends React.Component {
                         key={idx}
                         message={message}
                         getAuthor={this.props.getAuthor}
+                        currentUser={this.props.currentUser}
                     />
                 ))}
             </ul>
