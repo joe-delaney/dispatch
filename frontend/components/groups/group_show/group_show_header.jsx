@@ -6,15 +6,15 @@ const GroupShowHeader = ({ group }) => {
     const groupMembersLabel = groupMembers === 1 ? " member" : " members";
 
     return (
-        <div className="channel-show-header">
-            <div className="channel-show-header-left">
-                <div className="channel-show-header-text">
+        <div className="show-header">
+            <div className="show-header-left">
+                <div className="show-header-text">
                     <h1 >{`${groupName}`}</h1>
-                    <span className="channel-show-down-carret">ˇ</span>
+                    <span className="show-down-carret">ˇ</span>
                 </div>
             </div>
-            <div className="channel-show-members-icon">
-                <span className="channel-show-members-icon-label">{`${groupMembers}${groupMembersLabel}`}</span>
+            <div className="show-members-icon">
+                <span className="show-members-icon-label">{`${groupMembers}${groupMembersLabel}`}</span>
             </div>
         </div>
     )
