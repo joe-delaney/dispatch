@@ -7,12 +7,9 @@ class Api::MessagesController < ApplicationController
         if @message.save 
             if params[:message][:messagable_type] == "Channel"
                 @channel = Channel.find_by(id: params[:message][:messagable_id])
-                # ChannelsChannel.broadcast_to(@channel, @message)
-
                 ChannelsChannel.broadcast_to @channel,
-                    from_template('api/channels/show', {channel: @channel, current_user: @current_user})
-                    
-                render "api/channels/show", locals: { channel: @channel, current_user: @current_user }
+                    from_template('api/channels/show', {channel: @channel})  
+                render json: nil, status: :ok
             else 
                 render json: ["Insert Message Group Here"]
             end
@@ -27,7 +24,10 @@ class Api::MessagesController < ApplicationController
         if @message.update(message_params) 
             if @message.messagable_type == "Channel"
                 @channel = Channel.find_by(id: @message.messagable_id)
-                render "api/channels/show", locals: { channel: @channel, current_user: @current_user }
+                ChannelsChannel.broadcast_to @channel,
+                    from_template('api/channels/show', {channel: @channel})  
+                render json: nil, status: :ok
+                # render "api/channels/show", locals: { channel: @channel, current_user: @current_user }
             else 
                 render json: ["Insert Message Group Here"]
             end
