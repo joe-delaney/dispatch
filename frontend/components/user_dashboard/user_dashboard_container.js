@@ -6,6 +6,7 @@ import { toggleEditModal } from "../../actions/modal_actions";
 import { updateUser } from "../../actions/user_actions";
 import { selectSearchedChannels } from "../../actions/channel_selectors";
 import { fetchChannels } from "../../actions/channel_actions";
+import { fetchGroups } from "../../actions/group_actions";
 
 const mapStateToProps = (state, ownProps) => ({
     userSearchResults: Object.values(state.entities.searchResults.users),
@@ -21,7 +22,8 @@ const mapDispatchToProps = dispatch => ({
     logout: () => dispatch(logout()),
     toggleEditModal: () => dispatch(toggleEditModal()),
     updateUser: (user) => dispatch(updateUser(user)),
-    fetchChannels: () => dispatch(fetchChannels())
+    fetchChannels: () => dispatch(fetchChannels()),
+    fetchGroups: () => dispatch(fetchGroups())
 })
 
 const UserDashboardContainer = connect(mapStateToProps, mapDispatchToProps)(UserDashboard);

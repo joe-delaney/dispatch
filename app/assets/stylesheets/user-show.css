@@ -61,7 +61,8 @@
 
 .user-show-initial {
     font-size: 50px;
-    color: white
+    color: white;
+    font-family: Lato;
 }
 
 .user-show-display-name {

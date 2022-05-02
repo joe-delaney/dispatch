@@ -1,5 +1,6 @@
 import * as SessionAPIUtil from "../util/session_api_util";
 import { fetchChannels } from "./channel_actions";
+import { fetchGroups } from "./group_actions";
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const REMOVE_CURRENT_USER = "REMOVE_CURRENT_USER";
@@ -29,6 +30,7 @@ export const login = (user) => dispatch => SessionAPIUtil.login(user)
     .then(currentUser => {
         dispatch(receiveCurrentUser(currentUser));
         dispatch(fetchChannels());
+        dispatch(fetchGroups());
     })
 
 //Signup thunk action
