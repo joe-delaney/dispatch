@@ -2,7 +2,7 @@
     json.set! user.id do
         json.extract! user, :email, :id, :display_name, :status, :title
 
-        # Get the channels the current user is subscribed to
+        Get the channels the current user is subscribed to
         if user.id == @current_user_id
             subscribed_channel_ids = []
             user.subscribed_channels.each do |channel|

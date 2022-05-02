@@ -36,7 +36,7 @@ class ChannelBrowserItem extends React.Component {
         }
 
         let subscribedButton = <div></div>;
-        if (this.props.currentUser) {
+        if (this.props.currentUser ) {
             let subscribed = this.props.currentUser.subscribedChannelIds.includes(this.props.channel.id);
             subscribedButton = subscribed ? (
                 <button onClick={() => this.props.unsubscribe(subscription)} className={`channel-browser-item-button browser-button-light ${hidden}`}>Leave</button>

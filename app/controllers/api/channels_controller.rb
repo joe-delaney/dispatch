@@ -12,7 +12,7 @@ class Api::ChannelsController < ApplicationController
         @current_user = current_user
         
         if @channel.save 
-            render :show
+            render :show, locals: { channel: @channel, current_user: @current_user }
         else
             render json: @channel.errors.full_messages
         end
@@ -21,7 +21,7 @@ class Api::ChannelsController < ApplicationController
     def show 
         @channel = Channel.find_by(id: params[:id])
         @current_user = current_user
-        render :show
+        render :show, locals: { channel: @channel, current_user: @current_user }
     end
 
     def update 

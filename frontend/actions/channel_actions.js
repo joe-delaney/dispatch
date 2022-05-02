@@ -39,7 +39,7 @@ export const fetchChannels = () => dispatch => ChannelAPIUtil.fetchChannels()
     .then(channels => dispatch(receiveChannels(channels)));
 
 export const fetchChannelInfo = (channelId) => dispatch => ChannelAPIUtil.fetchChannelInfo(channelId)
-    .then(info => dispatch(receiveChannelInfo(info)));
+    //.then(info => dispatch(receiveChannelInfo(info)));
 
 export const createChannel = channel => dispatch => ChannelAPIUtil.createChannel(channel)
     .then(info => { 

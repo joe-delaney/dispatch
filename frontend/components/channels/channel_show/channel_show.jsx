@@ -17,21 +17,23 @@ export default class ChannelShow extends React.Component {
         this.subscription = consumer.subscriptions.create(
             { channel: 'ChannelsChannel', id: this.props.match.params.channelId },
             {
-                received: message => {
-                    console.log('Received message: ', message);
+                received: info => {
+                    this.props.receiveChannelInfo(info);
                 }
             }
         );
     }
 
     componentDidMount() {
-        this.props.fecthChannelInfo(this.props.match.params.channelId);
+        this.props.fecthChannelInfo(this.props.match.params.channelId)
+            .then(info => this.props.receiveChannelInfo(info));
         this.enterRoom();
     }
 
     componentDidUpdate(prevProps, prevState) {
         if(prevState.id !== this.props.match.params.channelId) {
-            this.props.fecthChannelInfo(this.props.match.params.channelId);
+            this.props.fecthChannelInfo(this.props.match.params.channelId)
+                .then(info => this.props.receiveChannelInfo(info));
             this.setState({
                 id: this.props.match.params.channelId
             })
@@ -48,6 +50,7 @@ export default class ChannelShow extends React.Component {
         let bottomComponent = <div></div>;
         let mainFeedComponent = <div></div>
         if (this.props.currentUser && this.props.channel) {
+            console.log(this.props.currentUser)
             let subscribed = this.props.currentUser.subscribedChannelIds.includes(this.props.channel.id);
             bottomComponent = subscribed ? (
                 <MessageComposerContainer
