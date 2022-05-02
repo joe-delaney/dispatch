@@ -28,6 +28,7 @@ export default class GroupSidebarList extends React.Component {
     render() {
         const rotateArrow = this.state.showGroups ? "" : "rotate-90";
         const hideGroups = this.state.showGroups ? "" : "hidden";
+        const hideAddGroupButton = this.state.hideAddGroupButton ? "" : "hidden";
 
         return (
             <div className="sidebar-list">
@@ -43,7 +44,7 @@ export default class GroupSidebarList extends React.Component {
                     </div>
                 </div>
                 <ul className={`${hideGroups}`}>
-                    {/* {this.props.groups.map((group, idx) => <GroupSidebarListItem key={idx} group={group} />)} */}
+                    {this.props.groups.map((group, idx) => <GroupSidebarListItem key={idx} group={group} />)}
                 </ul>
                 <ul>
                     <Link to="/user-dashboard/browse-channels" className="sidebar-link">

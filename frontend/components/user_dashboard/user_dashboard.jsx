@@ -14,6 +14,10 @@ export default class UserDashboard extends React.Component {
         if(this.props.selectedChannels("").length === 0) {
             this.props.fetchChannels();
         }
+
+        if(this.props.groups.length === 0) {
+            this.props.fetchGroups();
+        }
     }
 
     render() {

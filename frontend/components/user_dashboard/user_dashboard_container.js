@@ -13,7 +13,8 @@ const mapStateToProps = (state, ownProps) => ({
     currentUser: state.entities.users[state.session.currentUserId],
     editModalDisplayed: state.ui.modals.editModalDisplayed,
     selectedChannels: (query) => selectSearchedChannels(state.entities, query),
-    ownProps: ownProps
+    ownProps: ownProps,
+    groups: Object.values(state.entities.groups)
 })
 
 const mapDispatchToProps = dispatch => ({
