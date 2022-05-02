@@ -9,4 +9,8 @@ class GroupMessage < ApplicationRecord
     def is_direct_message? 
         this.group_members.length == 2
     end
+
+    def self.group_messages_for_current_user(current_user) 
+
+    end
 end

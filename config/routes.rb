@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :channels, only: [:index, :create, :show, :update, :destroy]
     resources :subscriptions, only: [:create, :destroy]
     resources :messages, only: [:create, :update]
+    resources :group_messages, only: [:index, :create, :show]
   end
 end
