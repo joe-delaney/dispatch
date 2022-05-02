@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
     toggleModal: () => dispatch(toggleChannelDetailsModal()),
-    fecthChannelInfo: (channelId) => dispatch(fetchChannelInfo(channelId)),
+    fecthChannelInfo: (channelId) => fetchChannelInfo(channelId),
     subscribe: (subscription) => dispatch(subscribe(subscription)),
     receiveChannelInfo: (info) => dispatch(receiveChannelInfo(info))
 })

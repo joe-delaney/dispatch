@@ -38,7 +38,7 @@ export const receiveUnsubscribedUser = (userId, channelId) => ({
 export const fetchChannels = () => dispatch => ChannelAPIUtil.fetchChannels()
     .then(channels => dispatch(receiveChannels(channels)));
 
-export const fetchChannelInfo = (channelId) => dispatch => ChannelAPIUtil.fetchChannelInfo(channelId)
+export const fetchChannelInfo = (channelId) => ChannelAPIUtil.fetchChannelInfo(channelId)
 
 export const createChannel = channel => dispatch => ChannelAPIUtil.createChannel(channel)
     .then(info => { 
