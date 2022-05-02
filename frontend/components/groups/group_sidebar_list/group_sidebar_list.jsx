@@ -6,7 +6,8 @@ export default class GroupSidebarList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            showGroups: true
+            showGroups: true,
+            showAddGroupButton: false
         }
 
         this.toggleShowGroups = this.toggleShowGroups.bind(this);
@@ -28,7 +29,7 @@ export default class GroupSidebarList extends React.Component {
     render() {
         const rotateArrow = this.state.showGroups ? "" : "rotate-90";
         const hideGroups = this.state.showGroups ? "" : "hidden";
-        const hideAddGroupButton = this.state.hideAddGroupButton ? "" : "hidden";
+        const showAddGroupButton = this.state.showAddGroupButton ? "" : "hidden";
 
         return (
             <div className="sidebar-list">
@@ -39,7 +40,7 @@ export default class GroupSidebarList extends React.Component {
                         </div>
                         <span className="sidebar-list-header-title">Direct Messages</span>
                     </div>
-                    <div className={`sidebar-button-image-container ${hideAddGroupButton}`}>
+                    <div className={`sidebar-button-image-container ${showAddGroupButton}`}>
                         <img src={window.plus} alt="plus" className="sidebar-button-plus"></img>
                     </div>
                 </div>
