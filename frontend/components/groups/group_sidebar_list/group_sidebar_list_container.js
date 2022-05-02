@@ -11,3 +11,4 @@ const mapDispatchToProps = dispatch => ({
 
 const GroupSidebarListContainer = connect(mapStateToProps, mapDispatchToProps)(GroupSidebarList);
 export default GroupSidebarListContainer;
+
