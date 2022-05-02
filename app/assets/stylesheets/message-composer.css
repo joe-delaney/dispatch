@@ -80,7 +80,7 @@
 }
 
 .cancel-edit-message:hover {
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 8%);
+    box-shadow: 0 1px 3px 0 #00000014;
     background: #222529;
 }
 
@@ -95,7 +95,7 @@
 
 .save-edit-message:hover {
     background: #148567;
-    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+    box-shadow: 0 1px 4px #0000004d;
 }
 
 .send-message-button {
@@ -109,5 +109,5 @@
 
 .send-message-button:hover {
     background: #148567;
-    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+    box-shadow: 0 1px 4px #0000004d;
 }
