@@ -100,6 +100,7 @@ dm2 = GroupMessage.create!()
 dm3 = GroupMessage.create!()
 dm4 = GroupMessage.create!()
 dm5 = GroupMessage.create!()
+dm6 = GroupMessage.create!()
 
 puts "Creating subscriptions..."
 
@@ -204,6 +205,10 @@ s71 = Subscription.create!(subscriber_id: spongebob.id, subscribable_id: dm4.id,
 #dm5
 s72 = Subscription.create!(subscriber_id: joe.id, subscribable_id: dm5.id, subscribable_type: "GroupMessage")
 s73 = Subscription.create!(subscriber_id: voldemort.id, subscribable_id: dm5.id, subscribable_type: "GroupMessage")
+
+#dm6
+s74 = Subscription.create!(subscriber_id: sasha.id, subscribable_id: dm6.id, subscribable_type: "GroupMessage")
+s75 = Subscription.create!(subscriber_id: shannon.id, subscribable_id: dm6.id, subscribable_type: "GroupMessage")
 
 puts "Creating messages..."
 
@@ -325,3 +330,10 @@ m88 = Message.create!(author_id: voldemort.id, text: "Hello", messagable_id: dm5
 m89 = Message.create!(author_id: voldemort.id, text: "How are you doing?", messagable_id: dm5.id, messagable_type: "GroupMessage")
 m90 = Message.create!(author_id: joe.id, text: "I'm great, how are you!", messagable_id: dm5.id, messagable_type: "GroupMessage")
 m91 = Message.create!(author_id: voldemort.id, text: "Doing well!", messagable_id: dm5.id, messagable_type: "GroupMessage")
+
+#dm6
+m92 = Message.create!(author_id: sasha.id, text: "Hi", messagable_id: dm6.id, messagable_type: "GroupMessage")
+m93 = Message.create!(author_id: shannon.id, text: "Hello", messagable_id: dm6.id, messagable_type: "GroupMessage")
+m94 = Message.create!(author_id: shannon.id, text: "How are you doing?", messagable_id: dm6.id, messagable_type: "GroupMessage")
+m95 = Message.create!(author_id: sasha.id, text: "I'm great, how are you!", messagable_id: dm6.id, messagable_type: "GroupMessage")
+m96 = Message.create!(author_id: shannon.id, text: "Doing well!", messagable_id: dm6.id, messagable_type: "GroupMessage")
