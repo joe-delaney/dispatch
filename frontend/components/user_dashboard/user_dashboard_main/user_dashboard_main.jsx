@@ -5,14 +5,15 @@ import {Route, Switch} from "react-router-dom";
 import UserShowContainer from "../user_show/user_show_container"
 import {ProtectedRoute} from "../../../util/route_util"
 
-const UserDashboardMain = () => {
+const UserDashboardMain = ({currentUser}) => {
     return (
         <div className="user-dashboard-main">
             <UserDashboardSidebar/>
             <UserDashboardCenter />
-            <Switch>
+            {/* <Switch>
                 <ProtectedRoute path="/user-dashboard/users/:userId" component={UserShowContainer} />
-            </Switch>
+            </Switch> */}
+            <UserShowContainer/>
         </div>
     )
 }

@@ -1,0 +1,109 @@
+.channel-show-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.channel-show-header-text {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 18px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.channel-show-header-text:hover {
+    background-color: #222529;
+}
+
+.channel-show-members-icon {
+    border-radius: 4px;
+    height: 28px;
+    box-shadow: 0 0 0 1px #E8E8E8B3;
+    cursor:pointer;
+}
+
+.channel-show-members-icon:hover {
+    background-color: #222529;
+}
+
+.channel-show-members-icon-label {
+    padding: 0px 8px 0px 12px;
+    color: #E8E8E8B3;
+    font-size: 13px;
+    font-family: Lato;
+}
+
+.channel-show-down-carret {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.channel-show-topic {
+    margin-left: 20px;
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #E8E8E8B3;
+}
+
+.channel-show-header-left {
+    display: flex;
+    align-items: center;
+}
+
+.unsubscribed-to-channel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 30px;
+    background-color: #222529;
+    border: 1px solid #e8e8e821;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 80px;
+    color: #d1d2d3;
+    font-family: Lato;
+}
+
+.unsubscribed-to-channel-button {
+    font-family: Lato;
+    border-radius: 4px;
+    font-size: 15px;
+    height: 36px;
+    min-width: 80px;
+    padding: 0 12px 1px;
+    margin-top: 12px;
+    margin-left: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.unsubscribed-details {
+    color: #d1d2d3e3;
+    border: 1px solid #d1d2d34d;
+    font-weight: 700;
+}
+
+.unsubscribed-join {
+    background: #007a5a;
+    color: #fff;
+    font-weight: 900;
+}
+
+.back-to-channel-browser {
+    font-size: 15px;
+    text-decoration: underline;
+    font-family: Lato;
+    margin-top: 16px;
+    color: #d1d2d3e3;
+}

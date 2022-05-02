@@ -1,20 +1,22 @@
-import { RECEIVE_SEARCHED_USERS, CLEAR_SEARCH_RESULTS } from "../../actions/search_actions";
+import { RECEIVE_SEARCHED_USERS, CLEAR_USER_SEARCH_RESULTS, RECEIVE_CHANNELS } from "../../actions/search_actions";
 import { merge } from "lodash";
 
 const initialState = {
-    users: {},
-    channels: {}
+    users: {}
 }
 
 export const searchResultsReducer = (state = initialState, action) => {
     Object.freeze(state);
+    let nextState
     switch (action.type) {
         case RECEIVE_SEARCHED_USERS:
-            let nextState = merge({}, state);
+            nextState = merge({}, state);
             nextState.users = action.users;
             return nextState;
-        case CLEAR_SEARCH_RESULTS:
-            return initialState;
+        case CLEAR_USER_SEARCH_RESULTS:
+            nextState = merge({}, state);
+            nextState.users = {};
+            return nextState;
         default:
             return state;
     }

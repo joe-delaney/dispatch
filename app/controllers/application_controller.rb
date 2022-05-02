@@ -27,4 +27,8 @@ class ApplicationController < ActionController::Base
     def redirect_if_not_logged_in
         redirect_to new_session_url unless logged_in?
     end
+
+    def from_template(template, locals = {})
+        JSON.parse(self.class.render(:json, template: template, locals: locals))
+    end
 end

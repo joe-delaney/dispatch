@@ -1,0 +1,113 @@
+.user-dashboard-center-main-message-composer {
+    height: 210px;
+    background-color: #1B1D21;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.user-dashboard-message-container {
+    border-radius: 8px;
+    font-family: Lato;
+    border-color: #565856;
+    background-color: #232529;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.user-dashboard-message-container:focus {
+    border-color: white;
+}
+
+.message-input {
+    background-color: transparent;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    color: #D1D2D3;
+    font-family: Lato;
+    resize: none;
+}
+
+.message-input:focus {
+    outline: none;
+}
+
+.message-input::placeholder {
+    color: #58595C;
+}
+
+.send-message-button {
+    margin-right: 20px;
+    background-color: transparent;
+    color: #D1D2D3;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-message-composer-right {
+    display: flex;
+    align-items: flex-end;
+}
+
+.edit-message-composer-buttons {
+    display: flex;
+    margin-top: 40px;
+}
+
+.edit-message-button {
+    font-size: 13px;
+    height: 28px;
+    padding: 0 12px 1px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.edit-message-button:hover {
+    cursor: pointer;
+}
+
+.cancel-edit-message {
+    color: #d1d2d3;
+    line-height: 1.46668;
+    border: 1px solid #565856;
+    background-color: #1a1d21;
+}
+
+.cancel-edit-message:hover {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 8%);
+    background: #222529;
+}
+
+.save-edit-message {
+    background-color: #007a5a;
+    margin: 0 0 0 8px;
+    color: white;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+    margin-bottom: 5px;
+}
+
+.save-edit-message:hover {
+    background: #148567;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+}
+
+.send-message-button {
+    background-color: #007a5a;
+    margin: 0 0 0 8px;
+    color: white;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+    margin-bottom: 5px;
+}
+
+.send-message-button:hover {
+    background: #148567;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+}

@@ -10,10 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_21_184526) do
+ActiveRecord::Schema.define(version: 2022_05_01_132405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "channels", force: :cascade do |t|
+    t.integer "creator_id", null: false
+    t.string "name", null: false
+    t.string "topic"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creator_id"], name: "index_channels_on_creator_id"
+    t.index ["name"], name: "index_channels_on_name"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "text", null: false
+    t.integer "author_id", null: false
+    t.string "messagable_type"
+    t.bigint "messagable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "edited", default: false
+    t.index ["author_id"], name: "index_messages_on_author_id"
+    t.index ["messagable_id", "messagable_type"], name: "index_messages_on_messagable_id_and_messagable_type"
+    t.index ["messagable_type", "messagable_id"], name: "index_messages_on_messagable_type_and_messagable_id"
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer "subscriber_id", null: false
+    t.string "subscribable_type", null: false
+    t.bigint "subscribable_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["subscribable_id", "subscribable_type"], name: "index_subscriptions_on_subscribable_id_and_subscribable_type"
+    t.index ["subscribable_type", "subscribable_id"], name: "index_subscriptions_on_subscribable_type_and_subscribable_id"
+    t.index ["subscriber_id", "subscribable_id", "subscribable_type"], name: "unique_subscriptions", unique: true
+    t.index ["subscriber_id"], name: "index_subscriptions_on_subscriber_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false

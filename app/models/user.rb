@@ -5,6 +5,26 @@ class User < ApplicationRecord
 
     before_validation :ensure_session_token
 
+    has_many :created_channels,
+        foreign_key: :creator_id,
+        class_name: :Channel,
+        dependent: :destroy
+
+    has_many :authored_messages,
+        foreign_key: :author_id,
+        class_name: :Message,
+        dependent: :destroy
+
+    has_many :subscriptions, 
+        foreign_key: :subscriber_id,
+        class_name: :Subscription,
+        dependent: :destroy
+    
+    has_many :subscribed_channels,
+        through: :subscriptions,
+        source: :subscribable,
+        source_type: :Channel
+
     def self.find_by_credentials(email, password)
         @user = User.find_by(email: email)
 

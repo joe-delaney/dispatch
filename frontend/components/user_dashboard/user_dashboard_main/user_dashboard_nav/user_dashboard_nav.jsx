@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import UserDashBoardNavSearchResult from "./user_dashboard_nav_search_result";
+import UserDashBoardNavUserSearchResult from "./user_dashboard_nav_user_search_result";
+import UserDashBoardNavChannelSearchResult from "./user_dashboard_nav_channel_search_result";
 
 class UserDashboardNav extends React.Component {
 
@@ -12,7 +13,10 @@ class UserDashboardNav extends React.Component {
         }
 
         this.handleInput = this.handleInput.bind(this);
-        this.toggleDropdown = this.toggleDropdown.bind(this);
+        this.showDropdown = this.showDropdown.bind(this);
+        this.hideDropdown = this.hideDropdown.bind(this);
+        this.clearSearchBar = this.clearSearchBar.bind(this);
+        this.showCurrentUserProfile = this.showCurrentUserProfile.bind(this);
     }
 
     handleInput(e) {
@@ -22,19 +26,39 @@ class UserDashboardNav extends React.Component {
         if(e.target.value !== "") {
             this.props.searchUsers(e.target.value);
         } else {
-            this.props.clearSearchResults();
+            this.props.clearUserSearchResults();
         }
     }
 
-    toggleDropdown(e) {
+    clearSearchBar(e) {
         this.setState({
-            dropdownOpen: !this.state.dropdownOpen
+            query: ""
+        });
+        this.props.clearUserSearchResults();
+    }
+
+    showDropdown() {
+        this.setState({
+            dropdownOpen: true
         });
     }
 
+    hideDropdown() {
+        this.setState({
+            dropdownOpen: false
+        });
+    }
+
+    showCurrentUserProfile() {
+        this.hideDropdown();
+        let base = this.props.ownProps.history.location.pathname.split("/users")[0];
+        this.props.ownProps.history.push(`${base}/users/${this.props.currentUser.id}`)
+    }
+
     render() {
-        const searchResults = (this.props.userSearchResults.length || !this.state.query.length) ? this.props.userSearchResults : [{displayName: "No results found"}];
-        const title = this.props.currentUser.title ? this.props.currentUser.title : "";
+        const channels = this.state.query === "" ? [] : this.props.selectedChannels(this.state.query);
+        const searchResults = (this.props.userSearchResults.length || !this.state.query.length || channels.length) ? this.props.userSearchResults : [{ displayName: "No results found" }];
+        const title = (this.props.currentUser && this.props.currentUser.title) ? this.props.currentUser.title : "";
         const dropdownClass = this.state.dropdownOpen ? "user-dashboard-nav-profile-dropdown" :
             "user-dashboard-nav-profile-dropdown hidden"
 
@@ -45,13 +69,23 @@ class UserDashboardNav extends React.Component {
                     <input onChange={this.handleInput} className="user-dashboard-nav-bar-search-input" type="text" value={this.state.query} placeholder="&#xF002;  Search Slack"/>
                     <ul className="user-dashboard-nav-bar-search-results">
                         {searchResults.map((user) => (
-                            <UserDashBoardNavSearchResult user={user}/>
+                            <UserDashBoardNavUserSearchResult 
+                                user={user}
+                                ownProps={this.props.ownProps}
+                                clearSearchBar={this.clearSearchBar}
+                            />
+                        ))}
+                        {channels.map((channel) => (
+                            <UserDashBoardNavChannelSearchResult 
+                                channel={channel}
+                                clearSearchBar={this.clearSearchBar}
+                            />
                         ))}
                     </ul>
                 </div>
                 <div className="user-dashboard-nav-bar-right">
-                    <img onClick={this.toggleDropdown} className="user-dashboard-nav-bar-profile-icon" src="https://cdn.bfldr.com/5H442O3W/at/pl546j-7le8zk-6gwiyo/Slack_Mark.svg?auto=webp&format=png" alt="" />
-                    <div onMouseLeave={this.toggleDropdown} className={dropdownClass}>
+                    <img onClick={this.showDropdown} className="user-dashboard-nav-bar-profile-icon" src="https://cdn.bfldr.com/5H442O3W/at/pl546j-7le8zk-6gwiyo/Slack_Mark.svg?auto=webp&format=png" alt="" />
+                    <div onMouseLeave={this.hideDropdown} className={dropdownClass}>
                         <div className="user-dashboard-nav-bar-profile-dropdown-details">
                             <img className="user-dashboard-nav-bar-profile-dropdown-icon" src="https://cdn.bfldr.com/5H442O3W/at/pl546j-7le8zk-6gwiyo/Slack_Mark.svg?auto=webp&format=png" alt="" />
                             <div className="user-dashboard-nav-bar-profile-dropdown-labels">
@@ -61,9 +95,9 @@ class UserDashboardNav extends React.Component {
                         </div>
                         <ul className="user-dashboard-nav-profile-dropdown-links">
                             <li className="dropdown-link">
-                                <Link to={`/user-dashboard/users/${this.props.currentUser.id}`} className="user-dashboard-nav-bar-profile-dropdown-view-profile">
-                                    <span onClick={this.toggleDropdown}>View Profile</span> 
-                                </Link>
+                                <button onClick={this.showCurrentUserProfile} className="user-dashboard-nav-bar-profile-dropdown-view-profile">
+                                    <span>View Profile</span> 
+                                </button>
                             </li>
                             <li className="dropdown-link">
                                 <button onClick={this.props.logout} className="user-dashboard-nav-bar-profile-dropdown-view-profile">Sign out of Slack</button>

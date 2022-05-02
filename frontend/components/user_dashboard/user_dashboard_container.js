@@ -1,22 +1,27 @@
 import { connect } from "react-redux";
 import UserDashboard from "./user_dashboard";
-import { searchUsers, clearSearchResults } from "../../actions/search_actions";
+import { searchUsers, clearUserSearchResults } from "../../actions/search_actions";
 import {logout} from "../../actions/session_actions"
 import { toggleEditModal } from "../../actions/modal_actions";
 import { updateUser } from "../../actions/user_actions";
+import { selectSearchedChannels } from "../../actions/channel_selectors";
+import { fetchChannels } from "../../actions/channel_actions";
 
 const mapStateToProps = (state, ownProps) => ({
     userSearchResults: Object.values(state.entities.searchResults.users),
     currentUser: state.entities.users[state.session.currentUserId],
-    editModalDisplayed: state.ui.modals.editModalDisplayed
+    editModalDisplayed: state.ui.modals.editModalDisplayed,
+    selectedChannels: (query) => selectSearchedChannels(state.entities, query),
+    ownProps: ownProps
 })
 
 const mapDispatchToProps = dispatch => ({
     searchUsers: query => dispatch(searchUsers(query)),
-    clearSearchResults: () => dispatch(clearSearchResults()),
+    clearUserSearchResults: () => dispatch(clearUserSearchResults()),
     logout: () => dispatch(logout()),
     toggleEditModal: () => dispatch(toggleEditModal()),
-    updateUser: (user) => dispatch(updateUser(user))
+    updateUser: (user) => dispatch(updateUser(user)),
+    fetchChannels: () => dispatch(fetchChannels())
 })
 
 const UserDashboardContainer = connect(mapStateToProps, mapDispatchToProps)(UserDashboard);

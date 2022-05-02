@@ -2,8 +2,10 @@
 <html>
   <head>
     <title>SlackChat</title>
+     <link rel="icon" type="image/x-icon" href="https://cdn.bfldr.com/5H442O3W/at/pl546j-7le8zk-6gwiyo/Slack_Mark.svg?auto=webp&format=png">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <link href="http://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
@@ -19,6 +21,11 @@
        window.composeIcon = "<%= image_url('compose-icon.png') %>";
        window.pencilIcon = "<%= image_url('pencil-icon.png') %>";
        window.messageIcon = "<%= image_url('message-icon.png') %>";
+       window.downArrow = "<%= image_url('down-arrow.png') %>";
+       window.rightArrow = "<%= image_url('right-arrow.png') %>";
+       window.plus = "<%= image_url('plus.png') %>";
+       window.plusThick = "<%= image_url('plus-thick.png') %>";
+       window.hashtag = "<%= image_url('hashtag.png') %>";
     </script>
   </head>
   <body>

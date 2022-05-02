@@ -35,6 +35,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@rails/actioncable": "^7.0.2-4",
     "babel-loader": "^8.2.5",
     "lodash": "^4.17.21",
     "react": "^18.0.0",
