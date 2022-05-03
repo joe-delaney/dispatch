@@ -7,7 +7,7 @@ class Api::MessagesController < ApplicationController
             if params[:message][:messagable_type] == "Channel"
                 @channel = Channel.find_by(id: params[:message][:messagable_id])
                 ChannelsChannel.broadcast_to @channel,
-                    from_template('api/channels/show', {channel: @channel})  
+                    from_template('api/channels/show', {channel: @channel, current_user: current_user})  
                 render json: nil, status: :ok
             else 
                 @group = GroupMessage.find_by(id: params[:message][:messagable_id])
@@ -27,7 +27,7 @@ class Api::MessagesController < ApplicationController
             if @message.messagable_type == "Channel"
                 @channel = Channel.find_by(id: @message.messagable_id)
                 ChannelsChannel.broadcast_to @channel,
-                    from_template('api/channels/show', {channel: @channel})  
+                    from_template('api/channels/show', {channel: @channel, current_user: current_user})  
                 render json: nil, status: :ok
             else 
                 @group = GroupMessage.find_by(id: params[:message][:messagable_id])
