@@ -40,15 +40,15 @@ export default class GroupSidebarList extends React.Component {
                         </div>
                         <span className="sidebar-list-header-title">Direct Messages</span>
                     </div>
-                    <div className={`sidebar-button-image-container ${showAddGroupButton}`}>
+                    <Link to="/user-dashboard/all-dms" className={`sidebar-button-image-container ${showAddGroupButton}`}>
                         <img src={window.plus} alt="plus" className="sidebar-button-plus"></img>
-                    </div>
+                    </Link>
                 </div>
                 <ul className={`${hideGroups}`}>
                     {this.props.groups.map((group, idx) => <GroupSidebarListItem key={idx} group={group} />)}
                 </ul>
                 <ul>
-                    <Link to="/user-dashboard/browse-channels" className="sidebar-link">
+                    <Link to="/user-dashboard/all-dms" className="sidebar-link">
                         <li className={`sidebar-list-item last-item ${hideGroups}`}>
                             <div className="add-margin-right">
                                 <div className="sidebar-button-image-container-bottom">
