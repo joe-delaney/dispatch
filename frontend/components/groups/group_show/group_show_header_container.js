@@ -1,5 +1,5 @@
 import { connect } from "react-redux"
-// import { toggleChannelDetailsModal } from "../../../actions/modal_actions";
+import { toggleGroupDetailsModal } from "../../../actions/modal_actions";
 import GroupShowHeader from "./group_show_header";
 
 const mapStateToProps = (state, ownProps) => ({
@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    // toggleModal: () => dispatch(toggleChannelDetailsModal())
+    toggleModal: () => dispatch(toggleGroupDetailsModal())
 })
 
 const GroupShowHeaderContainer = connect(mapStateToProps, mapDispatchToProps)(GroupShowHeader);

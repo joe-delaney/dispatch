@@ -4,6 +4,7 @@ import UserDashboardMain from "./user_dashboard_main/user_dashboard_main";
 import UserEditModal from "../modals/user_edit_modal";
 import ChannelDetailsModalContainer from "../modals/channel_details_modal/channel_details_modal_container";
 import CreateChannelModalContainer from "../modals/create_channel_modal/create_channel_modal_container";
+import GroupDetailsModalContainer from "../modals/group_details_modal/group_details_modal_container"
 
 export default class UserDashboard extends React.Component {
     constructor(props) {
@@ -41,6 +42,7 @@ export default class UserDashboard extends React.Component {
                 />
                 <ChannelDetailsModalContainer/>
                 <CreateChannelModalContainer/>
+                <GroupDetailsModalContainer/>
             </div>
         )
     }
