@@ -14,7 +14,8 @@ const mapStateToProps = (state, ownProps) => {
         displayModal: state.ui.modals.groupDetailsModalDisplayed,
         group: group,
         members: groupMembers,
-        currentUser: state.entities.users[state.session.currentUserId]
+        currentUser: state.entities.users[state.session.currentUserId],
+        ownProps: ownProps
     }
 }
 

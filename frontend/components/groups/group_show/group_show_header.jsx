@@ -1,6 +1,6 @@
 import React from "react";
 
-const GroupShowHeader = ({ group, toggleModal }) => {
+const GroupShowHeader = ({ group, toggleModal}) => {
     const groupName = group ? group.name : "";
     const groupMembers = group ? group.name.split(",").length + 1 : 0;
     const groupMembersLabel = groupMembers === 1 ? " member" : " members";

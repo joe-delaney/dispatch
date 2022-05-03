@@ -35,6 +35,8 @@ export default class GroupDetailsModal extends React.Component {
                         <GroupMembers
                             members={this.props.members}
                             currentUser={this.props.currentUser}
+                            ownProps={this.props.ownProps}
+                            toggleModal={this.props.toggleModal}
                         />
                     </div>
                 </div>
