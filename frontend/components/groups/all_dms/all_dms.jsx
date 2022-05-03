@@ -1,5 +1,5 @@
 import React from "react";
-import AllDMsItem from "./all_dms_item";
+import AllDMsItemContainer from "./all_dms_item_container";
 
 export default class AllDMs extends React.Component {
     constructor(props) {
@@ -13,7 +13,7 @@ export default class AllDMs extends React.Component {
                     <div className="all-dms-container">
                         <ul className="all-dms-items">
                             {this.props.groups.map((group, idx) => (
-                                <AllDMsItem group={group} key={idx}/>
+                                <AllDMsItemContainer group={group} key={idx}/>
                             ))}
                         </ul>
                     </div>
