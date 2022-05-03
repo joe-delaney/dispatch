@@ -1,8 +1,6 @@
 import { connect } from "react-redux";
 import { fetchGroupInfo, receiveGroupInfo } from "../../../actions/group_actions";
-// import { subscribe } from "../../../actions/subscription_actions";
 import GroupShow from "./group_show";
-// import { toggleChannelDetailsModal } from "../../../actions/modal_actions";
 
 const mapStateToProps = (state, ownProps) => ({
     group: state.entities.groups[ownProps.match.params.groupId],

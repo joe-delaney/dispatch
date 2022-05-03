@@ -1,4 +1,4 @@
-json.set! :group do 
+json.set! :group do
     json.extract! group, :id, :group_member_ids
 
     #message_ids
