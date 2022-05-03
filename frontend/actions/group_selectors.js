@@ -7,3 +7,11 @@ export const selectGroupMessages = ({ messages }, messageIds) => {
     }
     return groupMessages.sort((a, b) => (a.createdAt < b.createdAt) ? 1 : -1);
 }
+
+export const selectGroupMembers = ({ users }, groupMemberIds) => {
+    let groupMembers = [];
+    groupMemberIds.forEach((id) => {
+        groupMembers.push(users[id]);
+    })
+    return groupMembers;
+}
