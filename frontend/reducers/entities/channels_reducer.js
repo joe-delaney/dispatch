@@ -10,7 +10,9 @@ const channelsReducer = (state={}, action) => {
             nextState[action.channel.id] = action.channel;
             return nextState;
         case RECEIVE_INFO:
-            nextState[action.info.channel.id] = action.info.channel;
+            if(action.info.channel) {
+                nextState[action.info.channel.id] = action.info.channel;
+            }
             return nextState;
         case RECEIVE_SUBSCRIBED_USER:
             nextState[action.channelId].channelMemberIds.push(action.userId);

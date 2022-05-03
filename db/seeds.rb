@@ -311,18 +311,18 @@ m75 = Message.create!(author_id: joe.id, text: "I'm great, how are you!", messag
 m76 = Message.create!(author_id: ironman.id, text: "Doing well!", messagable_id: dm2.id, messagable_type: "GroupMessage")
 
 #dm3
-m77 = Message.create!(author_id: joe.id, text: "Hi", messagable_id: dm2.id, messagable_type: "GroupMessage")
-m78 = Message.create!(author_id: sasha.id, text: "Hello", messagable_id: dm2.id, messagable_type: "GroupMessage")
-m79 = Message.create!(author_id: shannon.id, text: "How is everyone doing?", messagable_id: dm2.id, messagable_type: "GroupMessage")
-m80 = Message.create!(author_id: joe.id, text: "I'm great, how are you!", messagable_id: dm2.id, messagable_type: "GroupMessage")
-m81 = Message.create!(author_id: shannon.id, text: "Doing well!", messagable_id: dm2.id, messagable_type: "GroupMessage")
+m77 = Message.create!(author_id: joe.id, text: "Hi", messagable_id: dm3.id, messagable_type: "GroupMessage")
+m78 = Message.create!(author_id: sasha.id, text: "Hello", messagable_id: dm3.id, messagable_type: "GroupMessage")
+m79 = Message.create!(author_id: shannon.id, text: "How is everyone doing?", messagable_id: dm3.id, messagable_type: "GroupMessage")
+m80 = Message.create!(author_id: joe.id, text: "I'm great, how are you!", messagable_id: dm3.id, messagable_type: "GroupMessage")
+m81 = Message.create!(author_id: shannon.id, text: "Doing well!", messagable_id: dm3.id, messagable_type: "GroupMessage")
 
 #dm4
-m82 = Message.create!(author_id: joe.id, text: "Hi", messagable_id: dm2.id, messagable_type: "GroupMessage")
-m83 = Message.create!(author_id: jeff.id, text: "Hello", messagable_id: dm2.id, messagable_type: "GroupMessage")
-m84 = Message.create!(author_id: anna.id, text: "How is everyone doing?", messagable_id: dm2.id, messagable_type: "GroupMessage")
-m85 = Message.create!(author_id: spongebob.id, text: "I'm great, how are you!", messagable_id: dm2.id, messagable_type: "GroupMessage")
-m86 = Message.create!(author_id: anna.id, text: "Doing well!", messagable_id: dm2.id, messagable_type: "GroupMessage")
+m82 = Message.create!(author_id: joe.id, text: "Hi", messagable_id: dm4.id, messagable_type: "GroupMessage")
+m83 = Message.create!(author_id: jeff.id, text: "Hello", messagable_id: dm4.id, messagable_type: "GroupMessage")
+m84 = Message.create!(author_id: anna.id, text: "How is everyone doing?", messagable_id: dm4.id, messagable_type: "GroupMessage")
+m85 = Message.create!(author_id: spongebob.id, text: "I'm great, how are you!", messagable_id: dm4.id, messagable_type: "GroupMessage")
+m86 = Message.create!(author_id: anna.id, text: "Doing well!", messagable_id: dm4.id, messagable_type: "GroupMessage")
 
 #dm5
 m87 = Message.create!(author_id: joe.id, text: "Hi", messagable_id: dm5.id, messagable_type: "GroupMessage")

@@ -11,6 +11,7 @@ class Api::GroupMessagesController < ApplicationController
     end
 
     def show 
-
+        @group_message = GroupMessage.find_by(id: params[:id])
+        render :show, locals: { group: @group_message, current_user: current_user }
     end
 end
