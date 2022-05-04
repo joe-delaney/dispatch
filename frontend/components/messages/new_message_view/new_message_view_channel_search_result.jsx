@@ -8,7 +8,7 @@ export default class NewMessageViewChannelSearchResult extends React.Component {
 
     render() {
         const name = this.props.channel.name;
-        const topic = this.props.channel.topic ? `• ${this.props.channel.title}` : "";
+        const topic = this.props.channel.topic ? `• ${this.props.channel.topic}` : "";
 
         return (
             <Link onClick={this.props.clearSearchBar} to={`/user-dashboard/channels/${this.props.channel.id}`}>
