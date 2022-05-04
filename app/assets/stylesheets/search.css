@@ -50,11 +50,6 @@
     align-items: center;
 }
 
-.search-result:hover {
-    cursor: pointer;
-    background-color: #1264A3;
-}
-
 .search-result-img {
     background-color: lightcoral;
     width: 24px;
@@ -96,4 +91,27 @@
     font-size: 15px;
     font-weight: 400;
     color: #d1d2d3;
+}
+
+.selected-text {
+    color: #1d9bd1;
+}
+
+.search-result:hover {
+    cursor: pointer;
+    background-color: #1264A3;
+}
+
+.search-result:hover > span {
+    color: white !important;
+}
+
+.selected-search-result {
+    padding-left: 0px;
+}
+
+.check-mark {
+    width: 16px;
+    height: 16px;
+    padding-right: 4px;
 }

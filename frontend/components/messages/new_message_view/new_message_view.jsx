@@ -15,6 +15,7 @@ export default class NewMessageView extends React.Component {
         this.clearSearchBar = this.clearSearchBar.bind(this);
         this.addSelectedUser = this.addSelectedUser.bind(this);
         this.removeSelectedUser = this.removeSelectedUser.bind(this);
+        this.currentlySelected = this.currentlySelected.bind(this);
     }
 
     componentDidMount() {
@@ -60,6 +61,14 @@ export default class NewMessageView extends React.Component {
         })
     }
 
+    currentlySelected(user) {
+        let selected = false;
+        this.state.selectedUsers.forEach((selectedUser) => {
+            if(selectedUser.id === user.id) selected = true;
+        })
+        return selected;
+    }
+
     render() {
         const channels = (this.state.query === "" || this.state.selectedUsers.length) ? [] : this.props.selectedChannels(this.state.query);
         const searchResults = (this.props.userSearchResults.length || !this.state.query.length || channels.length) ? this.props.userSearchResults : [{ displayName: "No results found" }];
@@ -93,6 +102,7 @@ export default class NewMessageView extends React.Component {
                                     user={user}
                                     clearSearchBar={this.clearSearchBar}
                                     addSelectedUser={this.addSelectedUser}
+                                    selected = {this.currentlySelected(user)}
                                 />
                             ))}
                             {channels.map((channel) => (
