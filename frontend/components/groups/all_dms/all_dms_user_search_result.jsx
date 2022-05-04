@@ -10,12 +10,15 @@ export default class AllDMsUserSearchResult extends React.Component {
         const displayName = this.props.user.displayName;
         const title = this.props.user.title ? `• ${this.props.user.title}` : "";
 
-        const linkInfo = {
-            pathname: "/user-dashboard/new-message",
-            selectedUser: this.props.user
-        };
-
-        return (
+        const searchResult = this.props.user.displayName === "No results found" ? (
+            <li onClick={this.props.clearSearchBar} className="search-result">
+                <div className="search-result-img">
+                    <span className="search-result-img-initial">{displayName[0]}</span>
+                </div>
+                <span className="search-result-display-text">{displayName}</span>
+                <span className="search-result-title">{title}</span>
+            </li>
+        ) : (
             <Link onClick={this.props.clearSearchBar} to={linkInfo}>
                 <li className="search-result">
                     <div className="search-result-img">
@@ -26,5 +29,12 @@ export default class AllDMsUserSearchResult extends React.Component {
                 </li>
             </Link>
         )
+
+        const linkInfo = {
+            pathname: "/user-dashboard/new-message",
+            selectedUser: this.props.user
+        };
+
+        return searchResult;
     }
 }

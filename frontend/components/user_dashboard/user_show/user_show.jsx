@@ -40,7 +40,6 @@ export default class UserShow extends React.Component {
         let title = "";
         let userShowActionLabel = "";
         let buttonImg;
-        let clickAction = <div></div>;
         let userActionButton = <div></div>;
         let hidden = "hidden";
 
