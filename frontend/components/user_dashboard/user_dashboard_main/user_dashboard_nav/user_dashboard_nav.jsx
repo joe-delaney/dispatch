@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import UserDashBoardNavUserSearchResult from "./user_dashboard_nav_user_search_result";
 import UserDashBoardNavChannelSearchResult from "./user_dashboard_nav_channel_search_result";
 

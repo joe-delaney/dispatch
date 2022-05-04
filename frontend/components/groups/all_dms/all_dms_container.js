@@ -5,7 +5,8 @@ import { searchUsers, clearUserSearchResults, ALL_DMS_SEARCH_BAR } from "../../.
 
 const mapStateToProps = (state) => ({
     groups: Object.values(state.entities.groups),
-    currentUser: state.entities.users[state.session.currentUserId]
+    currentUser: state.entities.users[state.session.currentUserId],
+    userSearchResults: Object.values(state.entities.searchResults.allDMsSearchBar)
 })
 
 const mapDispatchToProps = (dispatch) => ({

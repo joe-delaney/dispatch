@@ -1,5 +1,6 @@
 import React from "react";
 import AllDMsItemContainer from "./all_dms_item_container";
+import AllDMsUserSearchResult from "./all_dms_user_search_result";
 
 export default class AllDMs extends React.Component {
     constructor(props) {
@@ -31,6 +32,8 @@ export default class AllDMs extends React.Component {
     }
 
     render() {
+        const searchResults = (this.props.userSearchResults.length || !this.state.query.length) ? this.props.userSearchResults : [{ displayName: "No results found" }];
+
         return (
             <div className="user-dashboard-center-main">
                 <div className="user-dashboard-center-main-feed">
@@ -42,12 +45,22 @@ export default class AllDMs extends React.Component {
                         </ul>
                     </div>
                     <div className="all-dms-search-bar">
+                        <div className="all-dms-search-bar-top">
                         <span className="all-dms-search-bar-label">To: </span>
                         <input className="all-dms-search-bar-input" 
                                 type="text" 
                                 onChange={this.handleInput} 
                                 value={this.state.query} 
                                 placeholder="@somebody" />
+                        </div>
+                        <ul className="search-results">
+                            {searchResults.map((user) => (
+                                <AllDMsUserSearchResult
+                                    user={user}
+                                    clearSearchBar={this.clearSearchBar}
+                                />
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>
