@@ -13,11 +13,13 @@ export default class NewMessageView extends React.Component {
 
         this.handleInput = this.handleInput.bind(this);
         this.clearSearchBar = this.clearSearchBar.bind(this);
+        this.addSelectedUser = this.addSelectedUser.bind(this);
+        this.removeSelectedUser = this.removeSelectedUser.bind(this);
     }
 
     componentDidMount() {
         if(this.props.location.selectedUser) {
-            let newSelectedUsers = this.state.selectedUsers;
+            let newSelectedUsers = Object.assign([],this.state.selectedUsers);
             newSelectedUsers.push(this.props.location.selectedUser)
             this.setState({
                 selectedUsers: newSelectedUsers
@@ -43,11 +45,25 @@ export default class NewMessageView extends React.Component {
         this.props.clearUserSearchResults();
     }
 
+    addSelectedUser(user) {
+        let newSelectedUsers = this.state.selectedUsers.map(user => Object.assign({}, user));
+        newSelectedUsers.push(user);
+        this.setState({
+            selectedUsers: newSelectedUsers
+        });
+    }
+
+    removeSelectedUser(userId) {
+        let newSelectedUsers = this.state.selectedUsers.filter(user => user.id != userId); 
+        this.setState({
+            selectedUsers: newSelectedUsers
+        })
+    }
+
     render() {
         const channels = (this.state.query === "" || this.state.selectedUsers.length) ? [] : this.props.selectedChannels(this.state.query);
         const searchResults = (this.props.userSearchResults.length || !this.state.query.length || channels.length) ? this.props.userSearchResults : [{ displayName: "No results found" }];
         const placeholderText = this.state.selectedUsers.length ? "" : "#channel or @somebody"
-
         return (
             <div className="user-dashboard-center-main">
                 <div className="user-dashboard-center-main-feed">
@@ -59,7 +75,10 @@ export default class NewMessageView extends React.Component {
                             <span className="search-bar-label">To: </span>
                             <ul className="selected-users">
                                 {this.state.selectedUsers.map((user, idx) => (
-                                    <SelectedUserItem key={idx} user={user} />
+                                    <SelectedUserItem 
+                                        key={idx} 
+                                        user={user}
+                                        removeSelectedUser={this.removeSelectedUser} />
                                 ))}
                             </ul> 
                             <input className="search-bar-input"
@@ -73,6 +92,7 @@ export default class NewMessageView extends React.Component {
                                 <NewMessageViewUserSearchResult
                                     user={user}
                                     clearSearchBar={this.clearSearchBar}
+                                    addSelectedUser={this.addSelectedUser}
                                 />
                             ))}
                             {channels.map((channel) => (

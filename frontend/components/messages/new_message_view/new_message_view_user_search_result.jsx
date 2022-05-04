@@ -3,6 +3,13 @@ import React from "react";
 export default class NewMessageViewUserSearchResult extends React.Component {
     constructor(props) {
         super(props);
+
+        this.selectUser = this.selectUser.bind(this);
+    }
+
+    selectUser() {
+        this.props.clearSearchBar();
+        this.props.addSelectedUser(this.props.user);
     }
 
     render() {
@@ -10,7 +17,7 @@ export default class NewMessageViewUserSearchResult extends React.Component {
         const title = this.props.user.title ? `• ${this.props.user.title}` : "";
 
         return (
-            <li className="search-result">
+            <li onClick={this.selectUser} className="search-result">
                 <div className="search-result-img">
                     <span className="search-result-img-initial">{displayName[0]}</span>
                 </div>
