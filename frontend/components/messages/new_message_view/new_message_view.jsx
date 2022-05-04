@@ -7,11 +7,21 @@ export default class NewMessageView extends React.Component {
         super(props);
         this.state = {
             query: "",
-            selectedUserIds: []
+            selectedUsers: []
         }
 
         this.handleInput = this.handleInput.bind(this);
         this.clearSearchBar = this.clearSearchBar.bind(this);
+    }
+
+    componentDidMount() {
+        if(this.props.location.selectedUser) {
+            let newSelectedUsers = this.state.selectedUsers;
+            newSelectedUsers.push(this.props.location.selectedUser)
+            this.setState({
+                selectedUsers: newSelectedUsers
+            })
+        }
     }
 
     handleInput(e) {
@@ -46,6 +56,9 @@ export default class NewMessageView extends React.Component {
                     <div className="search-bar">
                         <div className="search-bar-top">
                             <span className="search-bar-label">To: </span>
+                            {this.state.selectedUsers.map((user) => (
+                                console.log(user)
+                            ))}
                             <input className="search-bar-input"
                                 type="text"
                                 onChange={this.handleInput}

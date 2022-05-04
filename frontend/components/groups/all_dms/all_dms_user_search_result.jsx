@@ -10,8 +10,13 @@ export default class AllDMsUserSearchResult extends React.Component {
         const displayName = this.props.user.displayName;
         const title = this.props.user.title ? `• ${this.props.user.title}` : "";
 
+        const linkInfo = {
+            pathname: "/user-dashboard/new-message",
+            selectedUser: this.props.user
+        };
+
         return (
-            <Link to="/user-dashboard/new-message">
+            <Link onClick={this.props.clearSearchBar} to={linkInfo}>
                 <li className="search-result">
                     <div className="search-result-img">
                         <span className="search-result-img-initial">{displayName[0]}</span>
