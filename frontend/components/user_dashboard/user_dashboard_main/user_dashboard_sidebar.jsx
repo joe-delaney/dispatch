@@ -12,7 +12,7 @@ const UserDashboardSidebar = ({currentUser}) => (
                 </Link>
                 <Link to="/user-dashboard/new-message">
                     <button className="new-message-button">
-                        <img src={window.composeIcon} alt="compose icon" />
+                        <img className="new-message-icon" src={window.composeIcon} alt="compose icon" />
                     </button>
                 </Link>
             </div>

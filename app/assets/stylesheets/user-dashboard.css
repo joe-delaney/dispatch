@@ -249,19 +249,25 @@
     margin-left: 8px;
 }
 .new-message-button {
-    height: 34px;
-    width: 34px;
+    height: 30px;
+    width: 30px;
     top: 8px;
     border-radius: 50%;
     font-size: 18px;
     color: #19171D;
-    background: white;
+    background: #d1d2d3;
     border: none;
     margin-right: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.new-message-icon {
+    height: 20px;
+    width: 20px;
+    margin-left: 2px;
 }
 
 .user-dashboard-sidebar-main {
