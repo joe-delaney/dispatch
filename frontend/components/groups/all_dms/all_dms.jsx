@@ -7,13 +7,19 @@ export default class AllDMs extends React.Component {
         this.state = {
             query: ""
         }
+
+        this.handleInput = this.handleInput.bind(this);
+        this.clearSearchBar = this.clearSearchBar.bind(this);
     }
 
-    handleInput(type) {
-        return e => {
-            this.setState({
-                [type]: e.target.value
-            })
+    handleInput(e) {
+        this.setState({
+            query: e.target.value
+        })
+        if (e.target.value !== "") {
+            this.props.searchUsers(e.target.value);
+        } else {
+            this.props.clearUserSearchResults();
         }
     }
 
@@ -38,7 +44,8 @@ export default class AllDMs extends React.Component {
                     <div className="all-dms-search-bar">
                         <span className="all-dms-search-bar-label">To: </span>
                         <input className="all-dms-search-bar-input" 
-                                type="text" onChange={this.handleInput("query")} 
+                                type="text" 
+                                onChange={this.handleInput} 
                                 value={this.state.query} 
                                 placeholder="@somebody" />
                     </div>

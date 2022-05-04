@@ -7,13 +7,19 @@ export default class NewMessageView extends React.Component {
             query: "",
             selectedUserIds: []
         }
+
+        this.handleInput = this.handleInput.bind(this);
+        this.clearSearchBar = this.clearSearchBar.bind(this);
     }
 
-    handleInput(type) {
-        return e => {
-            this.setState({
-                    [type]: e.target.value
-                })
+    handleInput(e) {
+        this.setState({
+            query: e.target.value
+         })
+        if (e.target.value !== "") {
+            this.props.searchUsers(e.target.value);
+        } else {
+            this.props.clearUserSearchResults();
         }
     }
 
@@ -36,7 +42,7 @@ export default class NewMessageView extends React.Component {
                     <div className="all-dms-search-bar">
                         <span className="all-dms-search-bar-label">To: </span>
                         <input className="all-dms-search-bar-input" 
-                            onChange={this.handleInput("query")} 
+                            onChange={this.handleInput} 
                             value={this.state.query} 
                             type="text" 
                             placeholder="#channel or @somebody" />

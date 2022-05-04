@@ -9,7 +9,7 @@ import GroupShowContainer from "../../groups/group_show/group_show_container";
 import AllDMsContainer from "../../groups/all_dms/all_dms_container";
 import AllDMsHeader from "../../groups/all_dms/all_dms_header";
 import NewMessageHeader from "../../messages/new_message_view/new_message_view_header";
-import NewMessageViewContainer from "../../messages/new_message_view/new_message_view";
+import NewMessageViewContainer from "../../messages/new_message_view/new_message_view_container";
 import { ProtectedRoute } from "../../../util/route_util";
 import { Switch, Route } from "react-router-dom";
 
