@@ -65,6 +65,16 @@
     margin-right: 10px;
 }
 
+.search-result-hashtag {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
 .search-result-img-initial {
     color: #d1d2d3;
     font-family: Lato;

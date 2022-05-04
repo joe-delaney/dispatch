@@ -6,10 +6,6 @@ export default class NewMessageViewUserSearchResult extends React.Component {
     }
 
     render() {
-        const displayText = this.props.user.title ?
-            `${this.props.user.displayName} • ${this.props.user.title}` :
-            `${this.props.user.displayName}`
-
         const displayName = this.props.user.displayName;
         const title = this.props.user.title ? `• ${this.props.user.title}` : "";
 

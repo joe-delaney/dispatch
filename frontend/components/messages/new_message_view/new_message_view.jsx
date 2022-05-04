@@ -1,5 +1,6 @@
 import React from "react";
 import NewMessageViewUserSearchResult from "./new_message_view_user_search_result";
+import NewMessageViewChannelSearchResult from "./new_message_view_channel_search_result";
 
 export default class NewMessageView extends React.Component {
     constructor(props) {
@@ -32,7 +33,8 @@ export default class NewMessageView extends React.Component {
     }
 
     render() {
-        const searchResults = (this.props.userSearchResults.length || !this.state.query.length) ? this.props.userSearchResults : [{ displayName: "No results found" }];
+        const channels = this.state.query === "" ? [] : this.props.selectedChannels(this.state.query);
+        const searchResults = (this.props.userSearchResults.length || !this.state.query.length || channels.length) ? this.props.userSearchResults : [{ displayName: "No results found" }];
         return (
             <div className="user-dashboard-center-main">
                 <div className="user-dashboard-center-main-feed">
@@ -54,6 +56,12 @@ export default class NewMessageView extends React.Component {
                             {searchResults.map((user) => (
                                 <NewMessageViewUserSearchResult
                                     user={user}
+                                    clearSearchBar={this.clearSearchBar}
+                                />
+                            ))}
+                            {channels.map((channel) => (
+                                <NewMessageViewChannelSearchResult
+                                    channel={channel}
                                     clearSearchBar={this.clearSearchBar}
                                 />
                             ))}
