@@ -74,6 +74,7 @@ export default class NewMessageView extends React.Component {
         const channels = (this.state.query === "" || this.state.selectedUsers.length) ? [] : this.props.selectedChannels(this.state.query);
         const searchResults = (this.props.userSearchResults.length || !this.state.query.length || channels.length) ? this.props.userSearchResults : [{ displayName: "No results found" }];
         const placeholderText = this.state.selectedUsers.length ? "" : "#channel or @somebody"
+        const addPadding = this.state.selectedUsers.length >= maximumUsers ? "max-reached-search-bar" : ""
         const maximumReachedError = this.state.selectedUsers.length >= maximumUsers ? (
             <div className="max-reached-error-container">
                 <span className="max-reached-error">Only 8 people can be in a direct message</span>
@@ -89,9 +90,11 @@ export default class NewMessageView extends React.Component {
                     <div className="all-dms-container">
                         <ul className="all-dms-items"></ul>
                     </div>
-                    <div className="search-bar">
+                    <div className={`search-bar ${addPadding}`}>
                         <div className="search-bar-top">
-                            <span className="search-bar-label">To: </span>
+                            <div className="search-bar-label-container">
+                                <span className="search-bar-label">To: </span>
+                            </div>
                             <ul className="selected-users">
                                 {this.state.selectedUsers.map((user, idx) => (
                                     <SelectedUserItem 

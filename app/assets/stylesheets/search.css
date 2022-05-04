@@ -5,7 +5,11 @@
     padding: 0 20px;
     max-width: 100%;
     flex-direction: column;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.max-reached-search-bar {
+    padding-bottom: 30px;
 }
 
 .search-bar-top {
@@ -13,6 +17,13 @@
     align-items: center;
     width: 100%;
     margin-top: 10px;
+}
+
+.search-bar-label-container {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    margin-top: 12px;
 }
 
 .search-bar-label {
