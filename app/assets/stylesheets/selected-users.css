@@ -1,9 +1,10 @@
 .selected-users {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .selected-user {
-    width: max-content;
     display: flex;
     align-items: center;
     background-color: #159bd11a;

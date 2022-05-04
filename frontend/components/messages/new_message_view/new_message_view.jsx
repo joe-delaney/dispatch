@@ -80,12 +80,12 @@ export default class NewMessageView extends React.Component {
                                         user={user}
                                         removeSelectedUser={this.removeSelectedUser} />
                                 ))}
+                                <input className="search-bar-input"
+                                    type="text"
+                                    onChange={this.handleInput}
+                                    value={this.state.query}
+                                    placeholder={placeholderText} />
                             </ul> 
-                            <input className="search-bar-input"
-                                type="text"
-                                onChange={this.handleInput}
-                                value={this.state.query}
-                                placeholder={placeholderText} />
                         </div>
                         <ul className="search-results">
                             {searchResults.map((user) => (
