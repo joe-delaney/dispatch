@@ -1,15 +1,18 @@
 .search-bar {
     display: flex;
-    min-height: 52px;
+    min-height: 50px;
     background-color: #1b1d21;
     padding: 0 20px;
     max-width: 100%;
+    flex-direction: column;
+    padding-bottom: 20px;
 }
 
 .search-bar-top {
     display: flex;
     align-items: center;
     width: 100%;
+    margin-top: 10px;
 }
 
 .search-bar-label {

@@ -70,9 +70,19 @@ export default class NewMessageView extends React.Component {
     }
 
     render() {
+        const maximumUsers = 8;
         const channels = (this.state.query === "" || this.state.selectedUsers.length) ? [] : this.props.selectedChannels(this.state.query);
         const searchResults = (this.props.userSearchResults.length || !this.state.query.length || channels.length) ? this.props.userSearchResults : [{ displayName: "No results found" }];
         const placeholderText = this.state.selectedUsers.length ? "" : "#channel or @somebody"
+        const maximumReachedError = this.state.selectedUsers.length >= maximumUsers ? (
+            <div className="max-reached-error-container">
+                <span className="max-reached-error">Only 8 people can be in a direct message</span>
+            </div>
+        ) : (
+            <div></div>
+        )
+
+
         return (
             <div className="user-dashboard-center-main">
                 <div className="user-dashboard-center-main-feed">
@@ -96,6 +106,7 @@ export default class NewMessageView extends React.Component {
                                     placeholder={placeholderText} />
                             </ul> 
                         </div>
+                        {maximumReachedError}
                         <ul className="search-results">
                             {searchResults.map((user) => (
                                 <NewMessageViewUserSearchResult
@@ -103,6 +114,7 @@ export default class NewMessageView extends React.Component {
                                     clearSearchBar={this.clearSearchBar}
                                     addSelectedUser={this.addSelectedUser}
                                     selected = {this.currentlySelected(user)}
+                                    maximumReached = {this.state.selectedUsers.length >= maximumUsers}
                                 />
                             ))}
                             {channels.map((channel) => (

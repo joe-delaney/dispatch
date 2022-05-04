@@ -22,7 +22,7 @@ export default class NewMessageViewUserSearchResult extends React.Component {
         ) : (
             <div></div>
         )
-        const onClickAction = (this.props.selected || this.props.user.displayName === "No results found") ? this.props.clearSearchBar : this.selectUser
+        const onClickAction = (this.props.selected || this.props.user.displayName === "No results found" || this.props.maximumReached) ? this.props.clearSearchBar : this.selectUser
 
         return (
             <li onClick={onClickAction} className={`search-result ${selectedSearchResult}`}>

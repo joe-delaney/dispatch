@@ -48,3 +48,21 @@
     margin-left: 10px;
     cursor: pointer;
 }
+
+.max-reached-error-container {
+    margin-left: 26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(232, 145, 45, 0.4);
+    background-color: rgba(232, 145, 45, 0.1);
+    padding: 8px 16px;
+    width: 90%;
+    border-radius: 8px;
+}
+
+.max-reached-error {
+    font-size: 13px;
+    font-weight: 400;
+    color: #d1d2d3;
+    font-family: Lato;
+}
