@@ -1,0 +1,49 @@
+.selected-users {
+    display: flex;
+}
+
+.selected-user {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    background-color: #159bd11a;
+    height: 26px;
+    margin: 8px 0 0 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.selected-user-img {
+    display: flex;
+    background-color: lightcoral;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    width: 22px;
+    border-radius: 4px;
+}
+
+.selected-user-img-initial {
+    font-family: Lato;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.selected-user-name {
+    font-family: Lato;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.remove-selected-user-button {
+    font-family: Lato;
+    font-size: 22px;
+    height: 24px;
+    width: 24px;
+    color: #e8e8e8b3;
+    margin-left: 10px;
+    cursor: pointer;
+}
