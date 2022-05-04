@@ -1,4 +1,5 @@
 import React from "react";
+import NewMessageViewUserSearchResult from "./new_message_view_user_search_result";
 
 export default class NewMessageView extends React.Component {
     constructor(props) {
@@ -31,6 +32,7 @@ export default class NewMessageView extends React.Component {
     }
 
     render() {
+        const searchResults = (this.props.userSearchResults.length || !this.state.query.length) ? this.props.userSearchResults : [{ displayName: "No results found" }];
         return (
             <div className="user-dashboard-center-main">
                 <div className="user-dashboard-center-main-feed">
@@ -39,13 +41,23 @@ export default class NewMessageView extends React.Component {
                             
                         </ul>
                     </div>
-                    <div className="all-dms-search-bar">
-                        <span className="all-dms-search-bar-label">To: </span>
-                        <input className="all-dms-search-bar-input" 
-                            onChange={this.handleInput} 
-                            value={this.state.query} 
-                            type="text" 
-                            placeholder="#channel or @somebody" />
+                    <div className="search-bar">
+                        <div className="search-bar-top">
+                            <span className="search-bar-label">To: </span>
+                            <input className="search-bar-input"
+                                type="text"
+                                onChange={this.handleInput}
+                                value={this.state.query}
+                                placeholder="#channel or @somebody" />
+                        </div>
+                        <ul className="search-results">
+                            {searchResults.map((user) => (
+                                <NewMessageViewUserSearchResult
+                                    user={user}
+                                    clearSearchBar={this.clearSearchBar}
+                                />
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>

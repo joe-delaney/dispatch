@@ -21,36 +21,6 @@
     width: 0px;
 }
 
-.all-dms-search-bar {
-    display: flex;
-    height: 52px;
-    background-color: #1b1d21;
-    padding: 0 20px;
-    width: 100%;
-}
-
-.all-dms-search-bar-top {
-    display: flex;
-    align-items: center;
-}
-
-.all-dms-search-bar-label {
-    color: #E8E8E8B3;
-    font-family: Lato;
-    font-size: 14px;
-}
-
-.all-dms-search-bar-input {
-    color: #d1d2d3;
-    font-family: Lato;
-    font-size: 14px;
-    padding: 0 12px;
-    width: 100%;
-}
-
-.all-dms-search-bar-input::placeholder {
-    color: #ABABAD
-}
 
 .all-dms-item {
     display: flex;

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class AllDMsUserSearchResult extends React.Component {
+export default class NewMessageViewUserSearchResult extends React.Component {
     constructor(props) {
         super(props);
     }

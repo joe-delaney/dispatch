@@ -3,7 +3,7 @@ import NewMessageView from "./new_message_view";
 import { searchUsers, clearUserSearchResults, NEW_MESSAGE_SEARCH_BAR } from "../../../actions/search_actions";
 
 const mapStateToProps = (state) => ({
-
+    userSearchResults: Object.values(state.entities.searchResults.newMessageSearchBar)
 })
 
 const mapDispatchToProps = dispatch => ({

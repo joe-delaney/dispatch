@@ -44,10 +44,10 @@ export default class AllDMs extends React.Component {
                             ))}
                         </ul>
                     </div>
-                    <div className="all-dms-search-bar">
-                        <div className="all-dms-search-bar-top">
-                        <span className="all-dms-search-bar-label">To: </span>
-                        <input className="all-dms-search-bar-input" 
+                    <div className="search-bar">
+                        <div className="search-bar-top">
+                        <span className="search-bar-label">To: </span>
+                        <input className="search-bar-input" 
                                 type="text" 
                                 onChange={this.handleInput} 
                                 value={this.state.query} 
