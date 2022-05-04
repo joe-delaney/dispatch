@@ -1,8 +1,11 @@
-import { RECEIVE_SEARCHED_USERS, CLEAR_USER_SEARCH_RESULTS, RECEIVE_CHANNELS } from "../../actions/search_actions";
+import { RECEIVE_SEARCHED_USERS, CLEAR_USER_SEARCH_RESULTS, NAV_SEARCH_BAR } from "../../actions/search_actions";
 import { merge } from "lodash";
 
 const initialState = {
-    users: {}
+    users: {},
+    navSearchBar: {},
+    allDMsSearchBar: {},
+    newMessageSearchBar: {}
 }
 
 export const searchResultsReducer = (state = initialState, action) => {
@@ -10,12 +13,16 @@ export const searchResultsReducer = (state = initialState, action) => {
     let nextState
     switch (action.type) {
         case RECEIVE_SEARCHED_USERS:
-            nextState = merge({}, state);
-            nextState.users = action.users;
+            if(action.component === NAV_SEARCH_BAR) {
+                nextState = merge({}, state);
+                nextState.navSearchBar = action.users;
+            }
             return nextState;
         case CLEAR_USER_SEARCH_RESULTS:
-            nextState = merge({}, state);
-            nextState.users = {};
+            if (action.component === NAV_SEARCH_BAR) {
+                nextState = merge({}, state);
+                nextState.navSearchBar = {};
+            }
             return nextState;
         default:
             return state;

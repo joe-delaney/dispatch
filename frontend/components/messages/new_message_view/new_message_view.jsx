@@ -17,6 +17,13 @@ export default class NewMessageView extends React.Component {
         }
     }
 
+    clearSearchBar(e) {
+        this.setState({
+            query: ""
+        });
+        this.props.clearUserSearchResults();
+    }
+
     render() {
         return (
             <div className="user-dashboard-center-main">
