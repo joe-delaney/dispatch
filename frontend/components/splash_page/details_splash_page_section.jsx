@@ -14,7 +14,7 @@ const DetailsSplashPageSection = ({currentUser}) => {
                 </div>
                 <div className="splash-page-details-section-right">
                     <h2 className={textColorh2}>Now is your moment to build a better tomorrow</h2>
-                    <p className={textColorp}>We've seen what the future can be. Now it's time to decide what it will be</p>
+                    <p className={textColorp}>We've seen what the future can be. Now it's time to decide what it will be.</p>
                 </div>
             </div>
             <div className="splash-page-details-section">
