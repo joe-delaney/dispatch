@@ -27,6 +27,11 @@ export default class EditChannelModal extends React.Component {
                     <div className="edit-channel-input-container">
                         <textarea className="edit-channel-input"></textarea>
                     </div>
+                    <span className="modal-input-description edit-channel-description">Let people know what #2022-01-31-ny is focused on right now (ex. a project milestone). Topics are always visible in the header.</span>
+                    <div className="user-edit-modal-footer">
+                        <button className="user-edit-button user-cancel-edit">Cancel</button>
+                        <button className="user-edit-button user-save-changes">Save</button>
+                    </div>
                 </div>
             </section>
         )
