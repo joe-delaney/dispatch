@@ -45,7 +45,13 @@ export default class GroupSidebarList extends React.Component {
                     </Link>
                 </div>
                 <ul className={`${hideGroups}`}>
-                    {this.props.groups.map((group, idx) => <GroupSidebarListItem key={idx} group={group} />)}
+                    {this.props.groups.map((group, idx) => <GroupSidebarListItem 
+                                                                key={idx} 
+                                                                group={group}
+                                                                updateGroup={this.props.updateGroup}
+                                                                receiveGroupInfo={this.props.receiveGroupInfo} 
+                                                                ownProps={this.props.ownProps}
+                                                            />)}
                 </ul>
                 <ul>
                     <Link to="/user-dashboard/all-dms" className="sidebar-link">

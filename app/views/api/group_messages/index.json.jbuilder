@@ -1,6 +1,6 @@
 @group_messages.each do |group_message|
     json.set! group_message.id do 
-        json.extract! group_message, :id, :group_member_ids
+        json.extract! group_message, :id, :group_member_ids, :hidden
 
         #message_ids
         message_ids = []

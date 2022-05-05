@@ -58,6 +58,18 @@
     align-items: center;
 }
 
+.sidebar-list-item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sidebar-list-item-left {
+    display: flex;
+    align-items: center;
+}
+
+
 .sidebar-hashtag {
     font-size: 15px;
     height: 20px;
@@ -130,4 +142,14 @@
     color: white;
     font-weight: 700;
     font-family: Lato;
+}
+
+.hide-group-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: Lato;
+    color: #a3a3a6;
+    font-size: 20px;
+    margin-right: 10px;
 }

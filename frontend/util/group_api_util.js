@@ -19,3 +19,11 @@ export const createGroup = (userIds) => (
         data: {userIds}
     })
 )
+
+export const updateGroup = (group) => (
+    $.ajax({
+        method: "PATCH",
+        url: `/api/group_messages/${group.id}`,
+        data: { group }
+    })
+)

@@ -1,5 +1,5 @@
 json.set! :group do
-    json.extract! group, :id, :group_member_ids
+    json.extract! group, :id, :group_member_ids, :hidden
 
     #message_ids
     message_ids = []

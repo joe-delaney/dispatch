@@ -44,15 +44,23 @@ export default class NewMessageView extends React.Component {
         //Check to see if a group with these members already exists
         //If it does not, create a new group
         //If it does, redirect the user to that group
-        let existingGroupId = this.groupAlreadyExists(userIds);
-        if(!existingGroupId) {
+        let existingGroup = this.groupAlreadyExists(userIds);
+        if(!existingGroup) {
             this.props.createGroup(userIds)
             .then(info => {
                 this.props.receiveGroupInfo(info)
                 this.props.history.push(`/user-dashboard/message-groups/${info.group.id}`)
             });
         } else {
-            this.props.history.push(`/user-dashboard/message-groups/${existingGroupId}`);
+            if(existingGroup.hidden) {
+                let newGroup = {
+                    id: existingGroup.id,
+                    hidden: false
+                }
+                this.props.updateGroup(newGroup)
+                .then(info => this.props.receiveGroupInfo(info))
+            }
+            this.props.history.push(`/user-dashboard/message-groups/${existingGroup.id}`);
         }
     }
 
@@ -66,7 +74,7 @@ export default class NewMessageView extends React.Component {
         for(let i =0; i < this.props.groups.length; i++) {
             let groupUniqueString = this.generateUniqueString(this.props.groups[i]);
             if(uniqueString === groupUniqueString) {
-                return this.props.groups[i].id;
+                return this.props.groups[i];
             }
         }
         return false;

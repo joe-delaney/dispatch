@@ -27,4 +27,18 @@ class Api::GroupMessagesController < ApplicationController
         @group_message = GroupMessage.find_by(id: params[:id])
         render :show, locals: { group: @group_message, current_user: current_user }
     end
+
+    def update 
+        @group_message = GroupMessage.find_by(id: params[:group][:id])
+        if @group_message.update(group_params) 
+            render :show, locals: { group: @group_message, current_user: current_user }
+        else 
+            render json: @group_message.errors.full_messages
+        end
+    end
+
+    private
+    def group_params
+        params.require(:group).permit(:hidden)
+    end
 end
