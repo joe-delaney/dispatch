@@ -7,7 +7,9 @@ import { receiveGroupInfo } from "../../../actions/group_actions";
 
 const mapStateToProps = (state) => ({
     userSearchResults: Object.values(state.entities.searchResults.newMessageSearchBar),
-    selectedChannels: (query) => selectSearchedChannels(state.entities, query)
+    selectedChannels: (query) => selectSearchedChannels(state.entities, query),
+    groups: Object.values(state.entities.groups),
+    currentUser: state.entities.users[state.session.currentUserId]
 })
 
 const mapDispatchToProps = dispatch => ({

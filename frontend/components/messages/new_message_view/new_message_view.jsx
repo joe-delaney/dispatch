@@ -18,6 +18,8 @@ export default class NewMessageView extends React.Component {
         this.removeSelectedUser = this.removeSelectedUser.bind(this);
         this.currentlySelected = this.currentlySelected.bind(this);
         this.createGroup = this.createGroup.bind(this);
+        this.groupAlreadyExists = this.groupAlreadyExists.bind(this);
+        this.generateUniqueString = this.generateUniqueString.bind(this);
     }
 
     componentDidMount() {
@@ -38,11 +40,40 @@ export default class NewMessageView extends React.Component {
         this.setState({
             selectedUsers: []
         })
-        this.props.createGroup(userIds)
-        .then(info => {
-            this.props.receiveGroupInfo(info)
-            this.props.history.push(`/user-dashboard/message-groups/${info.group.id}`)
-        });
+
+        //Check to see if a group with these members already exists
+        //If it does not, create a new group
+        //If it does, redirect the user to that group
+        let existingGroupId = this.groupAlreadyExists(userIds);
+        if(!existingGroupId) {
+            this.props.createGroup(userIds)
+            .then(info => {
+                this.props.receiveGroupInfo(info)
+                this.props.history.push(`/user-dashboard/message-groups/${info.group.id}`)
+            });
+        } else {
+            this.props.history.push(`/user-dashboard/message-groups/${existingGroupId}`);
+        }
+    }
+
+    //This function creates a unique string using the sorted ids of the
+    //selected users and the current user. If a group with a string constructed
+    //using the same process exists, return that group id, otherwise return false.
+    groupAlreadyExists(userIds) {
+        let newUserIds = userIds.map(id => id);
+        newUserIds.push(this.props.currentUser.id)
+        let uniqueString = newUserIds.sort().join("");
+        for(let i =0; i < this.props.groups.length; i++) {
+            let groupUniqueString = this.generateUniqueString(this.props.groups[i]);
+            if(uniqueString === groupUniqueString) {
+                return this.props.groups[i].id;
+            }
+        }
+        return false;
+    }
+
+    generateUniqueString(group) {
+        return group.groupMemberIds.sort().join("");
     }
 
     handleInput(e) {
