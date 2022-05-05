@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import ChannelDetailsModal from "./channel_details_modal";
-import { toggleChannelDetailsModal } from "../../../actions/modal_actions";
+import { toggleChannelDetailsModal, toggleEditChannelModal } from "../../../actions/modal_actions";
 import { withRouter } from "react-router-dom";
 import { selectChannelMembers } from "../../../actions/channel_selectors";
 import { unsubscribe, subscribe } from "../../../actions/subscription_actions";
@@ -27,7 +27,8 @@ const mapDispatchToProps = dispatch => ({
     toggleModal: () => dispatch(toggleChannelDetailsModal()),
     unsubscribe: (subscription) => dispatch(unsubscribe(subscription)),
     subscribe: (subscription) => dispatch(subscribe(subscription)),
-    deleteChannel: (channelId) => dispatch(deleteChannel(channelId))
+    deleteChannel: (channelId) => dispatch(deleteChannel(channelId)),
+    toggleEditChannelModal: (attr) => dispatch(toggleEditChannelModal(attr))
 })
 
 const ChannelDetailsModalContainer = connect(mapStateToProps, mapDispatchToProps)(ChannelDetailsModal);

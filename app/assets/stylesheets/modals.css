@@ -421,3 +421,11 @@
     margin-bottom: 10px;
 }
 
+/* Edit Channel Modal */
+.edit-channel-modal-content-container {
+    width: 32.5rem;
+    height: 316px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+}

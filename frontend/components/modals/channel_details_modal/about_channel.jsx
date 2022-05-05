@@ -76,14 +76,20 @@ export class AboutChannel extends React.Component {
                 <li className="about-channel-list-item">
                     <div className="about-channel-list-item-top">
                         <h3 className="about-item-title">Topic</h3>
-                        {/* <button className="about-channel-edit-button">Edit</button> */}
+                        <button 
+                            className="about-channel-edit-button"
+                            onClick={() => this.props.toggleEditModal("topic")}
+                        >Edit</button>
                     </div>
                     <span className="about-item-detail">{channelTopic}</span>
                 </li>
                 <li className="about-channel-list-item">
                     <div className="about-channel-list-item-top">
                         <h3 className="about-item-title">Description</h3>
-                        {/* <button className="about-channel-edit-button">Edit</button> */}
+                        <button
+                            className="about-channel-edit-button"
+                            onClick={() => this.props.toggleEditModal("description")}
+                        >Edit</button>
                     </div>
                     <span className="about-item-detail">{channelDescription}</span>
                 </li>
