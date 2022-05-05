@@ -120,7 +120,9 @@ export default class NewMessageView extends React.Component {
                                         placeholder={placeholderText} />
                                 </ul> 
                             </div>
-                            <button className="create-dm-button">Create DM</button>
+                            <div className="create-dm-button-container">
+                                <button className="create-dm-button">Create DM</button>
+                            </div>
                         </div>
                         {maximumReachedError}
                         <ul className="search-results">
