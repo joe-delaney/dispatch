@@ -8,6 +8,9 @@
 
 User.destroy_all
 Channel.destroy_all
+GroupMessage.destroy_all
+Subscription.destroy_all
+Message.destroy_all
 
 puts "Creating users..."
 
@@ -94,6 +97,13 @@ knicks = Channel.create!(creator_id: joe.id, name: "Knicks", topic: "Go NY Go NY
 dogs = Channel.create!(creator_id: joe.id, name: "Dogs", topic: "Woof Woof", description: "Woof woof Woof woof Woof woof bark bark")
 harrypotter = Channel.create!(creator_id: harry.id, name: "Hogwarts", topic: "Casting spells", description: "Learning witchcraft and wizardry")
 
+puts "Creating Group Messages..."
+dm1 = GroupMessage.create!()
+dm2 = GroupMessage.create!()
+dm3 = GroupMessage.create!()
+dm4 = GroupMessage.create!()
+dm5 = GroupMessage.create!()
+dm6 = GroupMessage.create!()
 
 puts "Creating subscriptions..."
 
@@ -175,6 +185,34 @@ s57 = Subscription.create!(subscriber_id: hermione.id, subscribable_id: harrypot
 s58 = Subscription.create!(subscriber_id: voldemort.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
 s59 = Subscription.create!(subscriber_id: dumbledore.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
 s60 = Subscription.create!(subscriber_id: snape.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
+
+#dm1
+s61 = Subscription.create!(subscriber_id: joe.id, subscribable_id: dm1.id, subscribable_type: "GroupMessage")
+s62 = Subscription.create!(subscriber_id: ross.id, subscribable_id: dm1.id, subscribable_type: "GroupMessage")
+
+#dm2
+s63 = Subscription.create!(subscriber_id: joe.id, subscribable_id: dm2.id, subscribable_type: "GroupMessage")
+s64 = Subscription.create!(subscriber_id: ironman.id, subscribable_id: dm2.id, subscribable_type: "GroupMessage")
+
+#dm3
+s65 = Subscription.create!(subscriber_id: joe.id, subscribable_id: dm3.id, subscribable_type: "GroupMessage")
+s66 = Subscription.create!(subscriber_id: michael.id, subscribable_id: dm3.id, subscribable_type: "GroupMessage")
+s67 = Subscription.create!(subscriber_id: dwight.id, subscribable_id: dm3.id, subscribable_type: "GroupMessage")
+
+#dm4
+s68 = Subscription.create!(subscriber_id: joe.id, subscribable_id: dm4.id, subscribable_type: "GroupMessage")
+s69 = Subscription.create!(subscriber_id: patrick.id, subscribable_id: dm4.id, subscribable_type: "GroupMessage")
+s70 = Subscription.create!(subscriber_id: squidward.id, subscribable_id: dm4.id, subscribable_type: "GroupMessage")
+s71 = Subscription.create!(subscriber_id: spongebob.id, subscribable_id: dm4.id, subscribable_type: "GroupMessage")
+s71 = Subscription.create!(subscriber_id: plankton.id, subscribable_id: dm4.id, subscribable_type: "GroupMessage")
+
+#dm5
+s72 = Subscription.create!(subscriber_id: joe.id, subscribable_id: dm5.id, subscribable_type: "GroupMessage")
+s73 = Subscription.create!(subscriber_id: voldemort.id, subscribable_id: dm5.id, subscribable_type: "GroupMessage")
+
+#dm6
+s74 = Subscription.create!(subscriber_id: sasha.id, subscribable_id: dm6.id, subscribable_type: "GroupMessage")
+s75 = Subscription.create!(subscriber_id: shannon.id, subscribable_id: dm6.id, subscribable_type: "GroupMessage")
 
 puts "Creating messages..."
 
@@ -261,3 +299,45 @@ m63 = Message.create!(author_id: voldemort.id, text: "There is no good and evil.
 m64 = Message.create!(author_id: dumbledore.id, text: "It does not do well to dwell on dreams and forget to live.", messagable_id: harrypotter.id, messagable_type: "Channel")
 m65 = Message.create!(author_id: snape.id, text: "There will be no foolish wand-waving or silly incantations in this class. As such, I don't expect many of you to appreciate the subtle science and exact art that is potion-making. However, for those select few who possess the predisposition, I can teach you how to bewitch the mind and ensnare the senses. I can tell you how to bottle fame, brew glory, and even put a stopper in death. Then again, maybe some of you have come to Hogwarts in possession of abilities so formidable that you feel confident enough to not pay attention!", messagable_id: harrypotter.id, messagable_type: "Channel")
 m66 = Message.create!(author_id: harry.id, text: "I’m going to keep going until I succeed—or I die. Don’t think I don’t know how this might end. I’ve known it for years.", messagable_id: harrypotter.id, messagable_type: "Channel")
+
+#dm1
+m67 = Message.create!(author_id: joe.id, text: "Hi Ross", messagable_id: dm1.id, messagable_type: "GroupMessage")
+m68 = Message.create!(author_id: ross.id, text: "Hello", messagable_id: dm1.id, messagable_type: "GroupMessage")
+m69 = Message.create!(author_id: ross.id, text: "How are you doing?", messagable_id: dm1.id, messagable_type: "GroupMessage")
+m70 = Message.create!(author_id: joe.id, text: "I'm great Ross, how are you!", messagable_id: dm1.id, messagable_type: "GroupMessage")
+m71 = Message.create!(author_id: ross.id, text: "Doing well!", messagable_id: dm1.id, messagable_type: "GroupMessage")
+
+#dm2
+m72 = Message.create!(author_id: joe.id, text: "Hi Tony", messagable_id: dm2.id, messagable_type: "GroupMessage")
+m73 = Message.create!(author_id: ironman.id, text: "Hello", messagable_id: dm2.id, messagable_type: "GroupMessage")
+m74 = Message.create!(author_id: ironman.id, text: "How are you today?", messagable_id: dm2.id, messagable_type: "GroupMessage")
+m75 = Message.create!(author_id: joe.id, text: "I'm great, how are you!", messagable_id: dm2.id, messagable_type: "GroupMessage")
+m76 = Message.create!(author_id: ironman.id, text: "Doing great too!", messagable_id: dm2.id, messagable_type: "GroupMessage")
+
+#dm3
+m77 = Message.create!(author_id: joe.id, text: "Hi", messagable_id: dm3.id, messagable_type: "GroupMessage")
+m78 = Message.create!(author_id: michael.id, text: "Yo", messagable_id: dm3.id, messagable_type: "GroupMessage")
+m79 = Message.create!(author_id: dwight.id, text: "How is this group of people doing?", messagable_id: dm3.id, messagable_type: "GroupMessage")
+m80 = Message.create!(author_id: joe.id, text: "I'm great, how are you Dwight?", messagable_id: dm3.id, messagable_type: "GroupMessage")
+m81 = Message.create!(author_id: dwight.id, text: "I am fine", messagable_id: dm3.id, messagable_type: "GroupMessage")
+
+#dm4
+m82 = Message.create!(author_id: joe.id, text: "Hi Bikini Bottom dwellers", messagable_id: dm4.id, messagable_type: "GroupMessage")
+m83 = Message.create!(author_id: patrick.id, text: "Hello", messagable_id: dm4.id, messagable_type: "GroupMessage")
+m84 = Message.create!(author_id: squidward.id, text: "Why am I in a group with these two", messagable_id: dm4.id, messagable_type: "GroupMessage")
+m85 = Message.create!(author_id: spongebob.id, text: "I'm great and don't mind Squidward", messagable_id: dm4.id, messagable_type: "GroupMessage")
+m86 = Message.create!(author_id: plankton.id, text: "Definitely not up to anything suspicious", messagable_id: dm4.id, messagable_type: "GroupMessage")
+
+#dm5
+m87 = Message.create!(author_id: joe.id, text: "Hi", messagable_id: dm5.id, messagable_type: "GroupMessage")
+m88 = Message.create!(author_id: voldemort.id, text: "Hello", messagable_id: dm5.id, messagable_type: "GroupMessage")
+m89 = Message.create!(author_id: voldemort.id, text: "Where is Potter?", messagable_id: dm5.id, messagable_type: "GroupMessage")
+m90 = Message.create!(author_id: joe.id, text: "I am not really sure", messagable_id: dm5.id, messagable_type: "GroupMessage")
+m91 = Message.create!(author_id: voldemort.id, text: "Well you better find out or else!", messagable_id: dm5.id, messagable_type: "GroupMessage")
+
+#dm6
+m92 = Message.create!(author_id: sasha.id, text: "Hi", messagable_id: dm6.id, messagable_type: "GroupMessage")
+m93 = Message.create!(author_id: shannon.id, text: "Hello", messagable_id: dm6.id, messagable_type: "GroupMessage")
+m94 = Message.create!(author_id: shannon.id, text: "How are you doing?", messagable_id: dm6.id, messagable_type: "GroupMessage")
+m95 = Message.create!(author_id: sasha.id, text: "I'm great, how are you!", messagable_id: dm6.id, messagable_type: "GroupMessage")
+m96 = Message.create!(author_id: shannon.id, text: "Doing well!", messagable_id: dm6.id, messagable_type: "GroupMessage")

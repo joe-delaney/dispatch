@@ -25,6 +25,11 @@ class User < ApplicationRecord
         source: :subscribable,
         source_type: :Channel
 
+    has_many :group_messages,
+        through: :subscriptions,
+        source: :subscribable,
+        source_type: :GroupMessage
+
     def self.find_by_credentials(email, password)
         @user = User.find_by(email: email)
 
@@ -64,6 +69,9 @@ class User < ApplicationRecord
     end
 
     def self.search(query, current_user_id) 
+        if(query[0] == '@') 
+            query = query[1..-1]
+        end
         users = User.where("users.display_name ILIKE '#{query}%' AND users.id != '#{current_user_id}'")
         users
     end

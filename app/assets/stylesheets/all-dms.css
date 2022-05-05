@@ -1,0 +1,87 @@
+.all-dms-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    background-color: #232529;
+}
+
+.all-dms-items {
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-bottom: 70px;
+    background-color: #1b1d21;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.all-dms-items::-webkit-scrollbar {
+    background-color: #232529;
+    width: 0px;
+}
+
+
+.all-dms-item {
+    display: flex;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.all-dms-item:hover {
+    background-color: #232529;
+    border: 1px solid #1b1d21;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.all-dms-item-image {
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightseagreen;
+    border-radius: 4px;
+}
+
+.all-dms-item-initial {
+    font-family: Lato;
+    font-size: 20px;
+    color: #d1d2d3;
+    font-weight: 700;
+}
+
+.all-dms-item-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.all-dms-item-right {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.all-dms-group-name {
+    color: #d1d2d3;
+    font-size: 15px;
+    font-family: Lato;
+    font-weight: 700;
+}
+
+.all-dms-last-message {
+    font-size: 15px;
+    color: #e8e8e8b3;
+    font-family: Lato;
+    font-weight: 400;
+    margin-top: 6px;
+}
+
+.all-dms-item-time-label {
+    font-size: 13px;
+    color: #e8e8e8b3;
+    font-family: Lato;
+    font-weight: 400;
+}

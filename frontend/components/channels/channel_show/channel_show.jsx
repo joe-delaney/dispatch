@@ -25,14 +25,14 @@ export default class ChannelShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fecthChannelInfo(this.props.match.params.channelId)
+        this.props.fetchChannelInfo(this.props.match.params.channelId)
             .then(info => this.props.receiveChannelInfo(info));
         this.enterRoom();
     }
 
     componentDidUpdate(prevProps, prevState) {
         if(prevState.id !== this.props.match.params.channelId) {
-            this.props.fecthChannelInfo(this.props.match.params.channelId)
+            this.props.fetchChannelInfo(this.props.match.params.channelId)
                 .then(info => this.props.receiveChannelInfo(info));
             this.setState({
                 id: this.props.match.params.channelId

@@ -24,18 +24,20 @@ export default class EditMessageComposer extends React.Component {
 
     saveMessage() {
         if(this.props.message && this.state.text !== "") {
-            let newMessage = {
-                id: this.props.message.id,
-                author_id: this.props.message.authorId,
-                messagable_id: this.props.message.messagableId,
-                messagable_type: this.props.message.messagableType,
-                text: this.state.text,
-                edited: true
+            if(this.state.text !== this.initialText) {
+                let newMessage = {
+                    id: this.props.message.id,
+                    author_id: this.props.message.authorId,
+                    messagable_id: this.props.message.messagableId,
+                    messagable_type: this.props.message.messagableType,
+                    text: this.state.text,
+                    edited: true
+                }
+                this.props.updateMessage(newMessage)
+                this.setState({
+                    text: newMessage.text
+                });
             }
-            this.props.updateMessage(newMessage)
-            this.setState({
-                text: newMessage.text
-            });
             this.props.toggleEditMessage();
         } else if (this.props.message && this.state.text === "") {
             //Don't let the user edit to a blank message

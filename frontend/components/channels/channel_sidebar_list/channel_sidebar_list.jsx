@@ -44,8 +44,13 @@ class ChannelSidebarList extends React.Component {
                         <img src={window.plus} alt="plus" className="sidebar-button-plus"></img>
                     </div>
                 </div>
-                <ul className={`${hideChannels}`}>
-                    {this.props.channels.map((channel, idx) => <ChannelSidebarListItem key={idx} channel={channel} />)}
+                <ul>
+                    {this.props.channels.map((channel, idx) => 
+                            <ChannelSidebarListItem 
+                                key={idx} 
+                                channel={channel} 
+                                ownProps={this.props.ownProps}
+                                show={this.state.showChannels} />)}
                 </ul>
                 <ul>
                     <Link to="/user-dashboard/browse-channels" className="sidebar-link">

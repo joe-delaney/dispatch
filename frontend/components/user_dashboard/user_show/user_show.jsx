@@ -21,7 +21,7 @@ export default class UserShow extends React.Component {
     }
 
     openDirectMessage(e) {
-        console.log("MESSAGE");
+
     }
 
     hideUserShow() {
@@ -40,7 +40,7 @@ export default class UserShow extends React.Component {
         let title = "";
         let userShowActionLabel = "";
         let buttonImg;
-        let clickAction = <div></div>;
+        let userActionButton = <div></div>;
         let hidden = "hidden";
 
         if(this.props.user) {
@@ -50,8 +50,23 @@ export default class UserShow extends React.Component {
                 "Edit profile" : "Message";
             buttonImg = (this.props.user.id === this.props.currentUser.id) ?
                 window.pencilIcon : window.messageIcon;
-            clickAction = (this.props.user.id === this.props.currentUser.id) ?
-                this.displayEditModal : this.openDirectMessage;
+
+            const linkInfo = {
+                pathname: "/user-dashboard/new-message",
+                selectedUser: this.props.user
+            };
+            userActionButton = (this.props.user.id === this.props.currentUser.id) ? (
+                <button onClick={this.displayEditModal} className="user-show-button">
+                    <img className="user-show-button-img" src={buttonImg} alt="action" />
+                </button>
+            ) : (
+                <Link to={linkInfo}>
+                    <button className="user-show-button">
+                        <img className="user-show-button-img" src={buttonImg} alt="action" />
+                    </button>
+                </Link>
+            )
+            
         }
 
         if(this.props.userId) {
@@ -66,9 +81,7 @@ export default class UserShow extends React.Component {
                 <strong className="user-show-display-name">{displayName}</strong>
                 <span className="user-show-title">{title}</span>
                 <div className="user-show-action">
-                    <button onClick={clickAction} className="user-show-button">
-                        <img className="user-show-button-img" src={buttonImg} alt="action" />
-                    </button>
+                    {userActionButton}
                     <span className="user-show-action-label">{userShowActionLabel}</span>
                 </div>
             </div>

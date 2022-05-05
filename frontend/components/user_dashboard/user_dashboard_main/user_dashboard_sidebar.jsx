@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import ChannelSidebarListContainer from "../../channels/channel_sidebar_list/channel_sidebar_list_container";
+import GroupSidebarListContainer from "../../groups/group_sidebar_list/group_sidebar_list_container";
 
 const UserDashboardSidebar = ({currentUser}) => (
     <div className="user-dashboard-sidebar">
@@ -9,12 +10,15 @@ const UserDashboardSidebar = ({currentUser}) => (
                 <Link to="/">
                     <img className="user-dashboard-sidebar-logo" src="https://cdn.bfldr.com/5H442O3W/at/pljt3c-dcwb20-c19uuy/Slack_RGB_White.svg?auto=webp&format=png" alt="slack-logo"></img>
                 </Link>
-                <button className="new-message-button">
-                    <img src={window.composeIcon} alt="compose icon" />
-                </button>
+                <Link to="/user-dashboard/new-message">
+                    <button className="new-message-button">
+                        <img className="new-message-icon" src={window.composeIcon} alt="compose icon" />
+                    </button>
+                </Link>
             </div>
             <div className="user-dashboard-sidebar-main">
                 <ChannelSidebarListContainer/>
+                <GroupSidebarListContainer/>
             </div>
         </div>
     </div>

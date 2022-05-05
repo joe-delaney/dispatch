@@ -17,7 +17,8 @@ const mapStateToProps = (state, ownProps) => {
         displayModal: state.ui.modals.channelDetailsModalDisplayed,
         channel_creator: creator,
         members: channelMembers,
-        currentUser: state.entities.users[state.session.currentUserId]
+        currentUser: state.entities.users[state.session.currentUserId],
+        ownProps: ownProps
     }
 }
 

@@ -1,0 +1,104 @@
+.selected-users {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.selected-user {
+    display: flex;
+    align-items: center;
+    background-color: #159bd11a;
+    height: 26px;
+    margin-left: 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.selected-user-img {
+    display: flex;
+    background-color: lightcoral;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    width: 22px;
+    border-radius: 4px;
+}
+
+.selected-user-img-initial {
+    font-family: Lato;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.selected-user-name {
+    font-family: Lato;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.remove-selected-user-button {
+    font-family: Lato;
+    font-size: 22px;
+    height: 24px;
+    width: 24px;
+    color: #e8e8e8b3;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.new-message-error-container {
+    margin-left: 26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(232, 145, 45, 0.4);
+    background-color: rgba(232, 145, 45, 0.1);
+    padding: 8px 16px;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.new-message-error {
+    font-size: 13px;
+    font-weight: 400;
+    color: #d1d2d3;
+    font-family: Lato;
+}
+
+.red-error-background {
+    border: 1px solid rgba(224, 30, 90, 0.4);
+    background-color: rgba(224, 30, 90, 0.1);
+}
+
+.create-dm-button {
+    background-color: #007a5a;
+    color: white;
+    height: 14px;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-left: 26px;
+    font-family: Lato;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    margin-right: 40px;
+    padding: 10px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.create-dm-button:hover {
+    background-color: #148567;
+    box-shadow: 0 1px 4px #0000004d;
+}
+
+.create-dm-button-container {
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+}

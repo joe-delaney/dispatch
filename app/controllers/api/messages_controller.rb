@@ -3,15 +3,17 @@ class Api::MessagesController < ApplicationController
     def create 
         @message = Message.new(message_params)
         @message.author_id = current_user.id 
-        @current_user = current_user
         if @message.save 
             if params[:message][:messagable_type] == "Channel"
                 @channel = Channel.find_by(id: params[:message][:messagable_id])
                 ChannelsChannel.broadcast_to @channel,
-                    from_template('api/channels/show', {channel: @channel})  
+                    from_template('api/channels/show', {channel: @channel, current_user: current_user})  
                 render json: nil, status: :ok
             else 
-                render json: ["Insert Message Group Here"]
+                @group = GroupMessage.find_by(id: params[:message][:messagable_id])
+                GroupMessagesChannel.broadcast_to @group,
+                    from_template('api/group_messages/show', {group: @group, current_user: current_user})  
+                render json: nil, status: :ok
             end
         else 
             render json: @message.errors.full_messages
@@ -25,11 +27,13 @@ class Api::MessagesController < ApplicationController
             if @message.messagable_type == "Channel"
                 @channel = Channel.find_by(id: @message.messagable_id)
                 ChannelsChannel.broadcast_to @channel,
-                    from_template('api/channels/show', {channel: @channel})  
+                    from_template('api/channels/show', {channel: @channel, current_user: current_user})  
                 render json: nil, status: :ok
-                # render "api/channels/show", locals: { channel: @channel, current_user: @current_user }
             else 
-                render json: ["Insert Message Group Here"]
+                @group = GroupMessage.find_by(id: params[:message][:messagable_id])
+                GroupMessagesChannel.broadcast_to @group,
+                    from_template('api/group_messages/show', {group: @group, current_user: current_user})  
+                render json: nil, status: :ok
             end
         else 
             render json: @message.errors.full_messages
