@@ -1,6 +1,9 @@
 //Select channels from state based on a query string
 export const selectSearchedChannels = ({channels}, query) => {
-    if(query === "") {
+    if(query[0] === '#') {
+        query = query.slice(1);
+    }
+    if(query === "") { 
         return Object.values(channels);
     } else {
         let searchResults = [];
