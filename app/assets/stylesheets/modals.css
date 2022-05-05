@@ -429,3 +429,23 @@
     flex-direction: column;
     margin-top: 10rem;
 }
+
+.edit-channel-input {
+    resize: none;
+    line-height: 1.46668;
+    font-size: 15px;
+    font-family: Lato;
+    color: #d1d2d3;
+    background-color: inherit;
+    border: none;
+}
+
+.edit-channel-input-container {
+    border: 1px solid #818385;
+    border-radius: 4px;
+    height: 126px;
+    padding: 8px 12px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+}

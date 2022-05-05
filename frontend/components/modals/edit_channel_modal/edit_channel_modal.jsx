@@ -24,6 +24,9 @@ export default class EditChannelModal extends React.Component {
                             <span>&times;</span>
                         </button>
                     </div>
+                    <div className="edit-channel-input-container">
+                        <textarea className="edit-channel-input"></textarea>
+                    </div>
                 </div>
             </section>
         )
