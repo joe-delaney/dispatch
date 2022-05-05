@@ -8,7 +8,8 @@ export default class NewMessageView extends React.Component {
         super(props);
         this.state = {
             query: "",
-            selectedUsers: []
+            selectedUsers: [],
+            showNoUsersSelectedError: false
         }
 
         this.inputFocus = this.utilizeFocus()
@@ -33,34 +34,40 @@ export default class NewMessageView extends React.Component {
     }
 
     createGroup() {
-        let userIds = [];
-        this.state.selectedUsers.forEach((user)  => {
-            userIds.push(user.id);
-        })
-        this.setState({
-            selectedUsers: []
-        })
+        if(this.state.selectedUsers.length) {
+            let userIds = [];
+            this.state.selectedUsers.forEach((user)  => {
+                userIds.push(user.id);
+            })
+            this.setState({
+                selectedUsers: []
+            })
 
-        //Check to see if a group with these members already exists
-        //If it does not, create a new group
-        //If it does, redirect the user to that group
-        let existingGroup = this.groupAlreadyExists(userIds);
-        if(!existingGroup) {
-            this.props.createGroup(userIds)
-            .then(info => {
-                this.props.receiveGroupInfo(info)
-                this.props.history.push(`/user-dashboard/message-groups/${info.group.id}`)
-            });
-        } else {
-            if(existingGroup.hidden) {
-                let newGroup = {
-                    id: existingGroup.id,
-                    hidden: false
+            //Check to see if a group with these members already exists
+            //If it does not, create a new group
+            //If it does, redirect the user to that group
+            let existingGroup = this.groupAlreadyExists(userIds);
+            if(!existingGroup) {
+                this.props.createGroup(userIds)
+                .then(info => {
+                    this.props.receiveGroupInfo(info)
+                    this.props.history.push(`/user-dashboard/message-groups/${info.group.id}`)
+                });
+            } else {
+                if(existingGroup.hidden) {
+                    let newGroup = {
+                        id: existingGroup.id,
+                        hidden: false
+                    }
+                    this.props.updateGroup(newGroup)
+                    .then(info => this.props.receiveGroupInfo(info))
                 }
-                this.props.updateGroup(newGroup)
-                .then(info => this.props.receiveGroupInfo(info))
+                this.props.history.push(`/user-dashboard/message-groups/${existingGroup.id}`);
             }
-            this.props.history.push(`/user-dashboard/message-groups/${existingGroup.id}`);
+        } else {
+            this.setState({
+                showNoUsersSelectedError: true
+            })
         }
     }
 
@@ -86,7 +93,8 @@ export default class NewMessageView extends React.Component {
 
     handleInput(e) {
         this.setState({
-            query: e.target.value
+            query: e.target.value,
+            showNoUsersSelectedError: false
          })
         if (e.target.value !== "") {
             this.props.searchUsers(e.target.value);
@@ -137,10 +145,18 @@ export default class NewMessageView extends React.Component {
         const channels = (this.state.query === "" || this.state.selectedUsers.length) ? [] : this.props.selectedChannels(this.state.query);
         const searchResults = (this.props.userSearchResults.length || !this.state.query.length || channels.length) ? this.props.userSearchResults : [{ displayName: "No results found" }];
         const placeholderText = this.state.selectedUsers.length ? "" : "#channel or @somebody"
-        const addPadding = this.state.selectedUsers.length >= maximumUsers ? "max-reached-search-bar" : ""
+        const addPadding = (this.state.selectedUsers.length >= maximumUsers || this.state.showNoUsersSelectedError) ? 
+            "max-reached-search-bar" : ""
         const maximumReachedError = this.state.selectedUsers.length >= maximumUsers ? (
-            <div className="max-reached-error-container">
-                <span className="max-reached-error">Only 8 people can be in a direct message</span>
+            <div className="new-message-error-container">
+                <span className="new-message-error">Only 8 people can be in a direct message</span>
+            </div>
+        ) : (
+            <div></div>
+        )
+        const noUserSelectedError = this.state.showNoUsersSelectedError ? (
+            <div className="new-message-error-container red-error-background">
+                <span className="new-message-error">Select another person to start a message</span>
             </div>
         ) : (
             <div></div>
@@ -180,6 +196,7 @@ export default class NewMessageView extends React.Component {
                             </div>
                         </div>
                         {maximumReachedError}
+                        {noUserSelectedError}
                         <ul className="search-results">
                             {searchResults.map((user) => (
                                 <NewMessageViewUserSearchResult

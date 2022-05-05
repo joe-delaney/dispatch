@@ -49,7 +49,7 @@
     cursor: pointer;
 }
 
-.max-reached-error-container {
+.new-message-error-container {
     margin-left: 26px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -60,11 +60,16 @@
     border-radius: 8px;
 }
 
-.max-reached-error {
+.new-message-error {
     font-size: 13px;
     font-weight: 400;
     color: #d1d2d3;
     font-family: Lato;
+}
+
+.red-error-background {
+    border: 1px solid rgba(224, 30, 90, 0.4);
+    background-color: rgba(224, 30, 90, 0.1);
 }
 
 .create-dm-button {
@@ -75,7 +80,7 @@
     margin-top: 10px;
     margin-left: 26px;
     font-family: Lato;
-    font-size: 12px;
+    font-size: 13px;
     cursor: pointer;
     border: none;
     margin-right: 40px;
@@ -84,6 +89,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 700;
 }
 
 .create-dm-button:hover {
