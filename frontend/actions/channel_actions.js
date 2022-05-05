@@ -6,6 +6,7 @@ export const RECEIVE_INFO = "RECEIVE_INFO";
 export const RECEIVE_CHANNEL = "RECEIVE_CHANNEL";
 export const RECEIVE_SUBSCRIBED_USER = "RECEIVE_SUBSCRIBED_USER";
 export const RECEIVE_UNSUBSCRIBED_USER = "RECEIVE_UNSUBSCRIBED_USER";
+export const REMOVE_CHANNEL = "REMOVE_CHANNEL";
 
 const receiveChannels = (channels) => ({
     type: RECEIVE_CHANNELS,
@@ -34,6 +35,11 @@ export const receiveUnsubscribedUser = (userId, channelId) => ({
     channelId
 })
 
+const removeChannel = (channelId) => ({
+    type: REMOVE_CHANNEL,
+    channelId
+})
+
 
 export const fetchChannels = () => dispatch => ChannelAPIUtil.fetchChannels()
     .then(channels => dispatch(receiveChannels(channels)));
@@ -41,12 +47,15 @@ export const fetchChannels = () => dispatch => ChannelAPIUtil.fetchChannels()
 export const fetchChannelInfo = (channelId) => ChannelAPIUtil.fetchChannelInfo(channelId)
 
 export const createChannel = channel => dispatch => ChannelAPIUtil.createChannel(channel)
-    .then(info => { 
-        dispatch(receiveChannel(info.channel));
-        let subscription = {
-            subscriber_id: info.currentUser.id,
-            subscribable_id: info.channel.id,
-            subscribable_type: "Channel"
-        }
-        dispatch(subscribe(subscription));
-    });
+.then(info => { 
+    dispatch(receiveChannel(info.channel));
+    let subscription = {
+        subscriber_id: info.currentUser.id,
+        subscribable_id: info.channel.id,
+        subscribable_type: "Channel"
+    }
+    dispatch(subscribe(subscription));
+});
+
+export const deleteChannel = channelId => dispatch => ChannelAPIUtil.deleteChannel(channelId)
+    .then(() => dispatch(removeChannel(channelId)));

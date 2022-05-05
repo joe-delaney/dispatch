@@ -8,6 +8,7 @@ export class AboutChannel extends React.Component {
 
         this.leaveChannel = this.leaveChannel.bind(this);
         this.joinChannel = this.joinChannel.bind(this);
+        this.deleteChannel = this.deleteChannel.bind(this);
     }
 
     leaveChannel(e) {
@@ -20,6 +21,11 @@ export class AboutChannel extends React.Component {
             }
             this.props.unsubscribe(subscription);
         }
+        this.props.toggleModal();
+    }
+
+    deleteChannel() {
+        this.props.deleteChannel(this.props.channel.id);
         this.props.toggleModal();
     }
 
@@ -56,6 +62,13 @@ export class AboutChannel extends React.Component {
                     <button onClick={this.joinChannel}>Join Channel</button>
                 </li>)
             )
+
+            let channelCreator = this.props.channel.creatorId === this.props.currentUser.id;
+            subscribedButton = channelCreator ? (<li className="channel-modal-button leave-channel-modal-button">
+                <Link className="leave-channel-link" to="/user-dashboard/browse-channels">
+                    <button onClick={this.deleteChannel}>Delete Channel</button>
+                </Link>
+            </li>) : subscribedButton;
         }
 
         return (

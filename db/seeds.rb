@@ -87,14 +87,14 @@ dumbledore = User.create!(email: "dumbledore@hogwarts.com", password: "123456", 
 snape = User.create!(email: "snape@hogwarts.com", password: "123456", display_name: "Professor Snape", title: "Defense Against the Dark Arts professor")
 
 puts "Creating channels..."
-general = Channel.create!(creator_id: joe.id, name: "general", topic: "General information", description: "To be used for general info and announcements")
-office = Channel.create!(creator_id: joe.id, name: "The Office", topic: "Dunder Mifflin", description: "Providing all of your paper needs")
-avengers = Channel.create!(creator_id: joe.id, name: "Avengers", topic: "Stopping supervillains", description: "Secure channel for saving the world")
-bikini_bottom = Channel.create!(creator_id: joe.id, name: "Bikini Bottom", topic: "Underwater shenanigans", description: "Friends of the sponge who lives in a pineapple under the sea")
-friends = Channel.create!(creator_id: joe.id, name: "Friends", topic: "Central Perk", description: "I'll be there for you")
-himym = Channel.create!(creator_id: joe.id, name: "How I Met Your Mother", topic: "5 friends in NYC", description: "Follow Ted on his quest to find love")
-knicks = Channel.create!(creator_id: joe.id, name: "Knicks", topic: "Go NY Go NY Go", description: "Trying to win the NBA Championship")
-dogs = Channel.create!(creator_id: joe.id, name: "Dogs", topic: "Woof Woof", description: "Woof woof Woof woof Woof woof bark bark")
+general = Channel.create!(creator_id: joe1.id, name: "general", topic: "General information", description: "To be used for general info and announcements")
+office = Channel.create!(creator_id: michael.id, name: "The Office", topic: "Dunder Mifflin", description: "Providing all of your paper needs")
+avengers = Channel.create!(creator_id: captain.id, name: "Avengers", topic: "Stopping supervillains", description: "Secure channel for saving the world")
+bikini_bottom = Channel.create!(creator_id: spongebob.id, name: "Bikini Bottom", topic: "Underwater shenanigans", description: "Friends of the sponge who lives in a pineapple under the sea")
+friends = Channel.create!(creator_id: ross.id, name: "Friends", topic: "Central Perk", description: "I'll be there for you")
+himym = Channel.create!(creator_id: barney.id, name: "How I Met Your Mother", topic: "5 friends in NYC", description: "Follow Ted on his quest to find love")
+knicks = Channel.create!(creator_id: ewing.id, name: "Knicks", topic: "Go NY Go NY Go", description: "Trying to win the NBA Championship")
+dogs = Channel.create!(creator_id: duke.id, name: "Dogs", topic: "Woof Woof", description: "Woof woof Woof woof Woof woof bark bark")
 harrypotter = Channel.create!(creator_id: harry.id, name: "Hogwarts", topic: "Casting spells", description: "Learning witchcraft and wizardry")
 
 puts "Creating Group Messages..."
@@ -157,7 +157,6 @@ s37 = Subscription.create!(subscriber_id: phoebe.id, subscribable_id: friends.id
 s38 = Subscription.create!(subscriber_id: joey.id, subscribable_id: friends.id, subscribable_type: "Channel")
 
 #HIMYM
-s39 = Subscription.create!(subscriber_id: joe.id, subscribable_id: himym.id, subscribable_type: "Channel")
 s40 = Subscription.create!(subscriber_id: barney.id, subscribable_id: himym.id, subscribable_type: "Channel")
 s41 = Subscription.create!(subscriber_id: ted.id, subscribable_id: himym.id, subscribable_type: "Channel")
 s42 = Subscription.create!(subscriber_id: robin.id, subscribable_id: himym.id, subscribable_type: "Channel")
@@ -165,7 +164,6 @@ s43 = Subscription.create!(subscriber_id: marshall.id, subscribable_id: himym.id
 s44 = Subscription.create!(subscriber_id: lily.id, subscribable_id: himym.id, subscribable_type: "Channel")
 
 #Knicks
-s45 = Subscription.create!(subscriber_id: joe.id, subscribable_id: knicks.id, subscribable_type: "Channel")
 s46 = Subscription.create!(subscriber_id: ewing.id, subscribable_id: knicks.id, subscribable_type: "Channel")
 s47 = Subscription.create!(subscriber_id: barrett.id, subscribable_id: knicks.id, subscribable_type: "Channel")
 s48 = Subscription.create!(subscriber_id: starks.id, subscribable_id: knicks.id, subscribable_type: "Channel")
@@ -178,7 +176,6 @@ s52 = Subscription.create!(subscriber_id: lucy.id, subscribable_id: dogs.id, sub
 s53 = Subscription.create!(subscriber_id: scout.id, subscribable_id: dogs.id, subscribable_type: "Channel")
 
 #Harry Potter
-# s54 = Subscription.create!(subscriber_id: joe.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
 s55 = Subscription.create!(subscriber_id: harry.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
 s56 = Subscription.create!(subscriber_id: ron.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
 s57 = Subscription.create!(subscriber_id: hermione.id, subscribable_id: harrypotter.id, subscribable_type: "Channel")
