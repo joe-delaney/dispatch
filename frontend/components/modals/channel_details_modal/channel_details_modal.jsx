@@ -49,6 +49,8 @@ export default class ChannelDetailsModal extends React.Component {
                                 subscribe={this.props.subscribe}
                                 currentUser={this.props.currentUser}
                                 toggleModal={this.props.toggleModal}
+                                deleteChannel={this.props.deleteChannel}
+                                toggleEditModal={this.props.toggleEditChannelModal}
                             />;
         const membersSection = <ChannelMembers 
                                 members={this.props.members}

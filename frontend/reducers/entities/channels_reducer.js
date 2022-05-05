@@ -1,4 +1,4 @@
-import { RECEIVE_CHANNELS, RECEIVE_CHANNEL, RECEIVE_SUBSCRIBED_USER, RECEIVE_UNSUBSCRIBED_USER, RECEIVE_INFO } from "../../actions/channel_actions";
+import { RECEIVE_CHANNELS, RECEIVE_CHANNEL, RECEIVE_SUBSCRIBED_USER, RECEIVE_UNSUBSCRIBED_USER, RECEIVE_INFO, REMOVE_CHANNEL } from "../../actions/channel_actions";
 
 const channelsReducer = (state={}, action) => {
     Object.freeze(state);
@@ -20,6 +20,9 @@ const channelsReducer = (state={}, action) => {
         case RECEIVE_UNSUBSCRIBED_USER:
             let idx = nextState[action.channelId].channelMemberIds.indexOf(action.userId)
             nextState[action.channelId].channelMemberIds.splice(idx, 1);
+            return nextState;
+        case REMOVE_CHANNEL:
+            delete nextState[action.channelId];
             return nextState;
         default:
             return state;

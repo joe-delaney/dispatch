@@ -23,11 +23,19 @@ class Api::ChannelsController < ApplicationController
     end
 
     def update 
+        @channel = Channel.find_by(id: params[:id])
 
+        if @channel.update(channel_params) 
+            render :show, locals: { channel: @channel, current_user: current_user }
+        else 
+            render json: @channel.errors.full_messages
+        end
     end
 
     def destroy 
-
+        @channel = Channel.find_by(id: params[:id])
+        @channel.destroy
+        render json: nil, status: :ok
     end
 
     private

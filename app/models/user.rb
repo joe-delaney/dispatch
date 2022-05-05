@@ -72,7 +72,7 @@ class User < ApplicationRecord
         if(query[0] == '@') 
             query = query[1..-1]
         end
-        users = User.where("users.display_name ILIKE '#{query}%' AND users.id != '#{current_user_id}'")
+        users = User.where("(users.display_name ILIKE '#{query}%' OR users.display_name ILIKE '% #{query}%') AND users.id != '#{current_user_id}'")
         users
     end
 end

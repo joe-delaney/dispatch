@@ -598,6 +598,7 @@
 .splash-page-footer-links {
     display: flex;
     flex-direction: column;
+    margin-right: 50px;
 }
 
 .splash-page-footer-h3 {
@@ -623,6 +624,21 @@
     word-break: break-word;
 }
 
+.splash-page-footer-span {
+    color: #454245;
+    text-decoration: none;
+    font-size: .875rem;
+    height: 40px;
+    position: relative;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    word-break: break-word;
+}
+
 .splash-page-footer-link:hover {
     text-decoration: underline;
+}
+
+.splash-page-footer-links-container {
+    display: flex;
 }
