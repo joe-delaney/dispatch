@@ -52,10 +52,13 @@
     max-height: 40vh;
     overflow:hidden;
     overflow-y:scroll;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-left: 10px;
-    width: 95%;
-    max-width: inherit;
+    width: 90%;
+}
+
+.search-results::-webkit-scrollbar {
+    width: 0px;
 }
 
 .search-result {

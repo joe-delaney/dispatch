@@ -11,6 +11,7 @@ export default class NewMessageView extends React.Component {
             selectedUsers: []
         }
 
+        this.inputFocus = this.utilizeFocus()
         this.handleInput = this.handleInput.bind(this);
         this.clearSearchBar = this.clearSearchBar.bind(this);
         this.addSelectedUser = this.addSelectedUser.bind(this);
@@ -52,6 +53,7 @@ export default class NewMessageView extends React.Component {
         this.setState({
             selectedUsers: newSelectedUsers
         });
+        this.inputFocus.setFocus()
     }
 
     removeSelectedUser(userId) {
@@ -67,6 +69,12 @@ export default class NewMessageView extends React.Component {
             if(selectedUser.id === user.id) selected = true;
         })
         return selected;
+    }
+
+    utilizeFocus() {
+        const ref = React.createRef()
+        const setFocus = () => { ref.current && ref.current.focus() }
+        return { setFocus, ref }
     }
 
     render() {
@@ -102,7 +110,10 @@ export default class NewMessageView extends React.Component {
                                         user={user}
                                         removeSelectedUser={this.removeSelectedUser} />
                                 ))}
-                                <input className="search-bar-input"
+                                <input 
+                                    autoFocus
+                                    ref={this.inputFocus.ref}
+                                    className="search-bar-input"
                                     type="text"
                                     onChange={this.handleInput}
                                     value={this.state.query}
