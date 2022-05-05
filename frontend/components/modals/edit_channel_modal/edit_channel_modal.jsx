@@ -27,7 +27,18 @@ export default class EditChannelModal extends React.Component {
     }
 
     updateChannel() {
-
+        let newChannel = {
+            id: this.props.channel.id,
+            topic: this.props.channel.topic,
+            description: this.props.channel.description
+        }
+        if(this.props.attr === "topic") {
+            newChannel.topic = this.state.input;
+        } else {
+            newChannel.description = this.state.input
+        }
+        this.props.updateChannel(newChannel);
+        this.props.toggleModal();
     }
 
     componentDidUpdate(prevProps) {

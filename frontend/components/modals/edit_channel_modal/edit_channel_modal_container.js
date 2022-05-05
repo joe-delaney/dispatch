@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import { toggleEditChannelModal } from "../../../actions/modal_actions";
 import EditChannelModal from "./edit_channel_modal";
 import { withRouter } from "react-router-dom";
+import { updateChannel } from "../../../actions/channel_actions";
 
 const mapStateToProps = (state, ownProps) => {
     let pathnameComponents = ownProps.location.pathname.split("/");
@@ -16,7 +17,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    toggleModal: () => dispatch(toggleEditChannelModal())
+    toggleModal: () => dispatch(toggleEditChannelModal()),
+    updateChannel: (channel) => dispatch(updateChannel(channel))
 });
 
 const EditChannelModalContainer = connect(mapStateToProps, mapDispatchToProps)(EditChannelModal);
