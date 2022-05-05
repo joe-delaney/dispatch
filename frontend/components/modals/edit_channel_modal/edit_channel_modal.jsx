@@ -5,14 +5,58 @@ export default class EditChannelModal extends React.Component {
         super(props);
 
         this.closeModal = this.closeModal.bind(this);
+        this.handleInput = this.handleInput.bind(this);
+        this.updateChannel = this.updateChannel.bind(this);
+
+        this.state = {
+            input: ""
+        }
     }
 
     closeModal() {
         this.props.toggleModal();
+        this.setState({
+            input: this.initialValue
+        })
+    }
+
+    handleInput(e) {
+        this.setState({
+            input: e.target.value
+        })
+    }
+
+    updateChannel() {
+
+    }
+
+    componentDidUpdate(prevProps) {
+        if(!prevProps.displayModal && this.props.displayModal) {
+            this.initialValue = "";
+            if (this.props.attr && this.props.channel) {
+                if (this.props.attr === "topic" && this.props.channel.topic) {
+                    this.initialValue = this.props.channel.topic;
+                } else if (this.props.channel.description) {
+                    this.initialValue = this.props.channel.description;
+                }
+            }
+
+            this.setState({
+                input: this.initialValue
+            })
+        }
     }
 
     render() {
         let headerText = this.props.attr ? this.props.attr : "";
+        let channelName = this.props.channel ? this.props.channel.name : "";
+
+        let descriptionText = "";
+        if(this.props.attr) {
+            descriptionText = this.props.attr === "topic" ? (
+               `Let people know what #${channelName} is focused on right now (ex. a project milestone). Topics are always visible in the header.`
+            ): "Let people know what this channel is for."
+        }
         
         let showModal = this.props.displayModal ? "" : "hidden";
         return (
@@ -25,12 +69,12 @@ export default class EditChannelModal extends React.Component {
                         </button>
                     </div>
                     <div className="edit-channel-input-container">
-                        <textarea className="edit-channel-input"></textarea>
+                        <textarea onChange={this.handleInput} value={this.state.input} className="edit-channel-input"></textarea>
                     </div>
-                    <span className="modal-input-description edit-channel-description">Let people know what #2022-01-31-ny is focused on right now (ex. a project milestone). Topics are always visible in the header.</span>
+                    <span className="modal-input-description edit-channel-description">{descriptionText}</span>
                     <div className="user-edit-modal-footer">
-                        <button className="user-edit-button user-cancel-edit">Cancel</button>
-                        <button className="user-edit-button user-save-changes">Save</button>
+                        <button onClick={this.closeModal} className="user-edit-button user-cancel-edit">Cancel</button>
+                        <button onClick={this.updateChannel} className="user-edit-button user-save-changes">Save</button>
                     </div>
                 </div>
             </section>
