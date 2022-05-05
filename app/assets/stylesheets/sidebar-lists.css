@@ -67,6 +67,7 @@
 .sidebar-list-item-left {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 
@@ -124,6 +125,7 @@
 
 .sidebar-list-item-container {
     text-decoration: none;
+    width: 100%;
 }
 
 .sidebar-list-item-image {
@@ -152,4 +154,13 @@
     color: #a3a3a6;
     font-size: 20px;
     margin-right: 10px;
+}
+
+.selected-sidebar-item {
+    background-color: #1164a3;
+    color: white;
+}
+
+.selected-sidebar-item:hover {
+    background-color: #1164a3;
 }

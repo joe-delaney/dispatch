@@ -44,13 +44,14 @@ export default class GroupSidebarList extends React.Component {
                         <img src={window.plus} alt="plus" className="sidebar-button-plus"></img>
                     </Link>
                 </div>
-                <ul className={`${hideGroups}`}>
+                <ul>
                     {this.props.groups.map((group, idx) => <GroupSidebarListItem 
                                                                 key={idx} 
                                                                 group={group}
                                                                 updateGroup={this.props.updateGroup}
                                                                 receiveGroupInfo={this.props.receiveGroupInfo} 
                                                                 ownProps={this.props.ownProps}
+                                                                show={this.state.showGroups}
                                                             />)}
                 </ul>
                 <ul>

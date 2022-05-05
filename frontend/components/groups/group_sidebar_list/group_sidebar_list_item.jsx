@@ -46,21 +46,23 @@ class GroupSidebarListItem extends React.Component {
 
     render() {
         let name =  this.props.group.name.length > 30 ? `${this.props.group.name.substring(0,31)}...` : this.props.group.name
-        let hidden = this.state.showCloseButton ? "" : "hidden"
-
+        let hidden = this.state.showCloseButton ? "" : "hidden";
+        let selected = this.props.ownProps.location.pathname.includes(`/message-groups/${this.props.group.id}`);
+        let selectedItem = selected ? "selected-sidebar-item" : "";
+        let showItem = (this.props.show || selected) ? "" : "hidden";
 
         let component = this.props.group.hidden ? (<div></div>) : (
-                <li onMouseEnter={this.showCloseButton} onMouseLeave={this.hideCloseButton} className="sidebar-list-item">
+                <li onMouseEnter={this.showCloseButton} onMouseLeave={this.hideCloseButton} className={`sidebar-list-item ${selectedItem} ${showItem}`}>
                     <div className="sidebar-list-item-wrapper">
                     <Link to={`/user-dashboard/message-groups/${this.props.group.id}`} className="sidebar-list-item-container">
                         <div className="sidebar-list-item-left">
                             <div className="sidebar-list-item-image">
                                 <strong className="sidebar-list-item-initial">{this.props.group.name[0]}</strong>
                             </div>
-                            <span className="sidebar-item-name">{name}</span>
+                            <span className={`sidebar-item-name ${selectedItem}`}>{name}</span>
                         </div>
                     </Link>
-                        <div onClick={this.hideGroup} className={`hide-group-button ${hidden}`} >
+                        <div onClick={this.hideGroup} className={`hide-group-button ${hidden} ${selectedItem}`} >
                             <span>&times;</span>
                         </div>
                     </div>
