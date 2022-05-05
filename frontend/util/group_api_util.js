@@ -11,3 +11,11 @@ export const fetchGroupInfo = (groupId) => (
         url: `/api/group_messages/${groupId}`
     })
 )
+
+export const createGroup = (userIds) => (
+    $.ajax({
+        method: "POST",
+        url: "/api/group_messages",
+        data: {userIds}
+    })
+)

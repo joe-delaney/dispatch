@@ -17,6 +17,7 @@ export default class NewMessageView extends React.Component {
         this.addSelectedUser = this.addSelectedUser.bind(this);
         this.removeSelectedUser = this.removeSelectedUser.bind(this);
         this.currentlySelected = this.currentlySelected.bind(this);
+        this.createGroup = this.createGroup.bind(this);
     }
 
     componentDidMount() {
@@ -27,6 +28,21 @@ export default class NewMessageView extends React.Component {
                 selectedUsers: newSelectedUsers
             })
         }
+    }
+
+    createGroup() {
+        let userIds = [];
+        this.state.selectedUsers.forEach((user)  => {
+            userIds.push(user.id);
+        })
+        this.setState({
+            selectedUsers: []
+        })
+        this.props.createGroup(userIds)
+        .then(info => {
+            this.props.receiveGroupInfo(info)
+            this.props.history.push(`/user-dashboard/message-groups/${info.group.id}`)
+        });
     }
 
     handleInput(e) {
@@ -120,8 +136,8 @@ export default class NewMessageView extends React.Component {
                                         placeholder={placeholderText} />
                                 </ul> 
                             </div>
-                            <div className="create-dm-button-container">
-                                <button className="create-dm-button">Create DM</button>
+                            <div onClick={this.createGroup} className="create-dm-button-container">
+                                <button className="create-dm-button">Start DM</button>
                             </div>
                         </div>
                         {maximumReachedError}
