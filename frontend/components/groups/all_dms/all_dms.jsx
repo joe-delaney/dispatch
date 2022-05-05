@@ -44,16 +44,18 @@ export default class AllDMs extends React.Component {
                             ))}
                         </ul>
                     </div>
-                    <div className="search-bar">
-                        <div className="search-bar-top">
+                    <div className="all-dms-search-bar">
+                        <div className="all-dms-search-bar-top">
                         <span className="search-bar-label">To: </span>
-                        <input className="search-bar-input" 
+                        <input 
+                                autoFocus
+                                className="search-bar-input" 
                                 type="text" 
                                 onChange={this.handleInput} 
                                 value={this.state.query} 
                                 placeholder="@somebody" />
                         </div>
-                        <ul className="search-results">
+                        <ul className="all-dms-search-results">
                             {searchResults.map((user) => (
                                 <AllDMsUserSearchResult
                                     user={user}

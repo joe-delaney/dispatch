@@ -1,6 +1,7 @@
 .selected-users {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .selected-user {
@@ -64,4 +65,28 @@
     font-weight: 400;
     color: #d1d2d3;
     font-family: Lato;
+}
+
+.create-dm-button {
+    background-color: #007a5a;
+    color: white;
+    height: 14px;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-left: 26px;
+    font-family: Lato;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    margin-right: 40px;
+    padding: 10px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-dm-button:hover {
+    background-color: #148567;
+    box-shadow: 0 1px 4px #0000004d;
 }

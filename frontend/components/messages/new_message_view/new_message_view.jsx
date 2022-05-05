@@ -96,29 +96,31 @@ export default class NewMessageView extends React.Component {
             <div className="user-dashboard-center-main">
                 <div className="user-dashboard-center-main-feed">
                     <div className="all-dms-container">
-                        <ul className="all-dms-items"></ul>
                     </div>
                     <div className={`search-bar ${addPadding}`}>
                         <div className="search-bar-top">
-                            <div className="search-bar-label-container">
-                                <span className="search-bar-label">To: </span>
+                            <div className="search-bar-top-left">
+                                <div className="search-bar-label-container">
+                                    <span className="search-bar-label">To: </span>
+                                </div>
+                                <ul className="selected-users">
+                                    {this.state.selectedUsers.map((user, idx) => (
+                                        <SelectedUserItem 
+                                            key={idx} 
+                                            user={user}
+                                            removeSelectedUser={this.removeSelectedUser} />
+                                    ))}
+                                    <input 
+                                        autoFocus
+                                        ref={this.inputFocus.ref}
+                                        className="search-bar-input"
+                                        type="text"
+                                        onChange={this.handleInput}
+                                        value={this.state.query}
+                                        placeholder={placeholderText} />
+                                </ul> 
                             </div>
-                            <ul className="selected-users">
-                                {this.state.selectedUsers.map((user, idx) => (
-                                    <SelectedUserItem 
-                                        key={idx} 
-                                        user={user}
-                                        removeSelectedUser={this.removeSelectedUser} />
-                                ))}
-                                <input 
-                                    autoFocus
-                                    ref={this.inputFocus.ref}
-                                    className="search-bar-input"
-                                    type="text"
-                                    onChange={this.handleInput}
-                                    value={this.state.query}
-                                    placeholder={placeholderText} />
-                            </ul> 
+                            <button className="create-dm-button">Create DM</button>
                         </div>
                         {maximumReachedError}
                         <ul className="search-results">
