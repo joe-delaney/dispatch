@@ -63,7 +63,25 @@ class UserDashboardNav extends React.Component {
 
         return (
             <nav className="user-dashboard-nav-bar">
-                <div className="user-dashboard-nav-bar-left">X</div>
+                <div className="user-dashboard-nav-bar-left">
+                    <ul className="user-dashboard-nav-bar-links">
+                        <li className="user-dashboard-nav-bar-link">
+                            <a href="https://www.linkedin.com/in/joseph-delaney-46985b76/">
+                                <img className="user-dashboard-nav-bar-link-img" src={window.linkedinLogo} alt="linkedin" />
+                            </a>
+                        </li>
+                        <li className="user-dashboard-nav-bar-link">
+                            <a href="https://github.com/joe-delaney/slack-chat">
+                                <img className="user-dashboard-nav-bar-link-img" src={window.githubLogo} alt="github" />
+                            </a>
+                        </li>
+                        <li className="user-dashboard-nav-bar-link">
+                            <a href="https://www.linkedin.com/in/joseph-delaney-46985b76/">
+                                <img className="user-dashboard-nav-bar-link-img" src={window.portfolioLogo} alt="portfolio" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div className="user-dashboard-nav-bar-center">
                     <input onChange={this.handleInput} className="user-dashboard-nav-bar-search-input" type="text" value={this.state.query} placeholder="&#xF002;  Search Slack"/>
                     <ul className="user-dashboard-nav-bar-search-results">

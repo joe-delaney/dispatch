@@ -25,8 +25,21 @@
     color: #121016;
     flex-grow: 0;
     width: 450px;
-    padding-left: 16px;
     padding-right: 20px;
+}
+
+.user-dashboard-nav-bar-links {
+    display: flex;
+}
+
+.user-dashboard-nav-bar-link {
+    color: #d1d2d3;
+    margin-left: 16px;
+}
+
+.user-dashboard-nav-bar-link-img {
+    width: 30px;
+    height: 30px;
 }
 
 .user-dashboard-nav-bar-center {
