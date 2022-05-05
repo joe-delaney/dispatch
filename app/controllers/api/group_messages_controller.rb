@@ -7,7 +7,14 @@ class Api::GroupMessagesController < ApplicationController
     end
 
     def create 
-
+        @group_message = GroupMessage.new()
+        if @group_message.save 
+            #Loop through the userIds and subscribe them to this dm
+            #Once done, render show and receive group info
+            render :show, locals: { group: @group_message, current_user: current_user }
+        else
+            render json: @group_message.errors.full_messages
+        end
     end
 
     def show 
