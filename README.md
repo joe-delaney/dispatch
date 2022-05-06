@@ -11,4 +11,12 @@ SlackChat is a full stack clone of the popular business messaging application, S
    * **Back-end**: Rails (including Websockets via Rails Action Cable)
    * **Database**: PostgreSQL
    * **Hosting**: Heroku
+
+## Splash Page
+
+## Channels
+
+## Direct Messages (including Group DMs)
+
+## User Search and Profiles
     
