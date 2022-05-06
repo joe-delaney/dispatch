@@ -20,6 +20,8 @@ Users will be redirected to this page whenever they are not currently logged in.
 ### When logged in 
 Users will land here upon a successful sign in or sign up. They will have a custom welcome component which lists their email, display name, and title if they have one. From this page, the user will be able to launch the main dashboard or sign out from dispatch. 
 
+![ezgif-3-ad74644c0a](https://user-images.githubusercontent.com/65872033/167148066-f09b9eb7-9968-4f19-a71c-9a9da2f55ea0.gif)
+
 ## Channels
 
 ### Channel Browser
