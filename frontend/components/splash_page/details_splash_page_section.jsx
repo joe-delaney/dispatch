@@ -28,7 +28,7 @@ const DetailsSplashPageSection = ({currentUser}) => {
             </div>
             <div className="splash-page-details-section">
                 <div className="splash-page-details-section-left">
-                    <img src={window.splashPageDetails3} alt="files" /> 
+                    <img src={window.splashPageDetails3} className="left-image" alt="files" /> 
                 </div>
                 <div className="splash-page-details-section-right">
                     <h2 className="splash-page-details-h2">Focus your time, on your own terms</h2>

@@ -642,3 +642,8 @@
 .splash-page-footer-links-container {
     display: flex;
 }
+
+.left-image {
+    width: 100%;
+    max-width: 449px;
+}
