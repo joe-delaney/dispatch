@@ -27,14 +27,22 @@ Users will land here upon a successful sign in or sign up. They will have a cust
 ### Channel Browser
 Users can search, join, and leave from all available channels within the app. Unsubscribed users will not be able to see the messages within a channel until they have successfully joined it.
 
+![ezgif-3-d4bc57988f](https://user-images.githubusercontent.com/65872033/167150104-0d29b722-c7ed-4193-ba3f-c9b159563444.gif)
+
 ### Channels Sidebar
 All channels that the current user is subscribed to will appear in this component. The user can choose to hide and show the list. If a channel is currently selected, it will have different styling and will still show in the sidebar when the channels list is hidden. A user can browse channels via the “browse channels” list item and can create channels via the “plus” button in the sidebar list header. 
+
+![ezgif-3-26f94dde07](https://user-images.githubusercontent.com/65872033/167150759-58265919-a98a-4c3d-a1e4-8eaf4d0de6a8.gif)
 
 ### Create Channel
 Users will be able to create new channels via the create channel modal component. Users are required to enter a channel name but may or may not fill in the channel topic and/or channel description. 
 
+![ezgif-3-0d0f58f184](https://user-images.githubusercontent.com/65872033/167151971-f179ac10-e134-4c31-ad71-bd25c51ce02f.gif)
+
 ### Channel Details 
 Users can view channel specific details such as an about section which has channel information like name, topic, and description as well as a members section which shows all users subscribed to this channel. The user will also be able to edit the channel details from this component and will be able to leave / join in the channel. 
+
+![ezgif-3-c994832f44](https://user-images.githubusercontent.com/65872033/167152879-f62a403e-1032-494f-b915-b1dbf1716442.gif)
 
 ## Direct Messages (including Group DMs)
 
