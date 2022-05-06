@@ -5,7 +5,7 @@ const GetStartedSplashPageSection = ({demoClicked, currentUser, logout}) => {
     const getStartedSection = currentUser ? <div></div> : (
         <div className="get-started-section  logged-out">
             <header className="get-started-header">
-                <h2 className="get-started-h2">Get started with Slack</h2>
+                <h2 className="get-started-h2">Get started with Dispatch</h2>
             </header>
             <div className="get-started-instructions">
                 <div className="get-started-instruction">
@@ -14,7 +14,7 @@ const GetStartedSplashPageSection = ({demoClicked, currentUser, logout}) => {
                     </div>
                     <h3 className="get-started-h3">Sign Up</h3>
                     <p className="get-started-p">
-                        <Link to="/signup" className="get-started-signup-link">Sign up for Slack</Link> in just a few moments. It's free to try for teams of any size.
+                        <Link to="/signup" className="get-started-signup-link">Sign up for Dispatch</Link> in just a few moments. It's free to try for teams of any size.
                     </p>
                 </div>
                 <div className="get-started-instruction">
@@ -23,7 +23,7 @@ const GetStartedSplashPageSection = ({demoClicked, currentUser, logout}) => {
                     </div>
                     <h3 className="get-started-h3">Invite your coworkers</h3>
                     <p className="get-started-p">
-                        Slack is better together (no, really, it’s a bit underwhelming by yourself), and it’s easy to invite your team.
+                        Dispatch is better together (no, really, it’s a bit underwhelming by yourself), and it’s easy to invite your team.
                     </p>
                 </div>
                 <div className="get-started-instruction">
@@ -32,7 +32,7 @@ const GetStartedSplashPageSection = ({demoClicked, currentUser, logout}) => {
                     </div>
                     <h3 className="get-started-h3">Try it out</h3>
                     <p className="get-started-p">
-                        Run a project, coordinate with your team, or just talk it out. Slack is a blank canvas for teamwork.
+                        Run a project, coordinate with your team, or just talk it out. Dispatch is a blank canvas for teamwork.
                     </p>
                 </div>
             </div>
@@ -44,8 +44,8 @@ const GetStartedSplashPageSection = ({demoClicked, currentUser, logout}) => {
             <div className="splash-page-final-section-content">
                 <h3 className="splash-page-final-section-h3">Welcome to where the future works</h3>
                 <div className="splash-page-final-section-buttons">
-                    <Link to="/user-dashboard/browse-channels" className="splash-page-final-section-button try-demo-final">Launch Slack</Link>
-                    <button onClick={logout} className="splash-page-final-section-button signup-final">Sign Out of Slack</button>
+                    <Link to="/user-dashboard/browse-channels" className="splash-page-final-section-button try-demo-final">Launch Dispatch</Link>
+                    <button onClick={logout} className="splash-page-final-section-button signup-final">Sign Out</button>
                 </div>
             </div>
         </div>

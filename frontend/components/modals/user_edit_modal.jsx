@@ -77,7 +77,7 @@ export default class UserEditModal extends React.Component {
                             <div className="modal-input-container">
                                 <label for="displayNameInput" className="modal-input-label">Display Name</label>
                                 <input autocomplete="off" id="displayNameInput" className={`modal-input ${inputErrorActive}`} type="text" value={this.state.display_name} onChange={this.handleInput("display_name")} />
-                                <span className={`modal-input-description ${descriptionErrorActive}`}>This could be your first name, or a nickname — however you’d like people to refer to you in Slack.</span>
+                                <span className={`modal-input-description ${descriptionErrorActive}`}>This could be your first name, or a nickname — however you’d like people to refer to you in Dispatch.</span>
                                 {errorMessage}
                             </div>
                             <div className="modal-input-container">

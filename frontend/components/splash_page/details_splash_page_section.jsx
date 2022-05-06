@@ -20,7 +20,7 @@ const DetailsSplashPageSection = ({currentUser}) => {
             <div className="splash-page-details-section">
                 <div className="splash-page-details-section-left">
                     <h2 className="splash-page-details-h2">Move faster by organizing your work life</h2>
-                    <p className="splash-page-details-p">The key to productivity in Slack is organized spaces called channels—a different one for everything you’re working on. With all the people, messages and files related to a topic in one place, you can move a whole lot faster.</p>
+                    <p className="splash-page-details-p">The key to productivity in Dispatch is organized spaces called channels—a different one for everything you’re working on. With all the people, messages and files related to a topic in one place, you can move a whole lot faster.</p>
                 </div>
                 <div className="splash-page-details-section-right">
                     <img src={window.splashPageDetails2} alt="channels" />

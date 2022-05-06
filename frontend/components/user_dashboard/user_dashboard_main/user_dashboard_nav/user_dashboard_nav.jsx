@@ -83,7 +83,7 @@ class UserDashboardNav extends React.Component {
                     </ul>
                 </div>
                 <div className="user-dashboard-nav-bar-center">
-                    <input onChange={this.handleInput} className="user-dashboard-nav-bar-search-input" type="text" value={this.state.query} placeholder="&#xF002;  Search Slack"/>
+                    <input onChange={this.handleInput} className="user-dashboard-nav-bar-search-input" type="text" value={this.state.query} placeholder="&#xF002;  Search Dispatch"/>
                     <ul className="user-dashboard-nav-bar-search-results">
                         {searchResults.map((user) => (
                             <UserDashBoardNavUserSearchResult 
@@ -117,7 +117,7 @@ class UserDashboardNav extends React.Component {
                                 </button>
                             </li>
                             <li className="dropdown-link">
-                                <button onClick={this.props.logout} className="user-dashboard-nav-bar-profile-dropdown-view-profile">Sign out of Slack</button>
+                                <button onClick={this.props.logout} className="user-dashboard-nav-bar-profile-dropdown-view-profile">Sign out</button>
                             </li>
                         </ul>
                     </div>

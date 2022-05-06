@@ -31,13 +31,13 @@ export default class SessionForm extends React.Component {
 
     render() {
         const errors = this.props.errors;
-        let sidebarHeading = (this.props.formType === "login" ? "New to Slack?" 
+        let sidebarHeading = (this.props.formType === "login" ? "New to Dispatch?" 
             : "Already have an account?");
         let formHeaderLinkTo = this.props.formType === "login" ? "signup" : "login";
         let formHeaderLinkLabel = (this.props.formType === "login" ? 
             "Create an account" : "Sign in");
-        let formH1 = (this.props.formType === "login" ? "Sign in to Slack" 
-            : "Sign up for Slack");
+        let formH1 = (this.props.formType === "login" ? "Sign in to Dispatch" 
+            : "Sign up for Dispatch");
         let submitLabel = (this.props.formType === "login" ? 
             "Sign in with Email" : "Sign up with Email");
         let signUpInputs = (this.props.formType === "login" ? <div></div> : 
@@ -69,7 +69,7 @@ export default class SessionForm extends React.Component {
                 <div className="form-header-section-center">
                     <Link to="/">
                         <img 
-                        src="https://cdn.bfldr.com/5H442O3W/at/pl546j-7le8zk-btwjnu/Slack_RGB.png?auto=webp&format=png" 
+                        src={window.dispatchLogoBlack} 
                         className="form-logo" 
                         />
                     </Link>

@@ -13,7 +13,7 @@ const MainSplashPageSection = ({demoClicked, currentUser}) => {
                 </h1>
             </div>
             <div className="welcome-back-user-info-container">
-                <div className="welcome-back-user-info-title">Slack for {currentUser.email}</div>
+                <div className="welcome-back-user-info-title">Dispatch for {currentUser.email}</div>
                 <div>
                     <div className="welcome-back-user-info">
                         <img className="welcome-back-user-img" src="https://cdn.bfldr.com/5H442O3W/at/pl546j-7le8zk-6gwiyo/Slack_Mark.svg?auto=webp&format=png" alt="slack-logo" />
@@ -21,7 +21,7 @@ const MainSplashPageSection = ({demoClicked, currentUser}) => {
                             <span className="welcome-back-user-display-name">{currentUser.displayName}</span>
                             <span className="welcome-back-user-title">{title}</span>
                         </div>
-                        <Link to="/user-dashboard/browse-channels" className="welcome-back-launch-slack">Launch Slack</Link>
+                        <Link to="/user-dashboard/browse-channels" className="welcome-back-launch-slack">Launch Dispatch</Link>
                     </div>
 
                 </div>
@@ -30,7 +30,7 @@ const MainSplashPageSection = ({demoClicked, currentUser}) => {
     ) : (
         <div className="splash-page-section-main logged-out">
             <div className="splash-page-section-main-left">
-                <h1 className="splash-page-section-main-header">Slack is your digital HQ</h1>
+                    <h1 className="splash-page-section-main-header">Dispatch is your digital HQ</h1>
                 <p className="splash-page-section-main-description">Transform the way you work with one place for everyone and everything you need to get stuff done.</p>
                 <div className="splash-page-section-main-buttons">
                     <button className="splash-page-section-main-button try-demo-main" onClick={demoClicked}>Try a Demo</button>

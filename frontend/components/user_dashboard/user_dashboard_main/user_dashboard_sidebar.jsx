@@ -3,12 +3,12 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import ChannelSidebarListContainer from "../../channels/channel_sidebar_list/channel_sidebar_list_container";
 import GroupSidebarListContainer from "../../groups/group_sidebar_list/group_sidebar_list_container";
 
-const UserDashboardSidebar = ({currentUser}) => (
+const UserDashboardSidebar = () => (
     <div className="user-dashboard-sidebar">
         <div className="user-dashboard-sidebar-contents">
             <div className="user-dashboard-sidebar-header">
                 <Link to="/">
-                    <img className="user-dashboard-sidebar-logo" src="https://cdn.bfldr.com/5H442O3W/at/pljt3c-dcwb20-c19uuy/Slack_RGB_White.svg?auto=webp&format=png" alt="slack-logo"></img>
+                    <img className="user-dashboard-sidebar-logo" src={window.dispatchLogoWhite} alt="slack-logo"></img>
                 </Link>
                 <Link to="/user-dashboard/new-message">
                     <button className="new-message-button">

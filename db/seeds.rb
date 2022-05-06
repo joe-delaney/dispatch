@@ -214,7 +214,7 @@ s75 = Subscription.create!(subscriber_id: shannon.id, subscribable_id: dm6.id, s
 puts "Creating messages..."
 
 #General
-m1 = Message.create!(author_id: joe.id, text: "Welcome to the general slack channel", messagable_id: general.id, messagable_type: "Channel")
+m1 = Message.create!(author_id: joe.id, text: "Welcome to the general dispatch channel", messagable_id: general.id, messagable_type: "Channel")
 m2 = Message.create!(author_id: sasha.id, text: "How is everyone doing?", messagable_id: general.id, messagable_type: "Channel")
 m3 = Message.create!(author_id: shannon.id, text: "What's up team!", messagable_id: general.id, messagable_type: "Channel")
 m4 = Message.create!(author_id: jeff.id, text: "Ready to get to work", messagable_id: general.id, messagable_type: "Channel")
