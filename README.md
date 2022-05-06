@@ -52,8 +52,12 @@ Users can search for and select up to 8 members to start a new direct message or
 ### All DMs
 Users can see a list of all direct or group messages they are a subscribed to and each list item will include the last sent message in that group. Users can select a DM and navigate to that DM’s show page. In addition, users can search for other users, select them, and be redirected to the new message page for the selected user(s).
 
+![ezgif-3-e4754d5df7](https://user-images.githubusercontent.com/65872033/167227863-25bcd456-5e92-4fcc-9cfe-9c399b6f0804.gif)
+
 ### Group Message Sidebar
 All direct or group messages that the current user is subscribed to will appear in this component. The user can choose to hide and show the list. The user can also choose to remove a specific group or direct message from the list. If a group message is currently selected, it will have different styling and will still show in the sidebar when the direct messages list is hidden. A user can view all message groups via the “add teammates” list item or the “plus” button in the sidebar list header.
+
+![ezgif-3-5aa7d064bf](https://user-images.githubusercontent.com/65872033/167227849-4a0a60e2-f51d-4008-8685-507a3e01e50c.gif)
 
 ## Messages 
 
@@ -68,8 +72,12 @@ Users will be able to share new messages into any channel or direct message they
 ### User Profile
 The user can choose to view their own profile or the profile of another user on the right side of the dashboard. If the user has currently selected their own profile, they will be given the option to edit their profile information. If the user has currently selected the profile of another user, they will be able to start a message with that user. 
 
+![ezgif-2-938e6fea1e](https://user-images.githubusercontent.com/65872033/167227871-1252c9f4-5c0d-4ec2-a655-fe586fdbf58b.gif)
+
 ### Edit User Profile
 The current user will be able to edit their user information from their user profile. When selected, an edit user modal component will become visible and give the user the ability to update their profile details. The user will not be able to enter a blank display name but can choose whether or not to have a title and/or status. 
+
+![ezgif-2-12216e0b61](https://user-images.githubusercontent.com/65872033/167227877-7cd9f4f1-6d03-458e-9eb0-41f89ed7ef8d.gif)
 
 ## Search
 Users are always able to search for both channels and other users from the main nav search bar. There are other areas where the user may search for channels and/or users depending on which page the user is currently on. As a user types in the search bar, the app will automatically filter and receive search results from the backend based on the current query. Channels look for any query matches within the channel name while users look for matches in first name or last name starting with the query. Users can enter a # to indicate they are searching for a channel or an @ to indicate they are searching for a user. 
