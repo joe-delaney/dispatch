@@ -66,8 +66,12 @@ All direct or group messages that the current user is subscribed to will appear 
 ### Live Chat 
 Dispatch uses Websockets vis Action Cable to facilitate live chat between users. When a user sends a message in a channel, group, or direct message, the message will immediately be broadcasted to all other subscribed members without the need for refreshing the page. Both new messages and edits to existing messages will be shared in real time with all subscribers. 
 
+![ezgif-4-3efe52ef0c](https://user-images.githubusercontent.com/65872033/167237681-a683d11c-79d5-4416-b660-6990b081b8e5.gif)
+
 ### New Messages / Edit Messages
 Users will be able to share new messages into any channel or direct message they are subscribed to. Messages will appear in chronological order (time and date listed with message) with the newest messages appearing at the bottom of the feed. Message authors will be able to edit their sent messages directly in the message feed. Edited messages will be marked as “edited” to let other users know that the original message has been modified. 
+
+![ezgif-4-be723df2f6](https://user-images.githubusercontent.com/65872033/167237792-3549c9da-6125-4372-95a0-ebc1fcc6864f.gif)
 
 ## Users
 
@@ -84,4 +88,5 @@ The current user will be able to edit their user information from their user pro
 ## Search
 Users are always able to search for both channels and other users from the main nav search bar. There are other areas where the user may search for channels and/or users depending on which page the user is currently on. As a user types in the search bar, the app will automatically filter and receive search results from the backend based on the current query. Channels look for any query matches within the channel name while users look for matches in first name or last name starting with the query. Users can enter a # to indicate they are searching for a channel or an @ to indicate they are searching for a user. 
 
-    
+![ezgif-4-e1506bf4d2](https://user-images.githubusercontent.com/65872033/167237913-908e1f26-a953-48d1-ba66-b7597fc8f92c.gif)
+
