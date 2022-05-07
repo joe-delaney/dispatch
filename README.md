@@ -49,6 +49,8 @@ Users can view channel specific details such as an about section which has chann
 ### New Messages
 Users can search for and select up to 8 members to start a new direct message or group message. A user can search for users by their first or last name and can select/deselect users as needed. If a DM with the selected users already exists, the user will be redirected to that group’s show page. If a DM with the selected users does not yet exist, a new one will be created, each user will be subscribed to it, and the current user will be redirected to the new group’s show page. 
 
+![ezgif-2-a15df663d7](https://user-images.githubusercontent.com/65872033/167237400-8beec649-7633-4ded-9245-951e6ab9a396.gif)
+
 ### All DMs
 Users can see a list of all direct or group messages they are a subscribed to and each list item will include the last sent message in that group. Users can select a DM and navigate to that DM’s show page. In addition, users can search for other users, select them, and be redirected to the new message page for the selected user(s).
 
