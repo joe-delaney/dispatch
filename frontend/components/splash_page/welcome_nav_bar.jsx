@@ -7,9 +7,10 @@ const WelcomeNavBar = ({currentUser, logout, demoClicked}) => {
             <div className="welcome-nav-bar-left-section">
                 <img src={window.dispatchLogoWhite}  className="welcome-slack-logo" />
                 <ul className="personal-links">
-                    <a className="welcome-nav-bar-heading-logged-in" href="https://www.linkedin.com/in/joseph-delaney-46985b76/">Portfolio</a>
+                    <a className="welcome-nav-bar-heading-logged-in" href="https://www.joe-delaney.com">Portfolio</a>
                     <a className="welcome-nav-bar-heading-logged-in" href="https://www.linkedin.com/in/joseph-delaney-46985b76/">LinkedIn</a>
                     <a className="welcome-nav-bar-heading-logged-in" href="https://github.com/joe-delaney/slack-chat">Github</a>
+                    <a className="welcome-nav-bar-heading-logged-in" href="https://angel.co/u/joe-delaney-6">AngelList</a>
                 </ul>
             </div>
             <div className="welcome-nav-bar-buttons">
@@ -22,9 +23,10 @@ const WelcomeNavBar = ({currentUser, logout, demoClicked}) => {
             <div className="welcome-nav-bar-left-section">
                 <img src={window.dispatchLogoBlack}  className="welcome-slack-logo" />
                 <ul className="personal-links">
-                    <a className="welcome-nav-bar-heading-logged-out" href="#">Portfolio</a>
+                    <a className="welcome-nav-bar-heading-logged-out" href="https://www.joe-delaney.com">Portfolio</a>
                     <a className="welcome-nav-bar-heading-logged-out" href="https://www.linkedin.com/in/joseph-delaney-46985b76/">LinkedIn</a>
                     <a className="welcome-nav-bar-heading-logged-out" href="https://github.com/joe-delaney/slack-chat">Github</a>
+                    <a className="welcome-nav-bar-heading-logged-out" href="https://angel.co/u/joe-delaney-6">AngelList</a>
                 </ul>
             </div>
             <div className="welcome-nav-bar-buttons">
