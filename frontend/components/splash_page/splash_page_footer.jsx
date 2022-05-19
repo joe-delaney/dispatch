@@ -20,9 +20,10 @@ const SplashPageFooter = () => (
             </ul>
             <ul className="splash-page-footer-links">
                 <h3 className="splash-page-footer-h3">Personal Links</h3>
-                <a className="splash-page-footer-link" href="https://www.linkedin.com/in/joseph-delaney-46985b76/">Portfolio</a>
+                <a className="splash-page-footer-link" href="https://www.joe-delaney.com">Portfolio</a>
                 <a className="splash-page-footer-link" href="https://www.linkedin.com/in/joseph-delaney-46985b76/">LinkedIn</a>
                 <a className="splash-page-footer-link" href="https://github.com/joe-delaney/slack-chat">Github</a>
+                <a className="splash-page-footer-link" href="https://angel.co/u/joe-delaney-6">AngelList</a>
             </ul>
         </div>
     </div>

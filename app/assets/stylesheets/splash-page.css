@@ -15,12 +15,92 @@
     padding: 0 16vw;
 }
 
+@media screen and (max-width: 1200px) {
+    .welcome-nav-bar {
+        padding: 0 6vw;
+    }
+
+    .splash-page-section-main {
+        padding: 0 6vw !important;
+    }
+
+    .splash-page-details-section {
+        padding: 0 6vw  !important;
+    }
+
+    .get-started-section {
+        padding: 0 6vw  !important;
+    }
+
+    .splash-page-final-section-content {
+        padding: 0 6vw  !important;
+    }
+
+    .splash-page-final-section-content {
+        padding: 0 6vw  !important;
+    }
+
+    .splash-page-footer {
+        padding: 0 6vw  !important;
+    }
+
+    .welcome-nav-bar-button {
+        font-size: .7rem !important;
+    }
+
+    .sign-up {
+        padding: 0.5rem 1rem !important;
+    }
+
+    .try-demo {
+        padding: 0.5rem 1rem !important;
+    }
+
+    .sign-in {
+        margin-right: 10px !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .welcome-nav-bar {
+        padding: 0 2vw;
+    }
+
+    .splash-page-section-main {
+        padding: 0 2vw !important;
+    }
+    
+    .splash-page-details-section {
+        padding: 0 2vw !important;
+    }
+    
+    .get-started-section {
+        padding: 0 2vw !important;
+    }
+    
+    .splash-page-final-section-content {
+        padding: 0 2vw !important;
+    }
+    
+    .splash-page-final-section-content {
+        padding: 0 2vw !important;
+    }
+    
+    .splash-page-footer {
+        padding: 0 2vw !important;
+    }
+}
+
 .logged-in {
     background-color: #4a154b;
 }
 
 .logged-out {
     background-color: #f6efe8;
+}
+
+.sign-in {
+    margin-left: 20px !important;
 }
 
 .welcome-slack-logo {

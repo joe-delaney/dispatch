@@ -30,7 +30,7 @@ const WelcomeNavBar = ({currentUser, logout, demoClicked}) => {
                 </ul>
             </div>
             <div className="welcome-nav-bar-buttons">
-                <Link to="/login" className="welcome-nav-bar-heading-logged-out">Sign in</Link>
+                <Link to="/login" className="welcome-nav-bar-heading-logged-out sign-in">Sign in</Link>
                 <Link to="/signup" className="welcome-nav-bar-button sign-up">Sign Up Here</Link>
                 <button className="welcome-nav-bar-button try-demo" onClick={demoClicked}>Try a Demo</button>
             </div>
