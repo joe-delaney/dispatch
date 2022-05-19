@@ -69,7 +69,7 @@ Dispatch uses Websockets vis Action Cable to facilitate live chat between users.
 ![ezgif-4-3efe52ef0c](https://user-images.githubusercontent.com/65872033/167237681-a683d11c-79d5-4416-b660-6990b081b8e5.gif)
 
 ### New Messages / Edit Messages
-Users will be able to share new messages into any channel or direct message they are subscribed to. Messages will appear in chronological order (time and date listed with message) with the newest messages appearing at the bottom of the feed. Message authors will be able to edit their sent messages directly in the message feed. Edited messages will be marked as “edited” to let other users know that the original message has been modified. 
+Users will be able to share new messages into any channel or direct message they are subscribed to. Messages will appear in chronological order (time and date listed with message) with the newest messages appearing at the bottom of the feed. Message authors will be able to edit their sent messages directly in the message feed. Edited messages will be marked as “edited” to let other users know that the original message has been modified. Note that users will not be able to delete messages as this is reserved for the admin. 
 
 ![ezgif-4-be723df2f6](https://user-images.githubusercontent.com/65872033/167237792-3549c9da-6125-4372-95a0-ebc1fcc6864f.gif)
 
