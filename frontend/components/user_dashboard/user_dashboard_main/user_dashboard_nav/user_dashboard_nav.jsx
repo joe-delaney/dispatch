@@ -76,7 +76,7 @@ class UserDashboardNav extends React.Component {
                             </a>
                         </li>
                         <li className="user-dashboard-nav-bar-link">
-                            <a href="https://www.linkedin.com/in/joseph-delaney-46985b76/">
+                            <a href="https://www.joe-delaney.com">
                                 <img className="user-dashboard-nav-bar-link-img" src={window.portfolioLogo} alt="portfolio" />
                             </a>
                         </li>
