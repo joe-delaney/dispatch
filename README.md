@@ -64,7 +64,7 @@ All direct or group messages that the current user is subscribed to will appear 
 ## Messages 
 
 ### Live Chat 
-Dispatch uses Websockets vis Action Cable to facilitate live chat between users. When a user sends a message in a channel, group, or direct message, the message will immediately be broadcasted to all other subscribed members without the need for refreshing the page. Both new messages and edits to existing messages will be shared in real time with all subscribers. 
+Dispatch uses Websockets via Action Cable to facilitate live chat between users. When a user sends a message in a channel, group, or direct message, the message will immediately be broadcasted to all other subscribed members without the need for refreshing the page. Both new messages and edits to existing messages will be shared in real time with all subscribers. 
 
 ![ezgif-4-3efe52ef0c](https://user-images.githubusercontent.com/65872033/167237681-a683d11c-79d5-4416-b660-6990b081b8e5.gif)
 
